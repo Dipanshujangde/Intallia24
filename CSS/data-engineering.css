@@ -1,0 +1,1337 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #333;
+  line-height: 1.6;
+}
+
+.data-engineering-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Theme Colors for Data Engineering */
+:root {
+  --data-primary-green: #10b981;
+  --data-primary-aqua: #06b6d4;
+  --data-dark-green: #059669;
+  --data-dark-aqua: #0891b2;
+  --data-light-green: #d1fae5;
+  --data-light-aqua: #cffafe;
+  --data-text-dark: #1f2937;
+  --data-text-light: #6b7280;
+  --data-card-bg: #ffffff;
+  --data-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --data-transition: all 0.3s ease;
+}
+
+/* Common Section Styles */
+section {
+  margin-bottom: 80px;
+  padding: 30px 0;
+}
+
+.data-section-title {
+  font-size: 2.5rem;
+  color: var(--data-text-dark);
+  margin-bottom: 15px;
+  position: relative;
+  text-align: center;
+}
+
+.data-section-description {
+  font-size: 1.1rem;
+  color: var(--data-text-light);
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Hero Section */
+.data-hero-section {
+  text-align: center;
+  padding: 50px 0;
+  background: linear-gradient(135deg, #f0fdf4 0%, #f0f9ff 100%);
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: var(--data-shadow);
+}
+
+.data-hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.data-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.data-title-icon {
+  font-size: 3rem;
+  color: var(--data-primary-green);
+  margin-right: 20px;
+  background: var(--data-light-green);
+  padding: 15px;
+  border-radius: 50%;
+  transition: var(--data-transition);
+}
+
+.data-title-icon:hover {
+  transform: rotate(15deg) scale(1.1);
+  background: linear-gradient(
+    135deg,
+    var(--data-primary-green),
+    var(--data-primary-aqua)
+  );
+  color: white;
+}
+
+.data-main-title {
+  font-size: 3rem;
+  color: var(--data-text-dark);
+  text-align: left;
+}
+
+.data-highlight {
+  color: var(--data-primary-aqua);
+  position: relative;
+}
+
+.data-highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(6, 182, 212, 0.2);
+  z-index: -1;
+}
+
+.data-hero-description {
+  font-size: 1.2rem;
+  color: var(--data-text-light);
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+}
+
+.data-hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.data-btn-primary1,
+.data-btn-secondary1 {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--data-transition);
+  cursor: pointer;
+  box-shadow: var(--data-shadow);
+}
+
+.data-btn-primary1 {
+  background: linear-gradient(
+    90deg,
+    var(--data-primary-green),
+    var(--data-primary-aqua)
+  );
+  color: white;
+  border: none;
+}
+
+.data-btn-primary1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+  background: linear-gradient(
+    90deg,
+    var(--data-dark-green),
+    var(--data-dark-aqua)
+  );
+}
+
+.data-btn-secondary1 {
+  background-color: white;
+  color: var(--data-primary-green);
+  border: 2px solid var(--data-primary-green);
+}
+
+.data-btn-secondary1:hover {
+  background-color: var(--data-light-green);
+  transform: translateY(-5px);
+  border-color: var(--data-dark-green);
+  color: var(--data-dark-green);
+}
+
+.data-btn-primary1 i,
+.data-btn-secondary1 i {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.data-stats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.data-stat-item {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: var(--data-shadow);
+  min-width: 180px;
+  transition: var(--data-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.data-stat-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.1),
+    rgba(6, 182, 212, 0.1)
+  );
+  z-index: 0;
+}
+
+.data-stat-item:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.2);
+}
+
+.data-counter {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--data-primary-green);
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.data-stat-item p {
+  color: var(--data-text-light);
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+/* Data Engineering Services Section */
+.data-services-section {
+  padding: 60px 0;
+}
+
+.data-services-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.data-service-card {
+  background-color: var(--data-card-bg);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: var(--data-shadow);
+  transition: var(--data-transition);
+  text-align: center;
+  border-top: 5px solid var(--data-primary-green);
+  position: relative;
+  overflow: hidden;
+}
+
+.data-service-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(
+    135deg,
+    var(--data-primary-green),
+    var(--data-primary-aqua)
+  );
+  transition: var(--data-transition);
+  z-index: 0;
+}
+
+.data-service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  border-top-color: var(--data-primary-aqua);
+}
+
+.data-service-card:hover::after {
+  height: 5px;
+}
+
+.data-service-icon {
+  font-size: 2.5rem;
+  color: var(--data-primary-green);
+  margin-bottom: 20px;
+  background-color: var(--data-light-green);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+  transition: var(--data-transition);
+}
+
+.data-service-card:hover .data-service-icon {
+  color: white;
+  background: linear-gradient(
+    135deg,
+    var(--data-primary-green),
+    var(--data-primary-aqua)
+  );
+  transform: rotateY(180deg);
+}
+
+.data-service-card h3 {
+  font-size: 1.5rem;
+  color: var(--data-text-dark);
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.data-service-card p {
+  color: var(--data-text-light);
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+/* Technologies & Tools Section */
+.data-tech-section {
+  background: linear-gradient(135deg, #f0f9ff 0%, #f0fdf4 100%);
+  padding: 50px 40px;
+  border-radius: 20px;
+}
+
+.data-section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.data-tech-icon {
+  font-size: 2.5rem;
+  color: var(--data-primary-aqua);
+  margin-right: 20px;
+  background-color: var(--data-light-aqua);
+  padding: 15px;
+  border-radius: 50%;
+  transition: var(--data-transition);
+}
+
+.data-tech-icon:hover {
+  transform: rotate(-15deg) scale(1.1);
+  background: linear-gradient(
+    135deg,
+    var(--data-primary-aqua),
+    var(--data-primary-green)
+  );
+  color: white;
+}
+
+.data-tech-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.data-tech-card {
+  background-color: var(--data-card-bg);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: var(--data-shadow);
+  transition: var(--data-transition);
+  text-align: center;
+  border-left: 5px solid var(--data-primary-aqua);
+  position: relative;
+  overflow: hidden;
+}
+
+.data-tech-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(6, 182, 212, 0.1),
+    transparent
+  );
+  transition: var(--data-transition);
+}
+
+.data-tech-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(6, 182, 212, 0.2);
+  border-left-color: var(--data-primary-green);
+}
+
+.data-tech-card:hover::before {
+  left: 100%;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  color: var(--data-primary-aqua);
+  margin-bottom: 20px;
+  transition: var(--data-transition);
+}
+
+.data-tech-card:hover .card-icon {
+  color: var(--data-primary-green);
+  transform: scale(1.2);
+}
+
+.data-tech-card h3 {
+  font-size: 1.5rem;
+  color: var(--data-text-dark);
+  margin-bottom: 15px;
+}
+
+.data-tech-card p {
+  color: var(--data-text-light);
+  line-height: 1.7;
+}
+
+/* Why Choose Our Data Engineering Section */
+.data-choose-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.data-excellence-list h3 {
+  font-size: 1.8rem;
+  color: var(--data-text-dark);
+  margin-bottom: 25px;
+  padding-left: 10px;
+  border-left: 4px solid var(--data-primary-green);
+}
+
+.data-excellence-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: var(--data-shadow);
+  transition: var(--data-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.data-excellence-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--data-primary-green),
+    var(--data-primary-aqua)
+  );
+  transition: var(--data-transition);
+}
+
+.data-excellence-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.data-excellence-item:hover::before {
+  height: 100%;
+}
+
+.data-excellence-item i {
+  font-size: 1.8rem;
+  color: var(--data-primary-green);
+  margin-right: 20px;
+  background-color: var(--data-light-green);
+  padding: 15px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: var(--data-transition);
+}
+
+.data-excellence-item:hover i {
+  color: white;
+  background: linear-gradient(
+    135deg,
+    var(--data-primary-green),
+    var(--data-primary-aqua)
+  );
+  transform: rotate(15deg);
+}
+
+.data-excellence-item h4 {
+  font-size: 1.3rem;
+  color: var(--data-text-dark);
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.data-excellence-item p {
+  color: var(--data-text-light);
+  position: relative;
+  z-index: 1;
+}
+
+.data-feature-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.data-feature-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: var(--data-shadow);
+  text-align: center;
+  transition: var(--data-transition);
+  border-bottom: 4px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.data-feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(
+    135deg,
+    var(--data-primary-green),
+    var(--data-primary-aqua)
+  );
+  transition: var(--data-transition);
+  z-index: 0;
+}
+
+.data-feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-bottom-color: var(--data-primary-aqua);
+}
+
+.data-feature-card:hover::before {
+  height: 100%;
+}
+
+.data-feature-card:hover i,
+.data-feature-card:hover h4,
+.data-feature-card:hover p {
+  color: white;
+}
+
+.data-feature-card i {
+  font-size: 2rem;
+  color: var(--data-primary-aqua);
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+  transition: var(--data-transition);
+}
+
+.data-feature-card:hover i {
+  transform: scale(1.2);
+}
+
+.data-feature-card h4 {
+  font-size: 1.3rem;
+  color: var(--data-text-dark);
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+  transition: var(--data-transition);
+}
+
+.data-feature-card p {
+  color: var(--data-text-light);
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 1;
+  transition: var(--data-transition);
+}
+
+/* Our Data Engineering Process Section */
+.data-process-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.data-process-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--data-shadow);
+  text-align: center;
+  transition: var(--data-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.data-process-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(
+    135deg,
+    var(--data-primary-green),
+    var(--data-primary-aqua)
+  );
+  transition: var(--data-transition);
+  z-index: 0;
+}
+
+.data-process-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.data-process-card:hover::before {
+  height: 100%;
+}
+
+.data-process-card:hover .data-process-number,
+.data-process-card:hover h3,
+.data-process-card:hover p {
+  color: white;
+}
+
+.data-process-number {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(
+    90deg,
+    var(--data-primary-green),
+    var(--data-primary-aqua)
+  );
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  z-index: 1;
+  transition: var(--data-transition);
+}
+
+.data-process-card:hover .data-process-number {
+  transform: translateX(-50%) scale(1.2);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.data-process-card h3 {
+  font-size: 1.5rem;
+  color: var(--data-text-dark);
+  margin: 20px 0 15px;
+  position: relative;
+  z-index: 1;
+  transition: var(--data-transition);
+}
+
+.data-process-card p {
+  color: var(--data-text-light);
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+  transition: var(--data-transition);
+}
+
+/* Data Platform Success Section */
+.data-platform-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.data-platform-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--data-shadow);
+  text-align: center;
+  transition: var(--data-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.data-platform-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--data-primary-green),
+    var(--data-primary-aqua)
+  );
+  transition: var(--data-transition);
+}
+
+.data-platform-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  animation: data-pulse 1.5s infinite;
+}
+
+.data-platform-card:hover::before {
+  height: 100%;
+}
+
+@keyframes data-pulse {
+  0% {
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+  }
+  50% {
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+  }
+  100% {
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+  }
+}
+
+.data-platform-icon {
+  font-size: 2.5rem;
+  color: var(--data-primary-green);
+  margin-bottom: 20px;
+  transition: var(--data-transition);
+}
+
+.data-platform-card:hover .data-platform-icon {
+  color: var(--data-primary-aqua);
+  transform: rotate(15deg) scale(1.2);
+}
+
+.data-platform-card h3 {
+  font-size: 1.5rem;
+  color: var(--data-text-dark);
+  margin-bottom: 15px;
+  transition: var(--data-transition);
+}
+
+.data-platform-card:hover h3 {
+  color: var(--data-primary-green);
+}
+
+.data-platform-card p {
+  color: var(--data-text-light);
+  line-height: 1.7;
+}
+
+/* Testimonials Section */
+.data-testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.data-testimonial-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--data-shadow);
+  transition: var(--data-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.data-testimonial-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    var(--data-primary-green),
+    var(--data-primary-aqua)
+  );
+}
+
+.data-testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.data-testimonial-content {
+  padding: 20px;
+  background-color: #f8fafc;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.data-testimonial-content::before {
+  content: '"';
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  font-size: 4rem;
+  color: var(--data-light-green);
+  font-family: Georgia, serif;
+}
+
+.data-testimonial-content p {
+  color: var(--data-text-dark);
+  font-style: italic;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+.data-testimonial-author h4 {
+  font-size: 1.3rem;
+  color: var(--data-text-dark);
+  margin-bottom: 5px;
+}
+
+.data-testimonial-author p {
+  color: var(--data-primary-aqua);
+  font-weight: 600;
+}
+
+/* Data Engineering Strategy Section */
+.data-strategy-section {
+  background: linear-gradient(135deg, #f0fdf4 0%, #f0f9ff 100%);
+  padding: 50px 40px;
+  border-radius: 20px;
+}
+
+.data-strategy-icon {
+  font-size: 2.5rem;
+  color: var(--data-primary-green);
+  margin-right: 20px;
+  background-color: var(--data-light-green);
+  padding: 15px;
+  border-radius: 50%;
+  transition: var(--data-transition);
+}
+
+.data-strategy-icon:hover {
+  transform: rotate(15deg) scale(1.1);
+  background: linear-gradient(
+    135deg,
+    var(--data-primary-green),
+    var(--data-primary-aqua)
+  );
+  color: white;
+}
+
+.data-strategy-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.data-strategy-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--data-shadow);
+  transition: var(--data-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.data-strategy-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(16, 185, 129, 0.1),
+    rgba(6, 182, 212, 0.1)
+  );
+  transition: var(--data-transition);
+}
+
+.data-strategy-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.data-strategy-card:hover::before {
+  width: 100%;
+}
+
+.data-strategy-card h3 {
+  font-size: 1.5rem;
+  color: var(--data-text-dark);
+  margin-bottom: 15px;
+  color: var(--data-primary-green);
+  position: relative;
+  z-index: 1;
+}
+
+.data-strategy-card p {
+  color: var(--data-text-light);
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+.data-cloud-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.data-cloud-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--data-shadow);
+  transition: var(--data-transition);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.data-cloud-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.aws-card {
+  border-top: 5px solid #ff9900;
+}
+
+.azure-card {
+  border-top: 5px solid #0078d4;
+}
+
+.data-cloud-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  transition: var(--data-transition);
+}
+
+.aws-card .data-cloud-icon {
+  color: #ff9900;
+}
+
+.azure-card .data-cloud-icon {
+  color: #0078d4;
+}
+
+.data-cloud-card:hover .data-cloud-icon {
+  transform: scale(1.2);
+}
+
+.data-cloud-card h3 {
+  font-size: 1.8rem;
+  color: var(--data-text-dark);
+  margin-bottom: 20px;
+}
+
+.data-cloud-card ul {
+  list-style: none;
+  text-align: left;
+}
+
+.data-cloud-card li {
+  padding: 10px 0;
+  color: var(--data-text-light);
+  border-bottom: 1px solid #f1f5f9;
+  transition: var(--data-transition);
+}
+
+.data-cloud-card li:last-child {
+  border-bottom: none;
+}
+
+.data-cloud-card li::before {
+  content: "▸";
+  color: var(--data-primary-green);
+  font-weight: bold;
+  margin-right: 10px;
+  transition: var(--data-transition);
+}
+
+.data-cloud-card:hover li::before {
+  color: var(--data-primary-aqua);
+}
+
+.data-cloud-card:hover li {
+  color: var(--data-text-dark);
+  transform: translateX(5px);
+}
+
+/* FAQ Section */
+.data-faq-container {
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+.data-faq-item {
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: var(--data-shadow);
+  overflow: hidden;
+  transition: var(--data-transition);
+}
+
+.data-faq-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.data-faq-question {
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: #f8fafc;
+  transition: var(--data-transition);
+}
+
+.data-faq-question:hover {
+  background-color: #f1f5f9;
+}
+
+.data-faq-question h3 {
+  font-size: 1.2rem;
+  color: var(--data-text-dark);
+  margin: 0;
+}
+
+.data-faq-question i {
+  color: var(--data-primary-green);
+  transition: var(--data-transition);
+}
+
+.data-faq-answer {
+  padding: 0 30px;
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease,
+    padding 0.3s ease;
+}
+
+.data-faq-answer.active {
+  padding: 25px 30px;
+  max-height: 500px;
+}
+
+.data-faq-answer p {
+  color: var(--data-text-light);
+  line-height: 1.7;
+}
+
+.data-faq-item.active .data-faq-question i {
+  transform: rotate(180deg);
+}
+
+.data-faq-item.active .data-faq-question {
+  background-color: var(--data-light-green);
+}
+
+/* Ready to Transform Your Data Section */
+.data-launch-section {
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(
+    135deg,
+    var(--data-primary-green),
+    var(--data-primary-aqua)
+  );
+  border-radius: 20px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.data-launch-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px
+  );
+  background-size: 30px 30px;
+  animation: data-float 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes data-float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(30px, 30px) rotate(360deg);
+  }
+}
+
+.data-launch-section .data-section-title {
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.data-launch-section .data-section-description {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.data-launch-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.data-btn-launch-primary,
+.data-btn-launch-secondary {
+  padding: 18px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--data-transition);
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.data-btn-launch-primary {
+  background-color: white;
+  color: var(--data-primary-green);
+}
+
+.data-btn-launch-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  background-color: #f1f5f9;
+}
+
+.data-btn-launch-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.data-btn-launch-secondary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.data-btn-launch-primary i,
+.data-btn-launch-secondary i {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .data-choose-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .data-cloud-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .data-hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .data-btn-primary1,
+  .data-btn-secondary1 {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .data-main-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .data-section-title {
+    font-size: 2rem;
+  }
+
+  .data-title-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .data-title-icon {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .data-stats-container {
+    gap: 20px;
+  }
+
+  .data-stat-item {
+    min-width: 140px;
+    padding: 15px;
+  }
+
+  .data-counter {
+    font-size: 2.2rem;
+  }
+
+  .data-feature-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .data-process-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .data-launch-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .data-btn-launch-primary,
+  .data-btn-launch-secondary {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .data-tech-section,
+  .data-strategy-section {
+    padding: 40px 20px;
+  }
+
+  .data-section-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .data-tech-icon,
+  .data-strategy-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .data-services-cards,
+  .data-tech-cards,
+  .data-testimonial-cards,
+  .data-platform-cards,
+  .data-strategy-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .data-section-title {
+    font-size: 1.8rem;
+  }
+
+  .data-hero-description,
+  .data-section-description {
+    font-size: 1rem;
+  }
+
+  .data-faq-question h3 {
+    font-size: 1.1rem;
+  }
+}

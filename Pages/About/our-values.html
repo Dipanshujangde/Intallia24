@@ -1,0 +1,930 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Values - Intallia24</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Intallia24/CSS/our-values.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/navbar.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/footer.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header">
+      <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo-container">
+          <div class="logo">
+            <div class="logo-text">
+              <!-- <span class="logo-main">INTALLA 24</span>
+              <span class="logo-sub">Building Tomorrow's Workforce</span> -->
+              <a href="/Intallia24/index.html">
+                <img src="/Intallia24/Images/intallia-logo.png" alt="" />
+              </a>
+            </div>
+            <div class="logo-gradient"></div>
+          </div>
+          <!-- Mobile Menu Toggle -->
+          <button class="menu-toggle" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="/Intallia24/index.html" class="nav-link active">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+
+          <!-- About Us Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">
+              <i class="fas fa-info-circle"></i> About Us
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/about.html">
+                  <i class="fas fa-building"></i>
+                  <span>Our Company</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-work.html">
+                  <i class="fas fa-cogs"></i>
+                  <span>How We Work</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-values.html">
+                  <i class="fas fa-heart"></i>
+                  <span>Our Values</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-working-culture.html">
+                  <i class="fas fa-users"></i>
+                  <span>Our Working Culture</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#services" class="nav-link dropdown-toggle">
+              <i class="fas fa-cogs"></i> Services
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html">
+                  <i class="fas fa-layer-group"></i>
+                  <span>Data Science & Analytics</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html">
+                  <i class="fas fa-chart-bar"></i>
+                  <span>AL / ML Engineering</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/website-development.html">
+                  <i class="fas fa-database"></i>
+                  <span>Website Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html">
+                  <i class="fas fa-mobile-alt"></i>
+                  <span>Mobile Application Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-engineering.html">
+                  <i class="fas fa-globe"></i>
+                  <span>Data Engineering Solutions</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/automation-workflows.html">
+                  <i class="fas fa-robot"></i>
+                  <span>Automation & Workflows</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#" class="view-more" id="viewMoreServices">
+                  <i class="fas fa-eye"></i>
+                  <span>View More Services</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Products -->
+          <li class="nav-item">
+            <a href="#products" class="nav-link">
+              <i class="fas fa-box-open"></i> Products
+            </a>
+          </li>
+        </ul>
+
+        <!-- Get Free Consultation Button -->
+        <div class="cta-container">
+          <button class="cta-button" id="consultationBtn">
+            <i class="fas fa-comment-dots"></i> Get Free Consultation
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <!-- <main class="main-content">
+      <div class="container">
+        <div class="content-section" id="contentDisplay">
+          <h2 id="sectionTitle">Home Content</h2>
+          <p id="sectionDescription">
+            Welcome to our website! Select any menu item to see detailed
+            information about that section.
+          </p>
+        </div>
+      </div>
+    </main> -->
+
+    <!-- Consultation Modal -->
+    <div class="modal" id="consultationModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Get Free Consultation</h3>
+          <button class="close-modal" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Fill out the form below and our experts will contact you within 24
+            hours.
+          </p>
+          <form id="consultationForm">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Phone Number" />
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="" disabled selected>Select Service</option>
+                <option value="fullstack">Full Stack Development</option>
+                <option value="analytics">Data Analytics</option>
+                <option value="datascience">Data Science</option>
+                <option value="mobile">Mobile Application Development</option>
+                <option value="web">Web Application Development</option>
+                <option value="ai">AI Powered Platform</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-btn">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="values-hero-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="title-with-icon">
+            <i class="fas fa-gem values-hero-icon"></i>
+            <h1 class="main-heading">Our Values</h1>
+          </div>
+          <p class="section-subtitle">
+            At Intallia24, our values are the guiding principles behind
+            everything we do—from the way we build products to how we
+            collaborate with clients and nurture our team.
+          </p>
+
+          <div class="values-intro">
+            <p>
+              These core values shape our culture, guide our decisions, and
+              drive our commitment to delivering exceptional results for every
+              client.
+            </p>
+          </div>
+
+          <a href="#careers" class="join-team-btn"
+            >Join Our Team <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Six Pillars Section -->
+    <section class="pillars-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Six Pillars of Excellence</h2>
+          <p class="section-subtitle">
+            These core values shape our culture, guide our decisions, and drive
+            our commitment to delivering exceptional results for every client.
+          </p>
+        </div>
+
+        <div class="pillars-cards">
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3 class="pillar-title">Be Innovative</h3>
+            <p class="pillar-description">
+              We champion forward-thinking technologies and creative
+              problem-solving to deliver next-generation solutions that
+              anticipate tomorrow's needs.
+            </p>
+            <div class="pillar-features">
+              <span
+                ><i class="fas fa-check"></i> Cutting-edge technology
+                adoption</span
+              >
+              <span><i class="fas fa-check"></i> Creative problem-solving</span>
+              <span><i class="fas fa-check"></i> Future-ready solutions</span>
+              <span
+                ><i class="fas fa-check"></i> Continuous R&D investment</span
+              >
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="pillar-title">Customer-Centric Mindset</h3>
+            <p class="pillar-description">
+              We put our clients first. Through personalized solutions,
+              proactive support, and a deep understanding of your goals, we
+              build partnerships that last.
+            </p>
+            <div class="pillar-features">
+              <span><i class="fas fa-check"></i> Personalized solutions</span>
+              <span><i class="fas fa-check"></i> Proactive support</span>
+              <span><i class="fas fa-check"></i> Deep goal understanding</span>
+              <span><i class="fas fa-check"></i> Long-term partnerships</span>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3 class="pillar-title">Earn Trust Through Reliability</h3>
+            <p class="pillar-description">
+              Transparency, accountability, and consistent results are the
+              pillars of our client relationships—and the reason clients come
+              back.
+            </p>
+            <div class="pillar-features">
+              <span><i class="fas fa-check"></i> Complete transparency</span>
+              <span><i class="fas fa-check"></i> Full accountability</span>
+              <span><i class="fas fa-check"></i> Consistent results</span>
+              <span><i class="fas fa-check"></i> Reliable partnerships</span>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3 class="pillar-title">Be Agile</h3>
+            <p class="pillar-description">
+              In a world that never stops evolving, we stay flexible and
+              responsive—adapting quickly to market changes while ensuring
+              consistent delivery of value and excellence.
+            </p>
+            <div class="pillar-features">
+              <span><i class="fas fa-check"></i> Rapid adaptation</span>
+              <span><i class="fas fa-check"></i> Flexible methodologies</span>
+              <span><i class="fas fa-check"></i> Quick market response</span>
+              <span
+                ><i class="fas fa-check"></i> Consistent value delivery</span
+              >
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h3 class="pillar-title">Invest in Talent</h3>
+            <p class="pillar-description">
+              Our people are our greatest asset. We invest in skilled
+              professionals who bring passion, curiosity, and craftsmanship to
+              every line of code.
+            </p>
+            <div class="pillar-features">
+              <span><i class="fas fa-check"></i> Skilled professionals</span>
+              <span><i class="fas fa-check"></i> Continuous learning</span>
+              <span><i class="fas fa-check"></i> Passion-driven work</span>
+              <span><i class="fas fa-check"></i> Quality craftsmanship</span>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+            <h3 class="pillar-title">Collaborate to Innovate</h3>
+            <p class="pillar-description">
+              We foster a culture of shared ownership, open communication, and
+              team-driven problem-solving—because the best ideas are built
+              together.
+            </p>
+            <div class="pillar-features">
+              <span><i class="fas fa-check"></i> Shared ownership</span>
+              <span><i class="fas fa-check"></i> Open communication</span>
+              <span><i class="fas fa-check"></i> Team problem-solving</span>
+              <span><i class="fas fa-check"></i> Collective innovation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values in Action Section -->
+    <section class="values-action-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="title-with-icon">
+            <i class="fas fa-chart-line action-icon"></i>
+            <h2 class="section-title">Values in Action</h2>
+          </div>
+          <p class="section-subtitle">
+            Our values aren't just words on a wall—they're reflected in our
+            results and the relationships we build with clients and team members
+            alike.
+          </p>
+        </div>
+
+        <div class="values-action-intro">
+          <p>
+            These numbers represent the tangible outcomes of living our values
+            every day. They demonstrate our commitment to excellence,
+            innovation, and building lasting relationships.
+          </p>
+        </div>
+
+        <!-- In the Values in Action section -->
+        <div class="values-stats-cards">
+          <div class="values-stat-card">
+            <div class="values-stat-icon">
+              <i class="fas fa-smile"></i>
+            </div>
+            <h3 class="values-stat-count" data-target="98">0</h3>
+            <p class="values-stat-label">Client Satisfaction</p>
+            <p class="values-stat-description">
+              Our customer-centric approach delivers results
+            </p>
+          </div>
+
+          <div class="values-stat-card">
+            <div class="values-stat-icon">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <h3 class="values-stat-count" data-target="20">0</h3>
+            <p class="values-stat-label">Projects Delivered</p>
+            <p class="values-stat-description">
+              Innovation and agility in every solution
+            </p>
+          </div>
+
+          <div class="values-stat-card">
+            <div class="values-stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="values-stat-count" data-target="15">0</h3>
+            <p class="values-stat-label">Team Members</p>
+            <p class="values-stat-description">
+              Talented professionals driving excellence
+            </p>
+          </div>
+
+          <div class="values-stat-card">
+            <div class="values-stat-icon">
+              <i class="fas fa-retweet"></i>
+            </div>
+            <h3 class="values-stat-count" data-target="95">0</h3>
+            <p class="values-stat-label">Client Retention</p>
+            <p class="values-stat-description">
+              Trust and reliability that brings clients back
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thriving Culture Section -->
+    <section class="culture-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Building a Thriving Culture</h2>
+          <p class="section-subtitle">
+            Our values create a culture where innovation flourishes, people
+            grow, and exceptional work becomes the natural outcome.
+          </p>
+        </div>
+
+        <div class="culture-intro">
+          <p>
+            We foster an environment that encourages creativity, supports
+            growth, and celebrates achievements. Our culture is built on mutual
+            respect, collaboration, and a shared passion for excellence.
+          </p>
+        </div>
+
+        <div class="culture-cards">
+          <div class="culture-card">
+            <div class="culture-card-header">
+              <div class="culture-card-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h3 class="culture-card-title">Innovation Culture</h3>
+              <p class="culture-card-subtitle">
+                We encourage experimentation and celebrate creative solutions.
+              </p>
+            </div>
+            <div class="culture-card-features">
+              <span
+                ><i class="fas fa-code"></i> Hackathons & Innovation Days</span
+              >
+              <span
+                ><i class="fas fa-microchip"></i> Technology Exploration</span
+              >
+              <span><i class="fas fa-paint-brush"></i> Creative Freedom</span>
+              <span><i class="fas fa-comments"></i> Idea Sharing Sessions</span>
+            </div>
+          </div>
+
+          <div class="culture-card">
+            <div class="culture-card-header">
+              <div class="culture-card-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h3 class="culture-card-title">People First</h3>
+              <p class="culture-card-subtitle">
+                We prioritize our team's growth and well-being.
+              </p>
+            </div>
+            <div class="culture-card-features">
+              <span
+                ><i class="fas fa-graduation-cap"></i> Professional
+                Development</span
+              >
+              <span
+                ><i class="fas fa-balance-scale"></i> Work-Life Balance</span
+              >
+              <span><i class="fas fa-award"></i> Recognition Programs</span>
+              <span
+                ><i class="fas fa-hands-helping"></i> Mental Health
+                Support</span
+              >
+            </div>
+          </div>
+
+          <div class="culture-card">
+            <div class="culture-card-header">
+              <div class="culture-card-icon">
+                <i class="fas fa-globe-americas"></i>
+              </div>
+              <h3 class="culture-card-title">Global Mindset</h3>
+              <p class="culture-card-subtitle">
+                We think globally while acting locally for our clients.
+              </p>
+            </div>
+            <div class="culture-card-features">
+              <span><i class="fas fa-users"></i> Diverse Perspectives</span>
+              <span><i class="fas fa-trophy"></i> Global Best Practices</span>
+              <span><i class="fas fa-hands"></i> Cultural Awareness</span>
+              <span
+                ><i class="fas fa-map-marker-alt"></i> Local Market
+                Understanding</span
+              >
+            </div>
+          </div>
+
+          <div class="culture-card">
+            <div class="culture-card-header">
+              <div class="culture-card-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h3 class="culture-card-title">Technical Excellence</h3>
+              <p class="culture-card-subtitle">
+                We maintain the highest standards in everything we build.
+              </p>
+            </div>
+            <div class="culture-card-features">
+              <span
+                ><i class="fas fa-file-code"></i> Code Quality Standards</span
+              >
+              <span><i class="fas fa-search"></i> Peer Reviews</span>
+              <span
+                ><i class="fas fa-sync-alt"></i> Continuous Integration</span
+              >
+              <span
+                ><i class="fas fa-tachometer-alt"></i> Performance
+                Optimization</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Believe In Section -->
+    <section class="beliefs-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">What We Believe In</h2>
+          <p class="section-subtitle">
+            These fundamental beliefs shape how we work together and approach
+            every challenge.
+          </p>
+        </div>
+
+        <div class="beliefs-intro">
+          <p>
+            Our beliefs guide our daily interactions, decision-making processes,
+            and overall approach to delivering exceptional value to our clients
+            and team members.
+          </p>
+        </div>
+
+        <div class="beliefs-cards">
+          <div class="belief-card">
+            <div class="belief-icon">
+              <i class="fas fa-flag"></i>
+            </div>
+            <h3 class="belief-title">Ownership</h3>
+            <p class="belief-description">
+              We take responsibility for our work and its impact, ensuring
+              accountability and commitment to excellence in every project.
+            </p>
+          </div>
+
+          <div class="belief-card">
+            <div class="belief-icon">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <h3 class="belief-title">Curiosity</h3>
+            <p class="belief-description">
+              We question, explore, and never stop learning. Continuous
+              improvement and innovation drive our approach to problem-solving.
+            </p>
+          </div>
+
+          <div class="belief-card">
+            <div class="belief-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3 class="belief-title">Excellence</h3>
+            <p class="belief-description">
+              We strive for perfection in every detail, maintaining the highest
+              standards of quality in our work and deliverables.
+            </p>
+          </div>
+
+          <div class="belief-card">
+            <div class="belief-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h3 class="belief-title">Communication</h3>
+            <p class="belief-description">
+              We believe in clear, honest, and open dialogue that fosters
+              transparency, collaboration, and mutual understanding.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="values-faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Values & Culture FAQ</h2>
+          <p class="section-subtitle">
+            Learn more about our values and company culture
+          </p>
+        </div>
+
+        <div class="values-faq-container">
+          <div class="values-faq-item">
+            <div class="values-faq-question">
+              <h3>What are Intallia24's core values?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="values-faq-answer">
+              <p>
+                Our six core values guide everything we do: Be Innovative
+                (championing forward-thinking technologies), Be Agile (staying
+                flexible and responsive to change), Customer-Centric Mindset
+                (putting clients first), Invest in Talent (nurturing our
+                people), Earn Trust Through Reliability (transparency and
+                accountability), and Collaborate to Innovate (team-driven
+                problem-solving). These aren't just words—they're reflected in
+                our daily decisions and actions.
+              </p>
+            </div>
+          </div>
+
+          <div class="values-faq-item">
+            <div class="values-faq-question">
+              <h3>How does Intallia24 foster innovation?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="values-faq-answer">
+              <p>
+                We foster innovation through regular hackathons, innovation
+                days, dedicated R&D time, technology exploration sessions, and a
+                culture that encourages creative problem-solving. Our teams are
+                empowered to experiment with new technologies and approaches,
+                and we celebrate both successes and learning opportunities from
+                experiments.
+              </p>
+            </div>
+          </div>
+
+          <div class="values-faq-item">
+            <div class="values-faq-question">
+              <h3>What does customer-centricity mean at Intallia24?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="values-faq-answer">
+              <p>
+                Customer-centricity means truly understanding our clients'
+                business goals, challenges, and success metrics. We go beyond
+                just delivering code to become strategic partners who
+                proactively identify opportunities, provide regular progress
+                updates, and adapt to changing needs. Our success is measured by
+                our clients' success.
+              </p>
+            </div>
+          </div>
+
+          <div class="values-faq-item">
+            <div class="values-faq-question">
+              <h3>How do you maintain work-life balance?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="values-faq-answer">
+              <p>
+                We promote work-life balance through flexible work hours, remote
+                work options, mental health support programs, and a culture that
+                respects personal time. We encourage our team members to take
+                regular breaks, use their vacation time, and maintain healthy
+                boundaries between work and personal life.
+              </p>
+            </div>
+          </div>
+
+          <div class="values-faq-item">
+            <div class="values-faq-question">
+              <h3>What is the team collaboration culture like?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="values-faq-answer">
+              <p>
+                Our collaboration culture is built on mutual respect, open
+                communication, and shared ownership. We practice regular team
+                sync-ups, pair programming, code reviews, and cross-functional
+                collaboration. We believe that diverse perspectives lead to
+                better solutions, and we create psychological safety for team
+                members to share ideas and feedback.
+              </p>
+            </div>
+          </div>
+
+          <div class="values-faq-item">
+            <div class="values-faq-question">
+              <h3>How does Intallia24 invest in talent development?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="values-faq-answer">
+              <p>
+                We invest in talent through continuous learning opportunities,
+                mentorship programs, conference sponsorships, certification
+                support, and regular skill development sessions. Each team
+                member has a personalized development plan, and we provide
+                resources and time for professional growth aligned with both
+                individual career goals and company needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="values-cta-section">
+      <div class="container">
+        <div class="values-cta-content">
+          <h2 class="values-cta-title">
+            Ready to Experience
+            <span class="highlight">Values-Driven</span> Excellence?
+          </h2>
+          <p class="values-cta-subtitle">
+            Join us in building something extraordinary. Our values aren't just
+            principles—they're the foundation of every successful partnership we
+            create.
+          </p>
+
+          <div class="values-cta-buttons">
+            <a href="#careers" class="values-cta-btn primary-btn"
+              >Join Our Team <i class="fas fa-users"></i
+            ></a>
+            <a href="#contact" class="values-cta-btn secondary-btn"
+              >Start Your Project <i class="fas fa-rocket"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="footer-container">
+        <!-- Top Section with Logo and Tagline -->
+        <div class="footer-top">
+          <div class="footer-logo-container">
+            <div class="logo-wrapper">
+              <img
+                src="/Intallia24/Images/logo1.png"
+                alt="Intallia Logo"
+                class="footer-logo"
+              />
+              <div class="logo-text">
+                <span class="logo-top">INTALIA</span>
+                <span class="logo-bottom">Building Tomorrow's Workforce</span>
+              </div>
+            </div>
+            <p class="footer-tagline">
+              Technology is at the core of everything we do—but it’s our people
+              who make the real difference. At Intallia, we bring together a
+              curated team of innovators, problem-solvers, and domain experts
+              who blend deep technical skills with a product-first mindset.
+            </p>
+          </div>
+
+          <div class="footer-cta">
+            <button class="btn-primary">Start Your Project →</button>
+            <button class="btn-secondary">Free Consultation</button>
+          </div>
+        </div>
+
+        <!-- Middle Section with Services, Developers, Company Links -->
+        <div class="footer-middle">
+          <div class="footer-column">
+            <h3 class="footer-heading">Services</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html"
+                  >Data Science & Engineering</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/website-development.html"
+                  >Web Application Development</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html"
+                  >Mobile Application Development</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html"
+                  >AI / ML Engineering</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/data-engineering.html"
+                  >Data Engineering Solutions</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/automation-workflows.html"
+                  >Automation & Workflows</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Hire Developers</h3>
+            <ul class="footer-links">
+              <li><a href="#">Hire React Developers</a></li>
+              <li><a href="#">Hire Node.js Developers</a></li>
+              <li><a href="#">Hire Java Developers</a></li>
+              <li><a href="#">Hire Python Developers</a></li>
+              <li><a href="#">Hire Flutter Developers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/Intallia24/index.html">Home</a></li>
+              <li><a href="/Intallia24/Pages/About/about.html">Our Company</a></li>
+              <li><a href="/Intallia24/Pages/About/our-work.html">How We Work</a></li>
+              <li><a href="/Intallia24/Pages/About/our-values.html">Our Values</a></li>
+              <li>
+                <a href="/Intallia24/Pages/About/our-working-culture.html"
+                  >Our Working Culture</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Get In Touch</h3>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> 123 Tech Street,
+                Innovation City
+              </p>
+              <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+              <p><i class="fas fa-envelope"></i> info@intallia.com</p>
+            </div>
+
+            <div class="newsletter">
+              <h4>Subscribe to our newsletter</h4>
+              <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email" />
+                <button class="btn-subscribe">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section with Social Media and Copyright -->
+        <div class="footer-bottom">
+          <div class="social-icons">
+            <a href="#" class="social-icon" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Twitter">
+              <i class="fab fa-twitter"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Instagram">
+              <i class="fab fa-instagram"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="GitHub">
+              <i class="fab fa-github"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="YouTube">
+              <i class="fab fa-youtube"></i>
+              <span class="icon-bg"></span>
+            </a>
+          </div>
+
+          <div class="copyright">
+            <p>
+              &copy; <span id="current-year">2024</span> Intallia. All rights
+              reserved. | <a href="#">Privacy Policy</a> |
+              <a href="#">Terms of Service</a>
+            </p>
+          </div>
+
+          <div class="footer-quote">
+            <button class="btn-quote">Get Quote</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/Intallia24/JS/our-values.js"></script>
+    <script src="/Intallia24/JS/script.js"></script>
+    <script src="/Intallia24/JS/footer.js"></script>
+  </body>
+</html>

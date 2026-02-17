@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #0ea5e9;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .back-btn:hover {
+            background: white;
+            color: #0ea5e9;
+            border-color: #0ea5e9;
+            box-shadow: 0 0 15px rgba(14, 165, 233, 0.7);
+        }
+        
+        .content {
+            margin-top: 50px;
+            height: 1500px;
+            background: linear-gradient(to bottom, #f1f5f9, #e2e8f0);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #64748b;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Technology Page</h1>
+        <p>This is a placeholder page that you would navigate to when clicking on one of the technology buttons. The page automatically scrolls from bottom to top when loaded.</p>
+        
+        <div class="content">
+            <div>Scroll position should be at the top when this page loads</div>
+        </div>
+        
+        <p style="margin-top: 30px;">
+            <a href="/index.html" class="back-btn">Back to Main Page</a>
+        </p>
+    </div>
+    
+    <script>
+        // Smooth scroll to top when page loads
+        window.addEventListener('load', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

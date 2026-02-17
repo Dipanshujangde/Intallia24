@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automation & Workflows Solutions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Intallia24/CSS/automation-workflows.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/navbar.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/footer.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header">
+      <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo-container">
+          <div class="logo">
+            <div class="logo-text">
+              <!-- <span class="logo-main">INTALLA 24</span>
+              <span class="logo-sub">Building Tomorrow's Workforce</span> -->
+              <a href="/Intallia24/index.html">
+                <img src="/Intallia24/Images/intallia-logo.png" alt="" />
+              </a>
+            </div>
+            <div class="logo-gradient"></div>
+          </div>
+          <!-- Mobile Menu Toggle -->
+          <button class="menu-toggle" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="/Intallia24/index.html" class="nav-link active">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+
+          <!-- About Us Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">
+              <i class="fas fa-info-circle"></i> About Us
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/about.html">
+                  <i class="fas fa-building"></i>
+                  <span>Our Company</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-work.html">
+                  <i class="fas fa-cogs"></i>
+                  <span>How We Work</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-values.html">
+                  <i class="fas fa-heart"></i>
+                  <span>Our Values</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-working-culture.html">
+                  <i class="fas fa-users"></i>
+                  <span>Our Working Culture</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#services" class="nav-link dropdown-toggle">
+              <i class="fas fa-cogs"></i> Services
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html">
+                  <i class="fas fa-layer-group"></i>
+                  <span>Data Science & Analytics</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html">
+                  <i class="fas fa-chart-bar"></i>
+                  <span>AL / ML Engineering</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/website-development.html">
+                  <i class="fas fa-database"></i>
+                  <span>Website Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html">
+                  <i class="fas fa-mobile-alt"></i>
+                  <span>Mobile Application Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-engineering.html">
+                  <i class="fas fa-globe"></i>
+                  <span>Data Engineering Solutions</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/automation-workflows.html">
+                  <i class="fas fa-robot"></i>
+                  <span>Automation & Workflows</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#" class="view-more" id="viewMoreServices">
+                  <i class="fas fa-eye"></i>
+                  <span>View More Services</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Products -->
+          <li class="nav-item">
+            <a href="#products" class="nav-link">
+              <i class="fas fa-box-open"></i> Products
+            </a>
+          </li>
+        </ul>
+
+        <!-- Get Free Consultation Button -->
+        <div class="cta-container">
+          <button class="cta-button" id="consultationBtn">
+            <i class="fas fa-comment-dots"></i> Get Free Consultation
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <!-- <main class="main-content">
+      <div class="container">
+        <div class="content-section" id="contentDisplay">
+          <h2 id="sectionTitle">Home Content</h2>
+          <p id="sectionDescription">
+            Welcome to our website! Select any menu item to see detailed
+            information about that section.
+          </p>
+        </div>
+      </div>
+    </main> -->
+
+    <!-- Consultation Modal -->
+    <div class="modal" id="consultationModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Get Free Consultation</h3>
+          <button class="close-modal" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Fill out the form below and our experts will contact you within 24
+            hours.
+          </p>
+          <form id="consultationForm">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Phone Number" />
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="" disabled selected>Select Service</option>
+                <option value="fullstack">Full Stack Development</option>
+                <option value="analytics">Data Analytics</option>
+                <option value="datascience">Data Science</option>
+                <option value="mobile">Mobile Application Development</option>
+                <option value="web">Web Application Development</option>
+                <option value="ai">AI Powered Platform</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-btn">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="automation-container">
+      <!-- Hero Section -->
+      <section class="automation-hero-section">
+        <div class="automation-hero-content">
+          <div class="automation-title-container">
+            <i class="fas fa-robot automation-title-icon"></i>
+            <h1 class="automation-main-title">
+              Automation & <span class="automation-highlight">Workflows</span>
+            </h1>
+          </div>
+          <p class="automation-hero-description">
+            We design intelligent automation systems and streamlined workflows
+            that transform manual processes into efficient, error-free
+            operations. Our automation solutions help organizations reduce
+            costs, increase productivity, eliminate human error, and scale
+            operations seamlessly across departments and systems.
+          </p>
+          <div class="automation-hero-buttons">
+            <a href="#" class="automation-btn-primary1"
+              >Start Automation Project <i class="fas fa-arrow-right"></i
+            ></a>
+            <a href="#" class="automation-btn-secondary1"
+              >View Case Studies <i class="fas fa-chart-line"></i
+            ></a>
+          </div>
+          <div class="automation-stats-container">
+            <div class="automation-stat-item">
+              <div class="automation-counter" data-target="85">0</div>
+              <p>% Time Saved</p>
+            </div>
+            <div class="automation-stat-item">
+              <div class="automation-counter" data-target="99">0</div>
+              <p>% Accuracy</p>
+            </div>
+            <div class="automation-stat-item">
+              <div class="automation-counter" data-target="300">0</div>
+              <p>Processes Automated</p>
+            </div>
+            <div class="automation-stat-item">
+              <div class="automation-counter" data-target="60">0</div>
+              <p>% Cost Reduction</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Automation Services Section -->
+      <section class="automation-services-section">
+        <h2 class="automation-section-title">Automation Services</h2>
+        <p class="automation-section-description">
+          From robotic process automation to complex workflow orchestration, we
+          create intelligent automation solutions that transform manual
+          operations into efficient, scalable digital processes.
+        </p>
+        <div class="automation-services-cards">
+          <div class="automation-service-card">
+            <i class="fas fa-cogs automation-service-icon"></i>
+            <h3>Process Automation</h3>
+            <p>
+              End-to-end automation of repetitive business processes using RPA,
+              workflow automation, and intelligent document processing.
+            </p>
+          </div>
+          <div class="automation-service-card">
+            <i class="fas fa-project-diagram automation-service-icon"></i>
+            <h3>Workflow Orchestration</h3>
+            <p>
+              Design and implementation of complex multi-system workflows with
+              conditional logic, approvals, and integrations.
+            </p>
+          </div>
+          <div class="automation-service-card">
+            <i class="fas fa-brain automation-service-icon"></i>
+            <h3>AI-Powered Automation</h3>
+            <p>
+              Intelligent automation using machine learning, natural language
+              processing, and cognitive automation for complex decision-making.
+            </p>
+          </div>
+          <div class="automation-service-card">
+            <i class="fas fa-exchange-alt automation-service-icon"></i>
+            <h3>System Integration</h3>
+            <p>
+              Seamless integration between disparate systems, applications, and
+              data sources to create unified automated workflows.
+            </p>
+          </div>
+          <div class="automation-service-card">
+            <i class="fas fa-chart-bar automation-service-icon"></i>
+            <h3>Analytics & Monitoring</h3>
+            <p>
+              Real-time monitoring, analytics, and reporting on automation
+              performance, ROI, and process improvements.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technologies & Platforms Section -->
+      <section class="automation-tech-section">
+        <div class="automation-section-header">
+          <i class="fas fa-tools automation-tech-icon"></i>
+          <h2 class="automation-section-title">Technologies & Platforms</h2>
+        </div>
+        <p class="automation-section-description">
+          We leverage industry-leading automation technologies, RPA platforms,
+          and workflow engines to build scalable automation solutions with 99.9%
+          reliability, intelligent decision-making, and seamless integration
+          capabilities.
+        </p>
+        <div class="automation-tech-cards">
+          <div class="automation-tech-card">
+            <i class="fas fa-robot card-icon"></i>
+            <h3>RPA Platforms</h3>
+            <p>
+              UiPath, Automation Anywhere, Blue Prism for robotic process
+              automation with attended and unattended bots.
+            </p>
+          </div>
+          <div class="automation-tech-card">
+            <i class="fas fa-code card-icon"></i>
+            <h3>Workflow Engines</h3>
+            <p>
+              Camunda, Activiti, Airflow, Prefect for complex workflow
+              orchestration and business process management.
+            </p>
+          </div>
+          <div class="automation-tech-card">
+            <i class="fas fa-cloud card-icon"></i>
+            <h3>Low-Code Platforms</h3>
+            <p>
+              Microsoft Power Automate, Zapier, Integromat for rapid automation
+              development with minimal coding.
+            </p>
+          </div>
+          <div class="automation-tech-card">
+            <i class="fas fa-plug card-icon"></i>
+            <h3>Integration Tools</h3>
+            <p>
+              MuleSoft, Dell Boomi, Workato for enterprise-grade integration and
+              API management across systems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Our Automation Section -->
+      <section class="automation-choose-section">
+        <h2 class="automation-section-title">
+          Why Choose Our Automation Solutions
+        </h2>
+        <p class="automation-section-description">
+          We create automation solutions that don't just replace manual
+          tasks—they transform entire business processes with intelligent
+          decision-making, 99.9% accuracy, real-time monitoring, and measurable
+          ROI that scales with your business growth.
+        </p>
+        <div class="automation-choose-content">
+          <div class="automation-excellence-list">
+            <h3>Built for Operational Excellence</h3>
+            <div class="automation-excellence-item">
+              <i class="fas fa-bolt"></i>
+              <div>
+                <h4>Rapid Implementation</h4>
+                <p>
+                  Quick deployment with minimal disruption, delivering ROI in
+                  weeks not months through agile automation development.
+                </p>
+              </div>
+            </div>
+            <div class="automation-excellence-item">
+              <i class="fas fa-shield-alt"></i>
+              <div>
+                <h4>Enterprise Security</h4>
+                <p>
+                  Secure automation with role-based access, audit trails, data
+                  encryption, and compliance with industry standards.
+                </p>
+              </div>
+            </div>
+            <div class="automation-excellence-item">
+              <i class="fas fa-sync-alt"></i>
+              <div>
+                <h4>Scalable Architecture</h4>
+                <p>
+                  Modular design that grows with your business, handling
+                  increased volume without performance degradation.
+                </p>
+              </div>
+            </div>
+            <div class="automation-excellence-item">
+              <i class="fas fa-chart-line"></i>
+              <div>
+                <h4>Measurable ROI</h4>
+                <p>
+                  Clear metrics and reporting showing time savings, cost
+                  reduction, error elimination, and productivity gains.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="automation-feature-cards">
+            <div class="automation-feature-card">
+              <i class="fas fa-tachometer-alt"></i>
+              <h4>High Performance</h4>
+              <p>
+                Optimized automation running 24/7 with sub-second response times
+                and 99.9% uptime reliability.
+              </p>
+            </div>
+            <div class="automation-feature-card">
+              <i class="fas fa-expand-arrows-alt"></i>
+              <h4>Flexible Scaling</h4>
+              <p>
+                Automatically scale automation resources based on workload
+                demands and business needs.
+              </p>
+            </div>
+            <div class="automation-feature-card">
+              <i class="fas fa-cogs"></i>
+              <h4>Easy Maintenance</h4>
+              <p>
+                Simple monitoring, debugging, and updating of automation
+                workflows with minimal IT intervention.
+              </p>
+            </div>
+            <div class="automation-feature-card">
+              <i class="fas fa-users"></i>
+              <h4>User-Centric Design</h4>
+              <p>
+                Intuitive interfaces and notifications keeping human operators
+                informed and in control.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Automation Process Section -->
+      <section class="automation-process-section">
+        <h2 class="automation-section-title">Our Automation Process</h2>
+        <p class="automation-section-description">
+          From process discovery to production deployment, our proven
+          methodology ensures your automation delivers maximum efficiency,
+          accuracy, and business value.
+        </p>
+        <div class="automation-process-cards">
+          <div class="automation-process-card">
+            <div class="automation-process-number">1</div>
+            <h3>Process Discovery</h3>
+            <p>
+              In-depth analysis of current processes, identification of
+              automation opportunities, and ROI assessment.
+            </p>
+          </div>
+          <div class="automation-process-card">
+            <div class="automation-process-number">2</div>
+            <h3>Solution Design</h3>
+            <p>
+              Architecture design, technology selection, and development of
+              automation workflows with exception handling.
+            </p>
+          </div>
+          <div class="automation-process-card">
+            <div class="automation-process-number">3</div>
+            <h3>Development & Testing</h3>
+            <p>
+              Automation development, rigorous testing, and validation with real
+              data to ensure accuracy and reliability.
+            </p>
+          </div>
+          <div class="automation-process-card">
+            <div class="automation-process-number">4</div>
+            <h3>Deployment & Scaling</h3>
+            <p>
+              Production deployment, user training, monitoring setup, and
+              scaling across the organization.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Automation Success Stories Section -->
+      <section class="automation-success-section">
+        <h2 class="automation-section-title">Automation Success Stories</h2>
+        <p class="automation-section-description">
+          We deliver automation solutions that transform business operations,
+          reduce costs, and improve accuracy across industries and departments.
+        </p>
+        <div class="automation-success-cards">
+          <div class="automation-success-card">
+            <i class="fas fa-file-invoice-dollar automation-success-icon"></i>
+            <h3>Finance & Accounting</h3>
+            <p>
+              Automated invoice processing, reconciliation, and reporting with
+              95% time reduction and 99.9% accuracy.
+            </p>
+          </div>
+          <div class="automation-success-card">
+            <i class="fas fa-headset automation-success-icon"></i>
+            <h3>Customer Service</h3>
+            <p>
+              Automated ticket routing, response generation, and customer
+              onboarding with 80% faster resolution.
+            </p>
+          </div>
+          <div class="automation-success-card">
+            <i class="fas fa-industry automation-success-icon"></i>
+            <h3>Manufacturing & Logistics</h3>
+            <p>
+              Automated inventory management, order processing, and supply chain
+              coordination with real-time tracking.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- What Our Clients Say Section -->
+      <section class="automation-testimonials-section">
+        <h2 class="automation-section-title">What Our Clients Say</h2>
+        <p class="automation-section-description">
+          Hear from organizations that transformed their operations with our
+          automation solutions
+        </p>
+        <div class="automation-testimonial-cards">
+          <div class="automation-testimonial-card">
+            <div class="automation-testimonial-content">
+              <p>
+                "BrillianTech automated our manual invoice processing, reducing
+                processing time from 15 minutes to 30 seconds per invoice. We
+                saved 2,500 hours annually with 99.9% accuracy."
+              </p>
+            </div>
+            <div class="automation-testimonial-author">
+              <h4>Jennifer Martinez</h4>
+              <p>CFO, Global Manufacturing Corp</p>
+            </div>
+          </div>
+          <div class="automation-testimonial-card">
+            <div class="automation-testimonial-content">
+              <p>
+                "Their customer service automation reduced our response time by
+                80% and increased customer satisfaction scores from 78% to 94%
+                in just three months."
+              </p>
+            </div>
+            <div class="automation-testimonial-author">
+              <h4>Thomas Reynolds</h4>
+              <p>VP Operations, TechSupport Solutions</p>
+            </div>
+          </div>
+          <div class="automation-testimonial-card">
+            <div class="automation-testimonial-content">
+              <p>
+                "The workflow automation system eliminated 90% of manual data
+                entry errors and reduced our operational costs by 40% while
+                improving compliance."
+              </p>
+            </div>
+            <div class="automation-testimonial-author">
+              <h4>Amanda Chen</h4>
+              <p>Director of Operations, HealthFirst Inc</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Automation Strategy Section -->
+      <section class="automation-strategy-section">
+        <div class="automation-section-header">
+          <i class="fas fa-chess-king automation-strategy-icon"></i>
+          <h2 class="automation-section-title">Automation Strategy</h2>
+        </div>
+        <p class="automation-section-description">
+          From process assessment to enterprise-wide automation deployment
+          achieving 10x productivity gains. Our comprehensive automation
+          strategy encompasses process optimization, technology selection, and
+          continuous improvement for sustainable operational excellence.
+        </p>
+        <div class="automation-strategy-cards">
+          <div class="automation-strategy-card">
+            <h3>Process Assessment & Prioritization</h3>
+            <p>
+              Comprehensive process mining and analysis to identify high-ROI
+              automation opportunities. Strategic prioritization based on
+              complexity, ROI, and business impact for maximum value delivery.
+            </p>
+          </div>
+          <div class="automation-strategy-card">
+            <h3>Technology Architecture</h3>
+            <p>
+              Selection of appropriate automation platforms (RPA, workflow,
+              integration) based on process requirements. Scalable architecture
+              supporting 99.9% uptime, enterprise security, and future
+              expansion.
+            </p>
+          </div>
+          <div class="automation-strategy-card">
+            <h3>Governance & Scaling</h3>
+            <p>
+              Center of Excellence (CoE) establishment, governance framework,
+              and scaling strategy. Change management, training programs, and
+              continuous optimization for sustainable automation success.
+            </p>
+          </div>
+        </div>
+        <div class="automation-platform-cards">
+          <div class="automation-platform-card rpa-card">
+            <i class="fas fa-robot automation-platform-icon"></i>
+            <h3>RPA Solutions</h3>
+            <ul>
+              <li>UiPath, Automation Anywhere</li>
+              <li>Attended & Unattended Bots</li>
+              <li>Process Mining & Analytics</li>
+            </ul>
+          </div>
+          <div class="automation-platform-card workflow-card">
+            <i class="fas fa-project-diagram automation-platform-icon"></i>
+            <h3>Workflow Platforms</h3>
+            <ul>
+              <li>Camunda, Activiti, Airflow</li>
+              <li>Business Process Management</li>
+              <li>Complex Orchestration</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Automation & Workflows FAQ Section -->
+      <section class="automation-faq-section">
+        <h2 class="automation-section-title">Automation & Workflows FAQ</h2>
+        <div class="automation-faq-container">
+          <div class="automation-faq-item">
+            <div class="automation-faq-question">
+              <h3>What is automation and how can it benefit my business?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="automation-faq-answer">
+              <p>
+                Automation involves using technology to perform repetitive tasks
+                and processes that were previously done manually. Benefits
+                include significant time savings (typically 50-90%), cost
+                reduction (30-70%), improved accuracy (99.9%+), faster
+                processing, enhanced compliance, better employee satisfaction
+                (by eliminating tedious work), and scalability to handle
+                increased volume without adding staff.
+              </p>
+            </div>
+          </div>
+          <div class="automation-faq-item">
+            <div class="automation-faq-question">
+              <h3>What types of processes are suitable for automation?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="automation-faq-answer">
+              <p>
+                Ideal processes for automation are rule-based, repetitive,
+                high-volume, prone to human error, time-consuming, and involve
+                structured data. Common examples include data entry, report
+                generation, invoice processing, customer onboarding, employee
+                onboarding, inventory management, email processing, data
+                validation, and system integrations. We conduct thorough process
+                assessments to identify the best automation candidates in your
+                organization.
+              </p>
+            </div>
+          </div>
+          <div class="automation-faq-item">
+            <div class="automation-faq-question">
+              <h3>How long does it take to implement automation solutions?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="automation-faq-answer">
+              <p>
+                Implementation timelines vary based on process complexity.
+                Simple automations can be deployed in 2-4 weeks, while complex
+                enterprise workflows typically take 6-12 weeks. We follow an
+                agile approach with incremental deliveries, ensuring you see
+                value early. The process includes discovery (1-2 weeks), design
+                (1-2 weeks), development (2-6 weeks), testing (1-2 weeks), and
+                deployment (1 week).
+              </p>
+            </div>
+          </div>
+          <div class="automation-faq-item">
+            <div class="automation-faq-question">
+              <h3>
+                What's the difference between RPA and workflow automation?
+              </h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="automation-faq-answer">
+              <p>
+                RPA (Robotic Process Automation) focuses on automating
+                repetitive, rule-based tasks by mimicking human interactions
+                with software applications. Workflow automation focuses on
+                orchestrating end-to-end business processes that involve
+                multiple steps, systems, people, and decisions. RPA is
+                task-oriented, while workflow automation is process-oriented.
+                Often, they work together—RPA handles individual tasks within
+                larger workflows orchestrated by workflow automation tools.
+              </p>
+            </div>
+          </div>
+          <div class="automation-faq-item">
+            <div class="automation-faq-question">
+              <h3>How do you ensure automation security and compliance?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="automation-faq-answer">
+              <p>
+                We implement multiple security layers including role-based
+                access controls, encryption of sensitive data, comprehensive
+                audit trails, secure credential management, and compliance with
+                regulations like GDPR, HIPAA, SOX, and PCI-DSS. Our automations
+                include proper error handling, data validation, and exception
+                management. We conduct security assessments and penetration
+                testing before deployment.
+              </p>
+            </div>
+          </div>
+          <div class="automation-faq-item">
+            <div class="automation-faq-question">
+              <h3>What about ongoing maintenance and support?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="automation-faq-answer">
+              <p>
+                We offer comprehensive maintenance and support packages
+                including 24/7 monitoring, performance optimization, regular
+                updates, exception handling, and enhancement services. Our
+                support includes monitoring automation performance, handling
+                system changes, updating automation when applications change,
+                and scaling automations as business needs evolve. We provide
+                detailed analytics and regular reporting on automation
+                performance and ROI.
+              </p>
+            </div>
+          </div>
+          <div class="automation-faq-item">
+            <div class="automation-faq-question">
+              <h3>Can automation work with our existing systems?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="automation-faq-answer">
+              <p>
+                Yes, automation solutions are designed to work with your
+                existing systems without requiring major changes. Modern
+                automation tools can interact with virtually any
+                application—web-based, desktop, legacy systems, databases, APIs,
+                and more. We use non-invasive techniques that work at the
+                presentation layer (UI automation) or integration layer (APIs),
+                avoiding the need for costly system modifications.
+              </p>
+            </div>
+          </div>
+          <div class="automation-faq-item">
+            <div class="automation-faq-question">
+              <h3>How do you measure automation ROI?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="automation-faq-answer">
+              <p>
+                We measure ROI through multiple metrics: time savings (hours
+                reduced), cost reduction (FTE savings, error reduction costs),
+                productivity gains (output increase), accuracy improvement
+                (error rate reduction), compliance improvement (audit findings),
+                and business impact (faster processing, better customer
+                experience). We provide detailed dashboards showing real-time
+                ROI metrics and conduct quarterly business reviews to track
+                ongoing value.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ready to Automate Section -->
+      <section class="automation-launch-section">
+        <h2 class="automation-section-title">
+          Ready to Transform Your Operations?
+        </h2>
+        <p class="automation-section-description">
+          Empower your organization with intelligent automation solutions that
+          eliminate manual work, reduce errors, and unlock new levels of
+          efficiency. Transform your business processes with scalable automation
+          that delivers measurable ROI, enhances employee satisfaction, and
+          creates competitive advantage.
+        </p>
+        <div class="automation-launch-buttons">
+          <a href="#" class="automation-btn-launch-primary"
+            >Get Automation Assessment <i class="fas fa-comments"></i
+          ></a>
+          <a href="#" class="automation-btn-launch-secondary"
+            >View Success Stories <i class="fas fa-book-open"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="footer-container">
+        <!-- Top Section with Logo and Tagline -->
+        <div class="footer-top">
+          <div class="footer-logo-container">
+            <div class="logo-wrapper">
+              <img
+                src="/Intallia24/Images/logo1.png"
+                alt="Intallia Logo"
+                class="footer-logo"
+              />
+              <div class="logo-text">
+                <span class="logo-top">INTALIA</span>
+                <span class="logo-bottom">Building Tomorrow's Workforce</span>
+              </div>
+            </div>
+            <p class="footer-tagline">
+              Technology is at the core of everything we do—but it’s our people
+              who make the real difference. At Intallia, we bring together a
+              curated team of innovators, problem-solvers, and domain experts
+              who blend deep technical skills with a product-first mindset.
+            </p>
+          </div>
+
+          <div class="footer-cta">
+            <button class="btn-primary">Start Your Project →</button>
+            <button class="btn-secondary">Free Consultation</button>
+          </div>
+        </div>
+
+        <!-- Middle Section with Services, Developers, Company Links -->
+        <div class="footer-middle">
+          <div class="footer-column">
+            <h3 class="footer-heading">Services</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html"
+                  >Data Science & Engineering</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/website-development.html"
+                  >Web Application Development</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html"
+                  >Mobile Application Development</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html"
+                  >AI / ML Engineering</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/data-engineering.html"
+                  >Data Engineering Solutions</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/automation-workflows.html"
+                  >Automation & Workflows</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Hire Developers</h3>
+            <ul class="footer-links">
+              <li><a href="#">Hire React Developers</a></li>
+              <li><a href="#">Hire Node.js Developers</a></li>
+              <li><a href="#">Hire Java Developers</a></li>
+              <li><a href="#">Hire Python Developers</a></li>
+              <li><a href="#">Hire Flutter Developers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/Intallia24/index.html">Home</a></li>
+              <li><a href="/Intallia24/Pages/About/about.html">Our Company</a></li>
+              <li><a href="/Intallia24/Pages/About/our-work.html">How We Work</a></li>
+              <li><a href="/Intallia24/Pages/About/our-values.html">Our Values</a></li>
+              <li>
+                <a href="/Intallia24/Pages/About/our-working-culture.html"
+                  >Our Working Culture</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Get In Touch</h3>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> 123 Tech Street,
+                Innovation City
+              </p>
+              <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+              <p><i class="fas fa-envelope"></i> info@intallia.com</p>
+            </div>
+
+            <div class="newsletter">
+              <h4>Subscribe to our newsletter</h4>
+              <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email" />
+                <button class="btn-subscribe">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section with Social Media and Copyright -->
+        <div class="footer-bottom">
+          <div class="social-icons">
+            <a href="#" class="social-icon" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Twitter">
+              <i class="fab fa-twitter"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Instagram">
+              <i class="fab fa-instagram"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="GitHub">
+              <i class="fab fa-github"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="YouTube">
+              <i class="fab fa-youtube"></i>
+              <span class="icon-bg"></span>
+            </a>
+          </div>
+
+          <div class="copyright">
+            <p>
+              &copy; <span id="current-year">2024</span> Intallia. All rights
+              reserved. | <a href="#">Privacy Policy</a> |
+              <a href="#">Terms of Service</a>
+            </p>
+          </div>
+
+          <div class="footer-quote">
+            <button class="btn-quote">Get Quote</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/Intallia24/JS/automation-workflows.js"></script>
+    <script src="/Intallia24/JS/script.js"></script>
+    <script src="/Intallia24/JS/footer.js"></script>
+  </body>
+</html>

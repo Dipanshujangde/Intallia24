@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Engineering Solutions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Intallia24/CSS/data-engineering.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/navbar.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/footer.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header">
+      <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo-container">
+          <div class="logo">
+            <div class="logo-text">
+              <!-- <span class="logo-main">INTALLA 24</span>
+              <span class="logo-sub">Building Tomorrow's Workforce</span> -->
+              <a href="/Intallia24/index.html">
+                <img src="/Intallia24/Images/intallia-logo.png" alt="" />
+              </a>
+            </div>
+            <div class="logo-gradient"></div>
+          </div>
+          <!-- Mobile Menu Toggle -->
+          <button class="menu-toggle" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="/Intallia24/index.html" class="nav-link active">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+
+          <!-- About Us Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">
+              <i class="fas fa-info-circle"></i> About Us
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/about.html">
+                  <i class="fas fa-building"></i>
+                  <span>Our Company</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-work.html">
+                  <i class="fas fa-cogs"></i>
+                  <span>How We Work</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-values.html">
+                  <i class="fas fa-heart"></i>
+                  <span>Our Values</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-working-culture.html">
+                  <i class="fas fa-users"></i>
+                  <span>Our Working Culture</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#services" class="nav-link dropdown-toggle">
+              <i class="fas fa-cogs"></i> Services
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html">
+                  <i class="fas fa-layer-group"></i>
+                  <span>Data Science & Analytics</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html">
+                  <i class="fas fa-chart-bar"></i>
+                  <span>AL / ML Engineering</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/website-development.html">
+                  <i class="fas fa-database"></i>
+                  <span>Website Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html">
+                  <i class="fas fa-mobile-alt"></i>
+                  <span>Mobile Application Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-engineering.html">
+                  <i class="fas fa-globe"></i>
+                  <span>Data Engineering Solutions</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/automation-workflows.html">
+                  <i class="fas fa-robot"></i>
+                  <span>Automation & Workflows</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#" class="view-more" id="viewMoreServices">
+                  <i class="fas fa-eye"></i>
+                  <span>View More Services</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Products -->
+          <li class="nav-item">
+            <a href="#products" class="nav-link">
+              <i class="fas fa-box-open"></i> Products
+            </a>
+          </li>
+        </ul>
+
+        <!-- Get Free Consultation Button -->
+        <div class="cta-container">
+          <button class="cta-button" id="consultationBtn">
+            <i class="fas fa-comment-dots"></i> Get Free Consultation
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <!-- <main class="main-content">
+      <div class="container">
+        <div class="content-section" id="contentDisplay">
+          <h2 id="sectionTitle">Home Content</h2>
+          <p id="sectionDescription">
+            Welcome to our website! Select any menu item to see detailed
+            information about that section.
+          </p>
+        </div>
+      </div>
+    </main> -->
+
+    <!-- Consultation Modal -->
+    <div class="modal" id="consultationModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Get Free Consultation</h3>
+          <button class="close-modal" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Fill out the form below and our experts will contact you within 24
+            hours.
+          </p>
+          <form id="consultationForm">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Phone Number" />
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="" disabled selected>Select Service</option>
+                <option value="fullstack">Full Stack Development</option>
+                <option value="analytics">Data Analytics</option>
+                <option value="datascience">Data Science</option>
+                <option value="mobile">Mobile Application Development</option>
+                <option value="web">Web Application Development</option>
+                <option value="ai">AI Powered Platform</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-btn">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="data-engineering-container">
+      <!-- Hero Section -->
+      <section class="data-hero-section">
+        <div class="data-hero-content">
+          <div class="data-title-container">
+            <i class="fas fa-database data-title-icon"></i>
+            <h1 class="data-main-title">
+              Data Engineering <span class="data-highlight">Solutions</span>
+            </h1>
+          </div>
+          <p class="data-hero-description">
+            We build robust, scalable data pipelines and infrastructure that
+            transform raw data into strategic assets. Our data engineering
+            services help organizations harness the power of their data through
+            modern data platforms, real-time processing, and AI-ready data
+            ecosystems that drive informed decision-making and business growth.
+          </p>
+          <div class="data-hero-buttons">
+            <a href="#" class="data-btn-primary1"
+              >Start Your Data Project <i class="fas fa-arrow-right"></i
+            ></a>
+            <a href="#" class="data-btn-secondary1"
+              >View Case Studies <i class="fas fa-chart-line"></i
+            ></a>
+          </div>
+          <div class="data-stats-container">
+            <div class="data-stat-item">
+              <div class="data-counter" data-target="150">0</div>
+              <p>Data Pipelines Built</p>
+            </div>
+            <div class="data-stat-item">
+              <div class="data-counter" data-target="99.5">0</div>
+              <p>Data Accuracy</p>
+            </div>
+            <div class="data-stat-item">
+              <div class="data-counter" data-target="1000">0</div>
+              <p>TB+ Processed Daily</p>
+            </div>
+            <div class="data-stat-item">
+              <div class="data-counter" data-target="95">0</div>
+              <p>% Faster Insights</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Engineering Services Section -->
+      <section class="data-services-section">
+        <h2 class="data-section-title">Data Engineering Services</h2>
+        <p class="data-section-description">
+          From data ingestion to advanced analytics, we create comprehensive
+          data solutions that transform your information infrastructure and
+          unlock actionable business insights.
+        </p>
+        <div class="data-services-cards">
+          <div class="data-service-card">
+            <i class="fas fa-stream data-service-icon"></i>
+            <h3>Data Pipeline Development</h3>
+            <p>
+              End-to-end data pipeline architecture with ETL/ELT processes, data
+              validation, and workflow orchestration for reliable data
+              processing.
+            </p>
+          </div>
+          <div class="data-service-card">
+            <i class="fas fa-cloud data-service-icon"></i>
+            <h3>Cloud Data Platforms</h3>
+            <p>
+              Modern data lakes, warehouses, and lakehouses on AWS, Azure, and
+              GCP with scalable storage and compute resources.
+            </p>
+          </div>
+          <div class="data-service-card">
+            <i class="fas fa-bolt data-service-icon"></i>
+            <h3>Real-Time Data Processing</h3>
+            <p>
+              Streaming data solutions with Apache Kafka, Spark Streaming, and
+              Flink for immediate insights and event-driven architectures.
+            </p>
+          </div>
+          <div class="data-service-card">
+            <i class="fas fa-cogs data-service-icon"></i>
+            <h3>DataOps & MLOps</h3>
+            <p>
+              Automated data workflows, CI/CD for data pipelines, and machine
+              learning operations for production-ready AI models.
+            </p>
+          </div>
+          <div class="data-service-card">
+            <i class="fas fa-shield-alt data-service-icon"></i>
+            <h3>Data Governance & Quality</h3>
+            <p>
+              Comprehensive data governance frameworks, quality monitoring,
+              lineage tracking, and compliance management.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technologies & Tools Section -->
+      <section class="data-tech-section">
+        <div class="data-section-header">
+          <i class="fas fa-tools data-tech-icon"></i>
+          <h2 class="data-section-title">Technologies & Tools</h2>
+        </div>
+        <p class="data-section-description">
+          We leverage industry-leading data engineering technologies,
+          frameworks, and cloud platforms to build scalable, performant data
+          infrastructure with sub-second query performance, efficient resource
+          utilization, and enterprise-grade reliability.
+        </p>
+        <div class="data-tech-cards">
+          <div class="data-tech-card">
+            <i class="fab fa-aws card-icon"></i>
+            <h3>Cloud Platforms</h3>
+            <p>
+              AWS (Redshift, Glue, EMR), Azure (Synapse, Data Factory), GCP
+              (BigQuery, Dataflow) for scalable cloud data solutions.
+            </p>
+          </div>
+          <div class="data-tech-card">
+            <i class="fas fa-code card-icon"></i>
+            <h3>Processing Frameworks</h3>
+            <p>
+              Apache Spark, Hadoop, Flink, Airflow, dbt for distributed
+              processing and workflow orchestration.
+            </p>
+          </div>
+          <div class="data-tech-card">
+            <i class="fas fa-database card-icon"></i>
+            <h3>Databases & Warehouses</h3>
+            <p>
+              Snowflake, Redshift, BigQuery, PostgreSQL, MongoDB for structured
+              and unstructured data storage.
+            </p>
+          </div>
+          <div class="data-tech-card">
+            <i class="fas fa-project-diagram card-icon"></i>
+            <h3>Orchestration & Monitoring</h3>
+            <p>
+              Apache Airflow, Prefect, Dagster, Grafana, Datadog for pipeline
+              orchestration and performance monitoring.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Our Data Engineering Section -->
+      <section class="data-choose-section">
+        <h2 class="data-section-title">Why Choose Our Data Engineering</h2>
+        <p class="data-section-description">
+          We create data infrastructure that doesn't just collect and store
+          information—it delivers real-time insights with sub-second latency,
+          scales effortlessly from gigabytes to petabytes, maintains 99.9%
+          uptime, and transforms raw data into measurable business value.
+        </p>
+        <div class="data-choose-content">
+          <div class="data-excellence-list">
+            <h3>Built for Data Excellence</h3>
+            <div class="data-excellence-item">
+              <i class="fas fa-database"></i>
+              <div>
+                <h4>Scalable Architecture</h4>
+                <p>
+                  Horizontally scalable data platforms that grow with your
+                  business needs and data volumes.
+                </p>
+              </div>
+            </div>
+            <div class="data-excellence-item">
+              <i class="fas fa-shield-alt"></i>
+              <div>
+                <h4>Enterprise Security</h4>
+                <p>
+                  End-to-end data encryption, access controls, audit trails, and
+                  compliance with industry standards.
+                </p>
+              </div>
+            </div>
+            <div class="data-excellence-item">
+              <i class="fas fa-sync-alt"></i>
+              <div>
+                <h4>Real-Time Processing</h4>
+                <p>
+                  Stream processing capabilities for immediate insights and
+                  decision-making from live data streams.
+                </p>
+              </div>
+            </div>
+            <div class="data-excellence-item">
+              <i class="fas fa-chart-line"></i>
+              <div>
+                <h4>Advanced Analytics Ready</h4>
+                <p>
+                  Data platforms optimized for machine learning, AI, and
+                  advanced analytical workloads.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="data-feature-cards">
+            <div class="data-feature-card">
+              <i class="fas fa-tachometer-alt"></i>
+              <h4>High Performance</h4>
+              <p>
+                Optimized queries and processing with sub-second response times
+                for large datasets.
+              </p>
+            </div>
+            <div class="data-feature-card">
+              <i class="fas fa-expand-arrows-alt"></i>
+              <h4>Elastic Scalability</h4>
+              <p>
+                Automatically scale resources based on workload demands and data
+                volumes.
+              </p>
+            </div>
+            <div class="data-feature-card">
+              <i class="fas fa-dollar-sign"></i>
+              <h4>Cost Optimization</h4>
+              <p>
+                Intelligent resource management and cost monitoring for cloud
+                data platforms.
+              </p>
+            </div>
+            <div class="data-feature-card">
+              <i class="fas fa-search"></i>
+              <h4>Data Discovery</h4>
+              <p>
+                Comprehensive metadata management and data cataloging for easy
+                discovery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Data Engineering Process Section -->
+      <section class="data-process-section">
+        <h2 class="data-section-title">Our Data Engineering Process</h2>
+        <p class="data-section-description">
+          From data assessment to production deployment, our proven process
+          ensures your data infrastructure delivers reliable, actionable
+          insights and business value.
+        </p>
+        <div class="data-process-cards">
+          <div class="data-process-card">
+            <div class="data-process-number">1</div>
+            <h3>Assessment & Strategy</h3>
+            <p>
+              Data landscape analysis, requirements gathering, and architecture
+              planning for optimal data solutions.
+            </p>
+          </div>
+          <div class="data-process-card">
+            <div class="data-process-number">2</div>
+            <h3>Architecture Design</h3>
+            <p>
+              Data model design, pipeline architecture, and technology selection
+              for scalable solutions.
+            </p>
+          </div>
+          <div class="data-process-card">
+            <div class="data-process-number">3</div>
+            <h3>Development & Integration</h3>
+            <p>
+              Pipeline development, data integration, and quality implementation
+              with agile methodology.
+            </p>
+          </div>
+          <div class="data-process-card">
+            <div class="data-process-number">4</div>
+            <h3>Deployment & Optimization</h3>
+            <p>
+              Production deployment, performance tuning, monitoring setup, and
+              ongoing optimization.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Platform Success Section -->
+      <section class="data-platform-section">
+        <h2 class="data-section-title">Data Platform Success</h2>
+        <p class="data-section-description">
+          We deliver end-to-end data platform solutions that ensure data
+          reliability, accessibility, and actionable insights for business users
+          across your organization.
+        </p>
+        <div class="data-platform-cards">
+          <div class="data-platform-card">
+            <i class="fas fa-check-circle data-platform-icon"></i>
+            <h3>Data Quality & Reliability</h3>
+            <p>
+              Comprehensive data validation, monitoring, and quality assurance
+              for trustworthy analytics.
+            </p>
+          </div>
+          <div class="data-platform-card">
+            <i class="fas fa-users data-platform-icon"></i>
+            <h3>Self-Service Analytics</h3>
+            <p>
+              Empowering business users with easy-to-use tools for data
+              exploration and visualization.
+            </p>
+          </div>
+          <div class="data-platform-card">
+            <i class="fas fa-chart-bar data-platform-icon"></i>
+            <h3>Performance & Insights</h3>
+            <p>
+              High-performance queries and dashboards that deliver insights in
+              seconds, not hours.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- What Our Clients Say Section -->
+      <section class="data-testimonials-section">
+        <h2 class="data-section-title">What Our Clients Say</h2>
+        <p class="data-section-description">
+          Hear from organizations that transformed their data capabilities with
+          our engineering solutions
+        </p>
+        <div class="data-testimonial-cards">
+          <div class="data-testimonial-card">
+            <div class="data-testimonial-content">
+              <p>
+                "BrillianTech transformed our fragmented data systems into a
+                unified analytics platform. Our reporting time reduced from days
+                to minutes, and data-driven decisions increased by 300%."
+              </p>
+            </div>
+            <div class="data-testimonial-author">
+              <h4>Michael Chen</h4>
+              <p>CDO, FinTech Solutions Inc.</p>
+            </div>
+          </div>
+          <div class="data-testimonial-card">
+            <div class="data-testimonial-content">
+              <p>
+                "Their real-time data pipeline architecture enabled us to
+                process 10TB of daily transaction data with 99.99% accuracy. The
+                system scaled seamlessly as our business grew."
+              </p>
+            </div>
+            <div class="data-testimonial-author">
+              <h4>Sarah Johnson</h4>
+              <p>VP Data, Retail Dynamics</p>
+            </div>
+          </div>
+          <div class="data-testimonial-card">
+            <div class="data-testimonial-content">
+              <p>
+                "The data governance framework they implemented solved our
+                compliance challenges while improving data accessibility across
+                departments. A game-changer for our analytics maturity."
+              </p>
+            </div>
+            <div class="data-testimonial-author">
+              <h4>Robert Williams</h4>
+              <p>Head of Analytics, HealthFirst Corp</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Engineering Strategy Section -->
+      <section class="data-strategy-section">
+        <div class="data-section-header">
+          <i class="fas fa-chess-king data-strategy-icon"></i>
+          <h2 class="data-section-title">Data Engineering Strategy</h2>
+        </div>
+        <p class="data-section-description">
+          From legacy system modernization to building cloud-native data
+          platforms achieving 10x faster insights. Our proven data engineering
+          approach encompasses comprehensive data strategy, architecture design,
+          and continuous optimization for sustainable data-driven growth.
+        </p>
+        <div class="data-strategy-cards">
+          <div class="data-strategy-card">
+            <h3>Modernization Strategy</h3>
+            <p>
+              Legacy system assessment and migration to cloud-native
+              architectures with minimal disruption. Data platform modernization
+              achieving 5-10x performance improvements and 30-50% cost
+              reduction.
+            </p>
+          </div>
+          <div class="data-strategy-card">
+            <h3>Performance & Scalability</h3>
+            <p>
+              Sub-second query performance on billion-row datasets, 99.9%
+              pipeline reliability, elastic scaling from GB to PB. Cost
+              optimization keeping cloud spend 20-40% below industry benchmarks.
+            </p>
+          </div>
+          <div class="data-strategy-card">
+            <h3>Operational Excellence</h3>
+            <p>
+              Automated monitoring, alerting, and incident response. DataOps
+              practices reducing deployment time by 70%. Continuous data quality
+              monitoring with automated anomaly detection.
+            </p>
+          </div>
+        </div>
+        <div class="data-cloud-cards">
+          <div class="data-cloud-card aws-card">
+            <i class="fab fa-aws data-cloud-icon"></i>
+            <h3>AWS Data Stack</h3>
+            <ul>
+              <li>Redshift, Athena, Glue</li>
+              <li>EMR, Kinesis, Lake Formation</li>
+              <li>QuickSight, SageMaker</li>
+            </ul>
+          </div>
+          <div class="data-cloud-card azure-card">
+            <i class="fab fa-microsoft data-cloud-icon"></i>
+            <h3>Azure Data Platform</h3>
+            <ul>
+              <li>Synapse, Data Factory, Databricks</li>
+              <li>Data Lake Storage, Stream Analytics</li>
+              <li>Power BI, Machine Learning</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Engineering FAQ Section -->
+      <section class="data-faq-section">
+        <h2 class="data-section-title">Data Engineering FAQ</h2>
+        <div class="data-faq-container">
+          <div class="data-faq-item">
+            <div class="data-faq-question">
+              <h3>What is data engineering and why is it important?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="data-faq-answer">
+              <p>
+                Data engineering involves designing, building, and maintaining
+                the systems and infrastructure that enable data collection,
+                storage, processing, and analysis. It's crucial because raw data
+                is useless without proper engineering—data engineers create the
+                pipelines and platforms that transform data into actionable
+                insights, power analytics, and enable machine learning
+                applications.
+              </p>
+            </div>
+          </div>
+          <div class="data-faq-item">
+            <div class="data-faq-question">
+              <h3>How much does data engineering cost?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="data-faq-answer">
+              <p>
+                Data engineering costs vary based on complexity, data volume,
+                and technology choices. Basic data pipelines start from $25,000,
+                while enterprise data platforms with real-time processing,
+                advanced analytics, and machine learning capabilities can range
+                from $100,000 to $500,000+. We provide detailed proposals after
+                assessing your specific data landscape and requirements.
+              </p>
+            </div>
+          </div>
+          <div class="data-faq-item">
+            <div class="data-faq-question">
+              <h3>How long does it take to build a data platform?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="data-faq-answer">
+              <p>
+                Implementation timelines depend on data complexity and platform
+                scope. A basic data pipeline can be delivered in 4-8 weeks,
+                while comprehensive enterprise data platforms typically take 3-6
+                months. We follow an agile approach with incremental deliveries,
+                ensuring you see value early in the process.
+              </p>
+            </div>
+          </div>
+          <div class="data-faq-item">
+            <div class="data-faq-question">
+              <h3>Do you help with data migration from legacy systems?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="data-faq-answer">
+              <p>
+                Yes, we specialize in modernizing legacy data systems and
+                migrating them to cloud-native architectures. Our approach
+                includes assessment, planning, incremental migration,
+                validation, and cutover strategies to minimize disruption. We've
+                successfully migrated systems from on-premise Hadoop, Oracle,
+                SQL Server, and other legacy platforms to modern cloud data
+                platforms.
+              </p>
+            </div>
+          </div>
+          <div class="data-faq-item">
+            <div class="data-faq-question">
+              <h3>How do you ensure data security and compliance?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="data-faq-answer">
+              <p>
+                We implement multiple security layers including data encryption
+                (at rest and in transit), fine-grained access controls, audit
+                logging, data masking, and tokenization. We ensure compliance
+                with GDPR, CCPA, HIPAA, PCI-DSS, and other regulations through
+                proper data handling, retention policies, and privacy by design
+                principles.
+              </p>
+            </div>
+          </div>
+          <div class="data-faq-item">
+            <div class="data-faq-question">
+              <h3>What about ongoing maintenance and support?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="data-faq-answer">
+              <p>
+                We offer comprehensive maintenance and support packages that
+                include 24/7 monitoring, performance optimization, cost
+                management, security updates, and regular enhancements. Our
+                DataOps approach ensures continuous improvement with automated
+                testing, deployment, and monitoring of your data infrastructure.
+              </p>
+            </div>
+          </div>
+          <div class="data-faq-item">
+            <div class="data-faq-question">
+              <h3>Can you help with real-time data processing?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="data-faq-answer">
+              <p>
+                Absolutely. We build real-time data pipelines using technologies
+                like Apache Kafka, Spark Streaming, Flink, and cloud-native
+                streaming services. Our solutions enable real-time analytics,
+                event-driven architectures, and immediate insights from live
+                data streams with sub-second latency.
+              </p>
+            </div>
+          </div>
+          <div class="data-faq-item">
+            <div class="data-faq-question">
+              <h3>Do you provide training for our team?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="data-faq-answer">
+              <p>
+                Yes, we offer comprehensive training programs for your data
+                engineers, analysts, and business users. Training covers
+                platform usage, data pipeline management, best practices, and
+                troubleshooting. We ensure knowledge transfer so your team can
+                effectively manage and extend the data platform.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ready to Transform Your Data Section -->
+      <section class="data-launch-section">
+        <h2 class="data-section-title">
+          Ready to Transform Your Data Infrastructure?
+        </h2>
+        <p class="data-section-description">
+          Empower your organization with professionally engineered data
+          solutions that deliver reliable, scalable, and actionable insights.
+          Transform raw data into strategic assets that drive informed
+          decision-making, operational efficiency, and competitive advantage in
+          today's data-driven world.
+        </p>
+        <div class="data-launch-buttons">
+          <a href="#" class="data-btn-launch-primary"
+            >Get Data Strategy Consultation <i class="fas fa-comments"></i
+          ></a>
+          <a href="#" class="data-btn-launch-secondary"
+            >View Data Success Stories <i class="fas fa-book-open"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="footer-container">
+        <!-- Top Section with Logo and Tagline -->
+        <div class="footer-top">
+          <div class="footer-logo-container">
+            <div class="logo-wrapper">
+              <img
+                src="/Intallia24/Images/logo1.png"
+                alt="Intallia Logo"
+                class="footer-logo"
+              />
+              <div class="logo-text">
+                <span class="logo-top">INTALIA</span>
+                <span class="logo-bottom">Building Tomorrow's Workforce</span>
+              </div>
+            </div>
+            <p class="footer-tagline">
+              Technology is at the core of everything we do—but it’s our people
+              who make the real difference. At Intallia, we bring together a
+              curated team of innovators, problem-solvers, and domain experts
+              who blend deep technical skills with a product-first mindset.
+            </p>
+          </div>
+
+          <div class="footer-cta">
+            <button class="btn-primary">Start Your Project →</button>
+            <button class="btn-secondary">Free Consultation</button>
+          </div>
+        </div>
+
+        <!-- Middle Section with Services, Developers, Company Links -->
+        <div class="footer-middle">
+          <div class="footer-column">
+            <h3 class="footer-heading">Services</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html"
+                  >Data Science & Engineering</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/website-development.html"
+                  >Web Application Development</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html"
+                  >Mobile Application Development</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html"
+                  >AI / ML Engineering</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/data-engineering.html"
+                  >Data Engineering Solutions</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/automation-workflows.html"
+                  >Automation & Workflows</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Hire Developers</h3>
+            <ul class="footer-links">
+              <li><a href="#">Hire React Developers</a></li>
+              <li><a href="#">Hire Node.js Developers</a></li>
+              <li><a href="#">Hire Java Developers</a></li>
+              <li><a href="#">Hire Python Developers</a></li>
+              <li><a href="#">Hire Flutter Developers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/Intallia24/index.html">Home</a></li>
+              <li><a href="/Intallia24/Pages/About/about.html">Our Company</a></li>
+              <li><a href="/Intallia24/Pages/About/our-work.html">How We Work</a></li>
+              <li><a href="/Intallia24/Pages/About/our-values.html">Our Values</a></li>
+              <li>
+                <a href="/Intallia24/Pages/About/our-working-culture.html"
+                  >Our Working Culture</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Get In Touch</h3>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> 123 Tech Street,
+                Innovation City
+              </p>
+              <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+              <p><i class="fas fa-envelope"></i> info@intallia.com</p>
+            </div>
+
+            <div class="newsletter">
+              <h4>Subscribe to our newsletter</h4>
+              <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email" />
+                <button class="btn-subscribe">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section with Social Media and Copyright -->
+        <div class="footer-bottom">
+          <div class="social-icons">
+            <a href="#" class="social-icon" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Twitter">
+              <i class="fab fa-twitter"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Instagram">
+              <i class="fab fa-instagram"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="GitHub">
+              <i class="fab fa-github"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="YouTube">
+              <i class="fab fa-youtube"></i>
+              <span class="icon-bg"></span>
+            </a>
+          </div>
+
+          <div class="copyright">
+            <p>
+              &copy; <span id="current-year">2024</span> Intallia. All rights
+              reserved. | <a href="#">Privacy Policy</a> |
+              <a href="#">Terms of Service</a>
+            </p>
+          </div>
+
+          <div class="footer-quote">
+            <button class="btn-quote">Get Quote</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/Intallia24/JS/data-engineering.js"></script>
+    <script src="/Intallia24/JS/script.js"></script>
+    <script src="/Intallia24/JS/footer.js"></script>
+  </body>
+</html>

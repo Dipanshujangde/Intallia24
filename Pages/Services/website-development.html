@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Development</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Intallia24/CSS/website-development.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/navbar.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/footer.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header">
+      <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo-container">
+          <div class="logo">
+            <div class="logo-text">
+              <!-- <span class="logo-main">INTALLA 24</span>
+              <span class="logo-sub">Building Tomorrow's Workforce</span> -->
+              <a href="/Intallia24/index.html">
+                <img src="/Intallia24/Images/intallia-logo.png" alt="" />
+              </a>
+            </div>
+            <div class="logo-gradient"></div>
+          </div>
+          <!-- Mobile Menu Toggle -->
+          <button class="menu-toggle" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="/Intallia24/index.html" class="nav-link active">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+
+          <!-- About Us Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">
+              <i class="fas fa-info-circle"></i> About Us
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/about.html">
+                  <i class="fas fa-building"></i>
+                  <span>Our Company</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-work.html">
+                  <i class="fas fa-cogs"></i>
+                  <span>How We Work</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-values.html">
+                  <i class="fas fa-heart"></i>
+                  <span>Our Values</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-working-culture.html">
+                  <i class="fas fa-users"></i>
+                  <span>Our Working Culture</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#services" class="nav-link dropdown-toggle">
+              <i class="fas fa-cogs"></i> Services
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html">
+                  <i class="fas fa-layer-group"></i>
+                  <span>Data Science & Analytics</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html">
+                  <i class="fas fa-chart-bar"></i>
+                  <span>AL / ML Engineering</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/website-development.html">
+                  <i class="fas fa-database"></i>
+                  <span>Website Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html">
+                  <i class="fas fa-mobile-alt"></i>
+                  <span>Mobile Application Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-engineering.html">
+                  <i class="fas fa-globe"></i>
+                  <span>Data Engineering Solutions</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/automation-workflows.html">
+                  <i class="fas fa-robot"></i>
+                  <span>Automation & Workflows</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#" class="view-more" id="viewMoreServices">
+                  <i class="fas fa-eye"></i>
+                  <span>View More Services</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Products -->
+          <li class="nav-item">
+            <a href="#products" class="nav-link">
+              <i class="fas fa-box-open"></i> Products
+            </a>
+          </li>
+        </ul>
+
+        <!-- Get Free Consultation Button -->
+        <div class="cta-container">
+          <button class="cta-button" id="consultationBtn">
+            <i class="fas fa-comment-dots"></i> Get Free Consultation
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <!-- <main class="main-content">
+      <div class="container">
+        <div class="content-section" id="contentDisplay">
+          <h2 id="sectionTitle">Home Content</h2>
+          <p id="sectionDescription">
+            Welcome to our website! Select any menu item to see detailed
+            information about that section.
+          </p>
+        </div>
+      </div>
+    </main> -->
+
+    <!-- Consultation Modal -->
+    <div class="modal" id="consultationModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Get Free Consultation</h3>
+          <button class="close-modal" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Fill out the form below and our experts will contact you within 24
+            hours.
+          </p>
+          <form id="consultationForm">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Phone Number" />
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="" disabled selected>Select Service</option>
+                <option value="fullstack">Full Stack Development</option>
+                <option value="analytics">Data Analytics</option>
+                <option value="datascience">Data Science</option>
+                <option value="mobile">Mobile Application Development</option>
+                <option value="web">Web Application Development</option>
+                <option value="ai">AI Powered Platform</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-btn">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="website-dev-container">
+      <!-- Hero Section -->
+      <section class="web-hero-section">
+        <div class="web-hero-content">
+          <div class="web-title-container">
+            <i class="fas fa-globe web-title-icon"></i>
+            <h1 class="web-main-title">
+              Website <span class="web-highlight">Development</span>
+            </h1>
+          </div>
+          <p class="web-hero-description">
+            We create stunning, high-performance websites that drive business
+            growth. Our web development services help businesses establish
+            powerful online presence, engage customers effectively, and convert
+            visitors into loyal customers through exceptional digital
+            experiences.
+          </p>
+          <div class="web-hero-buttons">
+            <a href="#" class="web-btn-primary"
+              >Start Your Web Project <i class="fas fa-arrow-right"></i
+            ></a>
+            <a href="#" class="web-btn-secondary"
+              >View Web Portfolio <i class="fas fa-eye"></i
+            ></a>
+          </div>
+          <div class="web-stats-container">
+            <div class="web-stat-item">
+              <div class="web-counter" data-target="150">0</div>
+              <p>Websites Built</p>
+            </div>
+            <div class="web-stat-item">
+              <div class="web-counter" data-target="98">0</div>
+              <p>Client Satisfaction</p>
+            </div>
+            <div class="web-stat-item">
+              <div class="web-counter" data-target="2.5">0</div>
+              <p>Sec Load Time</p>
+            </div>
+            <div class="web-stat-item">
+              <div class="web-counter" data-target="99.9">0</div>
+              <p>% Uptime</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Website Services Section -->
+      <section class="web-services-section">
+        <h2 class="web-section-title">Website Development Services</h2>
+        <p class="web-section-description">
+          From corporate websites to complex web applications, we deliver
+          comprehensive web solutions that engage users, drive conversions, and
+          grow your business online.
+        </p>
+        <div class="web-services-cards">
+          <div class="web-service-card">
+            <i class="fas fa-building web-service-icon"></i>
+            <h3>Corporate Websites</h3>
+            <p>
+              Professional business websites that establish brand authority,
+              showcase services, and generate qualified leads through compelling
+              design and strategic content.
+            </p>
+          </div>
+          <div class="web-service-card">
+            <i class="fas fa-shopping-cart web-service-icon"></i>
+            <h3>E-commerce Development</h3>
+            <p>
+              Feature-rich online stores with secure payment gateways, inventory
+              management, and seamless shopping experiences that drive sales and
+              customer loyalty.
+            </p>
+          </div>
+          <div class="web-service-card">
+            <i class="fas fa-users web-service-icon"></i>
+            <h3>Web Applications</h3>
+            <p>
+              Custom web applications with complex functionality, user
+              management, and data processing capabilities that solve specific
+              business challenges.
+            </p>
+          </div>
+          <div class="web-service-card">
+            <i class="fas fa-chart-line web-service-icon"></i>
+            <h3>CMS Development</h3>
+            <p>
+              Content management systems that empower teams to manage websites
+              easily with intuitive interfaces, workflow automation, and
+              publishing controls.
+            </p>
+          </div>
+          <div class="web-service-card">
+            <i class="fas fa-mobile-alt web-service-icon"></i>
+            <h3>Progressive Web Apps</h3>
+            <p>
+              Modern PWAs that combine the best of websites and mobile apps with
+              offline functionality, push notifications, and app-like
+              experiences.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Web Technologies & Frameworks Section -->
+      <section class="web-tech-section">
+        <div class="web-tech-header">
+          <i class="fas fa-code web-tech-icon"></i>
+          <h2 class="web-section-title">Web Technologies & Frameworks</h2>
+        </div>
+        <p class="web-section-description">
+          We leverage modern web technologies, cutting-edge frameworks, and
+          industry best practices to deliver fast, secure, and scalable websites
+          that perform exceptionally across all devices and browsers.
+        </p>
+        <div class="web-tech-cards">
+          <div class="web-tech-card">
+            <i class="fab fa-react web-card-icon"></i>
+            <h3>Frontend Frameworks</h3>
+            <p>
+              React, Angular, Vue.js, Next.js for building dynamic, interactive
+              user interfaces with exceptional performance and user experience.
+            </p>
+          </div>
+          <div class="web-tech-card">
+            <i class="fab fa-node-js web-card-icon"></i>
+            <h3>Backend Technologies</h3>
+            <p>
+              Node.js, Python Django, Ruby on Rails, PHP Laravel for robust
+              server-side logic, APIs, and database management systems.
+            </p>
+          </div>
+          <div class="web-tech-card">
+            <i class="fas fa-database web-card-icon"></i>
+            <h3>Databases</h3>
+            <p>
+              PostgreSQL, MySQL, MongoDB, Firebase for scalable data storage,
+              efficient queries, and real-time data synchronization.
+            </p>
+          </div>
+          <div class="web-tech-card">
+            <i class="fas fa-cloud web-card-icon"></i>
+            <h3>Cloud & Hosting</h3>
+            <p>
+              AWS, Google Cloud, Azure, Netlify for scalable hosting, CDN
+              distribution, and reliable website deployment at global scale.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Our Web Development Section -->
+      <section class="web-why-choose-section">
+        <h2 class="web-section-title">Why Choose Our Web Development</h2>
+        <p class="web-section-description">
+          We create websites that don't just look beautiful with responsive
+          designs—they perform exceptionally with sub-3 second load times,
+          perfect Core Web Vitals scores, SEO-optimized architecture, and
+          conversion-focused designs that drive measurable business results.
+        </p>
+        <div class="web-why-choose-content">
+          <div class="web-excellence-list">
+            <h3>Built for Web Excellence</h3>
+            <div class="web-excellence-item">
+              <i class="fas fa-tachometer-alt"></i>
+              <div>
+                <h4>Blazing Fast Performance</h4>
+                <p>
+                  Optimized code, efficient assets, and advanced caching
+                  strategies ensuring sub-3 second load times and perfect
+                  performance scores.
+                </p>
+              </div>
+            </div>
+            <div class="web-excellence-item">
+              <i class="fas fa-shield-alt"></i>
+              <div>
+                <h4>Enterprise Security</h4>
+                <p>
+                  Comprehensive security measures including SSL encryption,
+                  firewalls, regular updates, and protection against common web
+                  vulnerabilities.
+                </p>
+              </div>
+            </div>
+            <div class="web-excellence-item">
+              <i class="fas fa-search"></i>
+              <div>
+                <h4>SEO Optimized</h4>
+                <p>
+                  Built-in SEO best practices, semantic markup, optimized
+                  content structure, and technical SEO implementation for better
+                  search visibility.
+                </p>
+              </div>
+            </div>
+            <div class="web-excellence-item">
+              <i class="fas fa-expand-alt"></i>
+              <div>
+                <h4>Fully Responsive</h4>
+                <p>
+                  Mobile-first design approach ensuring perfect display and
+                  functionality across all devices, screen sizes, and browsers.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="web-feature-cards">
+            <div class="web-feature-card">
+              <i class="fas fa-bolt"></i>
+              <h4>Fast Loading</h4>
+              <p>
+                Optimized for speed with sub-3 second load times and perfect
+                Core Web Vitals scores.
+              </p>
+            </div>
+            <div class="web-feature-card">
+              <i class="fas fa-mobile-alt"></i>
+              <h4>Mobile First</h4>
+              <p>
+                Responsive designs that work perfectly on all devices and screen
+                sizes.
+              </p>
+            </div>
+            <div class="web-feature-card">
+              <i class="fas fa-search"></i>
+              <h4>SEO Ready</h4>
+              <p>
+                Built-in SEO optimization for better search engine rankings and
+                visibility.
+              </p>
+            </div>
+            <div class="web-feature-card">
+              <i class="fas fa-shield-alt"></i>
+              <h4>Secure & Reliable</h4>
+              <p>
+                Enterprise-grade security and 99.9% uptime guarantee for peace
+                of mind.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Web Development Process Section -->
+      <section class="web-process-section">
+        <h2 class="web-section-title">Our Web Development Process</h2>
+        <p class="web-section-description">
+          From discovery to deployment, our proven methodology ensures your
+          website delivers exceptional user experience, meets business
+          objectives, and achieves measurable success.
+        </p>
+        <div class="web-process-cards">
+          <div class="web-process-card">
+            <div class="web-process-number">1</div>
+            <h3>Discovery & Strategy</h3>
+            <p>
+              Understanding business goals, target audience, and technical
+              requirements to create a comprehensive website strategy and
+              roadmap.
+            </p>
+          </div>
+          <div class="web-process-card">
+            <div class="web-process-number">2</div>
+            <h3>Design & Prototyping</h3>
+            <p>
+              Creating wireframes, visual designs, and interactive prototypes
+              focusing on user experience, brand identity, and conversion
+              optimization.
+            </p>
+          </div>
+          <div class="web-process-card">
+            <div class="web-process-number">3</div>
+            <h3>Development & Testing</h3>
+            <p>
+              Building the website with modern technologies, rigorous testing
+              across devices, and performance optimization for speed and
+              reliability.
+            </p>
+          </div>
+          <div class="web-process-card">
+            <div class="web-process-number">4</div>
+            <h3>Launch & Optimization</h3>
+            <p>
+              Deploying the website, monitoring performance, implementing SEO,
+              and continuous optimization based on analytics and user feedback.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Web Performance & Results Section -->
+      <section class="web-results-section">
+        <h2 class="web-section-title">Web Performance & Results</h2>
+        <p class="web-section-description">
+          We focus on delivering websites that not only look great but also
+          perform exceptionally, driving tangible business results and
+          measurable ROI.
+        </p>
+        <div class="web-results-cards">
+          <div class="web-results-card">
+            <i class="fas fa-rocket web-results-icon"></i>
+            <h3>Speed Optimization</h3>
+            <p>
+              Advanced performance optimization techniques ensuring fast
+              loading, smooth interactions, and perfect Core Web Vitals scores
+              for better rankings.
+            </p>
+          </div>
+          <div class="web-results-card">
+            <i class="fas fa-chart-line web-results-icon"></i>
+            <h3>Conversion Optimization</h3>
+            <p>
+              Data-driven design strategies, A/B testing, and user experience
+              optimization that increase conversions and improve business
+              outcomes.
+            </p>
+          </div>
+          <div class="web-results-card">
+            <i class="fas fa-search web-results-icon"></i>
+            <h3>SEO & Visibility</h3>
+            <p>
+              Comprehensive SEO implementation, technical optimization, and
+              content strategy that improves search rankings and organic traffic
+              growth.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- What Our Clients Say Section -->
+      <section class="web-testimonials-section">
+        <h2 class="web-section-title">What Our Clients Say</h2>
+        <p class="web-section-description">
+          Don't just take our word for it - hear from businesses that have
+          transformed their online presence with our web solutions
+        </p>
+        <div class="web-testimonial-cards">
+          <div class="web-testimonial-card">
+            <div class="web-testimonial-content">
+              <p>
+                "Our new website increased online sales by 300% in the first
+                quarter. The design is stunning and the performance is
+                exceptional across all devices."
+              </p>
+            </div>
+            <div class="web-testimonial-author">
+              <h4>Michael Rodriguez</h4>
+              <p>Marketing Director, Retail Brand</p>
+            </div>
+          </div>
+          <div class="web-testimonial-card">
+            <div class="web-testimonial-content">
+              <p>
+                "The web application they built streamlined our operations and
+                reduced processing time by 70%. The team was professional and
+                delivered beyond expectations."
+              </p>
+            </div>
+            <div class="web-testimonial-author">
+              <h4>Sarah Johnson</h4>
+              <p>Operations Manager, Service Company</p>
+            </div>
+          </div>
+          <div class="web-testimonial-card">
+            <div class="web-testimonial-content">
+              <p>
+                "Our website loads in under 2 seconds on mobile and our organic
+                traffic increased by 250%. The SEO optimization was truly
+                outstanding."
+              </p>
+            </div>
+            <div class="web-testimonial-author">
+              <h4>David Chen</h4>
+              <p>CEO, Technology Startup</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Web Strategy & Implementation Section -->
+      <section class="web-strategy-section">
+        <div class="web-strategy-header">
+          <i class="fas fa-chess-king web-strategy-icon"></i>
+          <h2 class="web-section-title">Web Strategy & Implementation</h2>
+        </div>
+        <p class="web-section-description">
+          From technical architecture through development to ongoing
+          optimization achieving 95+ Google PageSpeed scores. Our comprehensive
+          web strategy encompasses performance optimization, security
+          implementation, and continuous improvement for sustainable online
+          growth.
+        </p>
+        <div class="web-strategy-cards">
+          <div class="web-strategy-card">
+            <h3>Technical Strategy & Architecture</h3>
+            <p>
+              Scalable technical architecture, performance optimization roadmap,
+              security implementation plan, and SEO technical foundation for
+              sustainable growth.
+            </p>
+          </div>
+          <div class="web-strategy-card">
+            <h3>Performance & Optimization</h3>
+            <p>
+              95+ PageSpeed scores, sub-3 second load times, perfect Core Web
+              Vitals. Advanced caching, image optimization, and code
+              minification techniques.
+            </p>
+          </div>
+          <div class="web-strategy-card">
+            <h3>Post-Launch Support</h3>
+            <p>
+              Regular updates, security patches, performance monitoring, and
+              continuous optimization based on analytics and evolving business
+              needs.
+            </p>
+          </div>
+        </div>
+        <div class="web-platform-cards">
+          <div class="web-platform-card web-frontend-card">
+            <i class="fas fa-paint-brush web-platform-icon"></i>
+            <h3>Frontend Development</h3>
+            <ul>
+              <li>React, Angular, Vue.js</li>
+              <li>Responsive Web Design</li>
+              <li>Progressive Web Apps</li>
+            </ul>
+          </div>
+          <div class="web-platform-card web-backend-card">
+            <i class="fas fa-server web-platform-icon"></i>
+            <h3>Backend Development</h3>
+            <ul>
+              <li>Node.js, Python, PHP</li>
+              <li>API Development</li>
+              <li>Database Design</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Website Development FAQ Section -->
+      <section class="web-faq-section">
+        <h2 class="web-section-title">Website Development FAQ</h2>
+        <div class="web-faq-container">
+          <div class="web-faq-item">
+            <div class="web-faq-question">
+              <h3>What types of websites do you develop?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="web-faq-answer">
+              <p>
+                We develop all types of websites including corporate websites,
+                e-commerce stores, web applications, portals, CMS-based
+                websites, progressive web apps (PWAs), and custom web solutions.
+                Our expertise spans across industries including retail,
+                healthcare, education, finance, technology, and professional
+                services.
+              </p>
+            </div>
+          </div>
+          <div class="web-faq-item">
+            <div class="web-faq-question">
+              <h3>How long does it take to build a website?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="web-faq-answer">
+              <p>
+                Website development timelines vary based on complexity. A basic
+                business website typically takes 4-6 weeks, while complex
+                e-commerce platforms or web applications can take 8-16 weeks. We
+                follow agile methodologies with regular deliverables and provide
+                detailed timelines during project planning.
+              </p>
+            </div>
+          </div>
+          <div class="web-faq-item">
+            <div class="web-faq-question">
+              <h3>Do you provide website hosting and maintenance?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="web-faq-answer">
+              <p>
+                Yes, we offer comprehensive hosting solutions with 99.9% uptime
+                guarantee, SSL certificates, CDN, and regular backups. We also
+                provide maintenance packages including security updates,
+                performance monitoring, content updates, and technical support
+                to ensure your website remains secure and up-to-date.
+              </p>
+            </div>
+          </div>
+          <div class="web-faq-item">
+            <div class="web-faq-question">
+              <h3>How do you ensure website security?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="web-faq-answer">
+              <p>
+                We implement multiple security layers including SSL encryption,
+                secure coding practices, regular security updates, firewall
+                protection, DDoS mitigation, and vulnerability scanning. We
+                follow OWASP security guidelines and conduct regular security
+                audits to protect against common web vulnerabilities.
+              </p>
+            </div>
+          </div>
+          <div class="web-faq-item">
+            <div class="web-faq-question">
+              <h3>Do you optimize websites for search engines (SEO)?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="web-faq-answer">
+              <p>
+                Yes, we build websites with SEO best practices including
+                semantic HTML structure, optimized page speed, mobile
+                responsiveness, proper meta tags, XML sitemaps, and clean URL
+                structures. We also provide ongoing SEO services to improve
+                search rankings and organic traffic.
+              </p>
+            </div>
+          </div>
+          <div class="web-faq-item">
+            <div class="web-faq-question">
+              <h3>Can you work with existing websites or redesign?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="web-faq-answer">
+              <p>
+                Yes, we offer website redesign and migration services. We can
+                analyze your existing website, recommend improvements, migrate
+                to new platforms, redesign for better user experience, and
+                optimize for performance while preserving existing content and
+                functionality.
+              </p>
+            </div>
+          </div>
+          <div class="web-faq-item">
+            <div class="web-faq-question">
+              <h3>What is your approach to responsive design?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="web-faq-answer">
+              <p>
+                We follow a mobile-first responsive design approach, ensuring
+                websites work perfectly on all devices from smartphones to
+                desktops. We test across multiple devices and browsers, optimize
+                images and assets for different screen sizes, and ensure
+                touch-friendly interfaces for mobile users.
+              </p>
+            </div>
+          </div>
+          <div class="web-faq-item">
+            <div class="web-faq-question">
+              <h3>Do you provide training and documentation?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="web-faq-answer">
+              <p>
+                Yes, we provide comprehensive documentation, video tutorials,
+                and training sessions to ensure your team can effectively manage
+                and update the website. We believe in empowering clients with
+                the knowledge and tools needed for long-term success.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ready to Launch Section -->
+      <section class="web-launch-section">
+        <h2 class="web-section-title">Ready to Launch Your Website?</h2>
+        <p class="web-section-description">
+          Transform your online presence with a professionally designed,
+          expertly developed website that engages visitors, drives conversions,
+          and grows your business. Let us help you create a digital experience
+          that delivers measurable results and sustainable growth.
+        </p>
+        <div class="web-launch-buttons">
+          <a href="#" class="web-btn-launch-primary"
+            >Get Free Web Consultation <i class="fas fa-comments"></i
+          ></a>
+          <a href="#" class="web-btn-launch-secondary"
+            >View Web Success Stories <i class="fas fa-book-open"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="footer-container">
+        <!-- Top Section with Logo and Tagline -->
+        <div class="footer-top">
+          <div class="footer-logo-container">
+            <div class="logo-wrapper">
+              <img
+                src="/Intallia24/Images/logo1.png"
+                alt="Intallia Logo"
+                class="footer-logo"
+              />
+              <div class="logo-text">
+                <span class="logo-top">INTALIA</span>
+                <span class="logo-bottom">Building Tomorrow's Workforce</span>
+              </div>
+            </div>
+            <p class="footer-tagline">
+              Technology is at the core of everything we do—but it’s our people
+              who make the real difference. At Intallia, we bring together a
+              curated team of innovators, problem-solvers, and domain experts
+              who blend deep technical skills with a product-first mindset.
+            </p>
+          </div>
+
+          <div class="footer-cta">
+            <button class="btn-primary">Start Your Project →</button>
+            <button class="btn-secondary">Free Consultation</button>
+          </div>
+        </div>
+
+        <!-- Middle Section with Services, Developers, Company Links -->
+        <div class="footer-middle">
+          <div class="footer-column">
+            <h3 class="footer-heading">Services</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html"
+                  >Data Science & Engineering</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/website-development.html"
+                  >Web Application Development</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html"
+                  >Mobile Application Development</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html"
+                  >AI / ML Engineering</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/data-engineering.html"
+                  >Data Engineering Solutions</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/automation-workflows.html"
+                  >Automation & Workflows</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Hire Developers</h3>
+            <ul class="footer-links">
+              <li><a href="#">Hire React Developers</a></li>
+              <li><a href="#">Hire Node.js Developers</a></li>
+              <li><a href="#">Hire Java Developers</a></li>
+              <li><a href="#">Hire Python Developers</a></li>
+              <li><a href="#">Hire Flutter Developers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/Intallia24/index.html">Home</a></li>
+              <li><a href="/Intallia24/Pages/About/about.html">Our Company</a></li>
+              <li><a href="/Intallia24/Pages/About/our-work.html">How We Work</a></li>
+              <li><a href="/Intallia24/Pages/About/our-values.html">Our Values</a></li>
+              <li>
+                <a href="/Intallia24/Pages/About/our-working-culture.html"
+                  >Our Working Culture</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Get In Touch</h3>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> 123 Tech Street,
+                Innovation City
+              </p>
+              <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+              <p><i class="fas fa-envelope"></i> info@intallia.com</p>
+            </div>
+
+            <div class="newsletter">
+              <h4>Subscribe to our newsletter</h4>
+              <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email" />
+                <button class="btn-subscribe">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section with Social Media and Copyright -->
+        <div class="footer-bottom">
+          <div class="social-icons">
+            <a href="#" class="social-icon" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Twitter">
+              <i class="fab fa-twitter"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Instagram">
+              <i class="fab fa-instagram"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="GitHub">
+              <i class="fab fa-github"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="YouTube">
+              <i class="fab fa-youtube"></i>
+              <span class="icon-bg"></span>
+            </a>
+          </div>
+
+          <div class="copyright">
+            <p>
+              &copy; <span id="current-year">2024</span> Intallia. All rights
+              reserved. | <a href="#">Privacy Policy</a> |
+              <a href="#">Terms of Service</a>
+            </p>
+          </div>
+
+          <div class="footer-quote">
+            <button class="btn-quote">Get Quote</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/Intallia24/JS/website-development.js"></script>
+    <script src="/Intallia24/JS/script.js"></script>
+    <script src="/Intallia24/JS/footer.js"></script>
+  </body>
+</html>

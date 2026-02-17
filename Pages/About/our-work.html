@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How We Work - Intallia24</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Intallia24/CSS/our-work.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/navbar.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/footer.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header">
+      <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo-container">
+          <div class="logo">
+            <div class="logo-text">
+              <!-- <span class="logo-main">INTALLA 24</span>
+              <span class="logo-sub">Building Tomorrow's Workforce</span> -->
+              <a href="/Intallia24/index.html">
+                <img src="/Intallia24/Images/intallia-logo.png" alt="" />
+              </a>
+            </div>
+            <div class="logo-gradient"></div>
+          </div>
+          <!-- Mobile Menu Toggle -->
+          <button class="menu-toggle" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="/Intallia24/index.html" class="nav-link active">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+
+          <!-- About Us Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">
+              <i class="fas fa-info-circle"></i> About Us
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/about.html">
+                  <i class="fas fa-building"></i>
+                  <span>Our Company</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-work.html">
+                  <i class="fas fa-cogs"></i>
+                  <span>How We Work</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-values.html">
+                  <i class="fas fa-heart"></i>
+                  <span>Our Values</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-working-culture.html">
+                  <i class="fas fa-users"></i>
+                  <span>Our Working Culture</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#services" class="nav-link dropdown-toggle">
+              <i class="fas fa-cogs"></i> Services
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html">
+                  <i class="fas fa-layer-group"></i>
+                  <span>Data Science & Analytics</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html">
+                  <i class="fas fa-chart-bar"></i>
+                  <span>AL / ML Engineering</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/website-development.html">
+                  <i class="fas fa-database"></i>
+                  <span>Website Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html">
+                  <i class="fas fa-mobile-alt"></i>
+                  <span>Mobile Application Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-engineering.html">
+                  <i class="fas fa-globe"></i>
+                  <span>Data Engineering Solutions</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/automation-workflows.html">
+                  <i class="fas fa-robot"></i>
+                  <span>Automation & Workflows</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#" class="view-more" id="viewMoreServices">
+                  <i class="fas fa-eye"></i>
+                  <span>View More Services</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Products -->
+          <li class="nav-item">
+            <a href="#products" class="nav-link">
+              <i class="fas fa-box-open"></i> Products
+            </a>
+          </li>
+        </ul>
+
+        <!-- Get Free Consultation Button -->
+        <div class="cta-container">
+          <button class="cta-button" id="consultationBtn">
+            <i class="fas fa-comment-dots"></i> Get Free Consultation
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <!-- <main class="main-content">
+      <div class="container">
+        <div class="content-section" id="contentDisplay">
+          <h2 id="sectionTitle">Home Content</h2>
+          <p id="sectionDescription">
+            Welcome to our website! Select any menu item to see detailed
+            information about that section.
+          </p>
+        </div>
+      </div>
+    </main> -->
+
+    <!-- Consultation Modal -->
+    <div class="modal" id="consultationModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Get Free Consultation</h3>
+          <button class="close-modal" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Fill out the form below and our experts will contact you within 24
+            hours.
+          </p>
+          <form id="consultationForm">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Phone Number" />
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="" disabled selected>Select Service</option>
+                <option value="fullstack">Full Stack Development</option>
+                <option value="analytics">Data Analytics</option>
+                <option value="datascience">Data Science</option>
+                <option value="mobile">Mobile Application Development</option>
+                <option value="web">Web Application Development</option>
+                <option value="ai">AI Powered Platform</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-btn">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="title-with-icon">
+            <i class="fas fa-cogs process-icon"></i>
+            <h1 class="main-heading">Our Process</h1>
+          </div>
+          <h2 class="section-title">How We Work</h2>
+          <p class="section-subtitle">
+            We believe the best digital products are built through close
+            collaboration, rapid iteration, and clear communication. That's why
+            we follow an agile, sprint-based development approach that allows
+            flexibility, faster feedback, and faster time-to-market.
+          </p>
+
+          <div class="process-intro">
+            <p>
+              Our methodology combines Agile principles with proven engineering
+              practices to deliver high-quality software efficiently. We
+              emphasize transparency, rapid feedback loops, and continuous
+              improvement throughout the development lifecycle.
+            </p>
+          </div>
+
+          <a href="#contact" class="start-project-btn"
+            >Start Your Project <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proven Principles Section -->
+    <section class="principles-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Built on Proven Principles</h2>
+          <p class="section-subtitle">
+            Our approach is grounded in principles that ensure success:
+            transparency, rapid iteration, and unwavering focus on your goals.
+          </p>
+        </div>
+
+        <div class="principles-cards">
+          <div class="principle-card">
+            <div class="principle-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h3 class="principle-title">Transparent Communication</h3>
+            <p class="principle-description">
+              We keep you informed at every stage with regular updates, demos,
+              and clear documentation.
+            </p>
+          </div>
+
+          <div class="principle-card">
+            <div class="principle-icon">
+              <i class="fas fa-sync-alt"></i>
+            </div>
+            <h3 class="principle-title">Rapid Iteration</h3>
+            <p class="principle-description">
+              Quick feedback loops and sprint-based development enable us to
+              adapt and improve continuously.
+            </p>
+          </div>
+
+          <div class="principle-card">
+            <div class="principle-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3 class="principle-title">Goal-Oriented</h3>
+            <p class="principle-description">
+              Every decision is aligned with your business objectives and user
+              needs.
+            </p>
+          </div>
+
+          <div class="principle-card">
+            <div class="principle-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3 class="principle-title">Faster Time-to-Market</h3>
+            <p class="principle-description">
+              Our agile approach and proven processes deliver results faster
+              without compromising quality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Development Journey Section -->
+    <section class="journey-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="title-with-icon">
+            <i class="fas fa-road journey-icon"></i>
+            <h2 class="section-title">Our Development Journey</h2>
+          </div>
+          <p class="section-subtitle">
+            From initial discovery to ongoing support, every step is designed to
+            deliver exceptional results while keeping you informed and involved.
+          </p>
+        </div>
+
+        <div class="journey-intro">
+          <p>
+            We follow a structured yet flexible process that ensures quality,
+            transparency, and timely delivery. Each phase builds upon the
+            previous one, creating a solid foundation for success.
+          </p>
+        </div>
+
+        <div class="journey-cards">
+          <div class="journey-card">
+            <div class="journey-card-header">
+              <div class="journey-card-icon">
+                <i class="fas fa-search"></i>
+              </div>
+              <div class="journey-card-title">
+                <h3>Discovery & Requirements</h3>
+                <span class="timeline">2 weeks</span>
+              </div>
+            </div>
+            <div class="journey-card-content">
+              <p>
+                We start with comprehensive workshops to understand your
+                business goals, user needs, and technical requirements. Our
+                discovery process ensures we build exactly what you need.
+              </p>
+              <div class="journey-features">
+                <span><i class="fas fa-check"></i> Stakeholder interviews</span>
+                <span><i class="fas fa-check"></i> User research</span>
+                <span
+                  ><i class="fas fa-check"></i> Technical feasibility
+                  analysis</span
+                >
+                <span><i class="fas fa-check"></i> Project scoping</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="journey-card">
+            <div class="journey-card-header">
+              <div class="journey-card-icon">
+                <i class="fas fa-pencil-ruler"></i>
+              </div>
+              <div class="journey-card-title">
+                <h3>Design & Architecture</h3>
+                <span class="timeline">2-3 weeks</span>
+              </div>
+            </div>
+            <div class="journey-card-content">
+              <p>
+                Our design and architecture phase creates the blueprint for
+                success. We plan both the user experience and technical
+                foundation to ensure scalability.
+              </p>
+              <div class="journey-features">
+                <span><i class="fas fa-check"></i> User experience design</span>
+                <span><i class="fas fa-check"></i> System architecture</span>
+                <span><i class="fas fa-check"></i> Database design</span>
+                <span><i class="fas fa-check"></i> API planning</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="journey-card">
+            <div class="journey-card-header">
+              <div class="journey-card-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="journey-card-title">
+                <h3>Agile Development</h3>
+                <span class="timeline">Ongoing</span>
+              </div>
+            </div>
+            <div class="journey-card-content">
+              <p>
+                We build in short, focused sprints with weekly demos. This
+                approach ensures rapid progress, continuous feedback, and the
+                ability to adapt quickly.
+              </p>
+              <div class="journey-features">
+                <span><i class="fas fa-check"></i> 2-week sprints</span>
+                <span><i class="fas fa-check"></i> Weekly demos</span>
+                <span><i class="fas fa-check"></i> Daily standups</span>
+                <span><i class="fas fa-check"></i> Sprint retrospectives</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="journey-card">
+            <div class="journey-card-header">
+              <div class="journey-card-icon">
+                <i class="fas fa-vial"></i>
+              </div>
+              <div class="journey-card-title">
+                <h3>Quality Assurance</h3>
+                <span class="timeline">Continuous</span>
+              </div>
+            </div>
+            <div class="journey-card-content">
+              <p>
+                Quality is built into every step. Our integrated QA process and
+                automated deployment pipelines ensure reliable, bug-free
+                releases.
+              </p>
+              <div class="journey-features">
+                <span><i class="fas fa-check"></i> Automated testing</span>
+                <span><i class="fas fa-check"></i> Code reviews</span>
+                <span><i class="fas fa-check"></i> Performance testing</span>
+                <span><i class="fas fa-check"></i> Security audits</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="journey-card">
+            <div class="journey-card-header">
+              <div class="journey-card-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <div class="journey-card-title">
+                <h3>Launch & Deployment</h3>
+                <span class="timeline">1 week</span>
+              </div>
+            </div>
+            <div class="journey-card-content">
+              <p>
+                We handle the complete deployment process, from staging to
+                production, ensuring a smooth launch with zero downtime.
+              </p>
+              <div class="journey-features">
+                <span><i class="fas fa-check"></i> Staging deployment</span>
+                <span><i class="fas fa-check"></i> Production release</span>
+                <span><i class="fas fa-check"></i> Monitoring setup</span>
+                <span><i class="fas fa-check"></i> Launch support</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="journey-card">
+            <div class="journey-card-header">
+              <div class="journey-card-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <div class="journey-card-title">
+                <h3>Ongoing Support</h3>
+                <span class="timeline">Ongoing</span>
+              </div>
+            </div>
+            <div class="journey-card-content">
+              <p>
+                Our relationship doesn't end at launch. We provide ongoing
+                monitoring, optimization, and support to ensure continued
+                success.
+              </p>
+              <div class="journey-features">
+                <span><i class="fas fa-check"></i> Performance monitoring</span>
+                <span><i class="fas fa-check"></i> Bug fixes</span>
+                <span><i class="fas fa-check"></i> Feature enhancements</span>
+                <span><i class="fas fa-check"></i> 24/7 support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collaborative Design Section -->
+    <section class="collaborative-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Collaborative by Design</h2>
+          <p class="section-subtitle">
+            We prioritize transparency and keep you informed at every stage with
+            tools and processes designed for seamless collaboration.
+          </p>
+        </div>
+
+        <div class="collaborative-intro">
+          <p>
+            Our approach ensures you're involved throughout the development
+            process, with regular updates and opportunities for feedback.
+          </p>
+        </div>
+
+        <div class="collaborative-cards">
+          <div class="collaborative-card">
+            <div class="collaborative-card-icon">
+              <i class="fas fa-desktop"></i>
+            </div>
+            <h3 class="collaborative-card-title">Weekly Demo Sessions</h3>
+            <p class="collaborative-card-description">
+              See your product come to life with regular demonstrations of new
+              features and functionality.
+            </p>
+            <div class="collaborative-card-tag">
+              Early feedback & validation
+            </div>
+          </div>
+
+          <div class="collaborative-card">
+            <div class="collaborative-card-icon">
+              <i class="fas fa-code-branch"></i>
+            </div>
+            <h3 class="collaborative-card-title">
+              Version Control & Branching
+            </h3>
+            <p class="collaborative-card-description">
+              Organized code management with feature branches and controlled
+              releases.
+            </p>
+            <div class="collaborative-card-tag">
+              Safe, controlled development
+            </div>
+          </div>
+
+          <div class="collaborative-card">
+            <div class="collaborative-card-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="collaborative-card-title">Progress Tracking</h3>
+            <p class="collaborative-card-description">
+              Real-time visibility into project progress with detailed sprint
+              reports and metrics.
+            </p>
+            <div class="collaborative-card-tag">Complete transparency</div>
+          </div>
+
+          <div class="collaborative-card">
+            <div class="collaborative-card-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3 class="collaborative-card-title">Dedicated Support</h3>
+            <p class="collaborative-card-description">
+              Direct access to your development team and project manager
+              throughout the process.
+            </p>
+            <div class="collaborative-card-tag">Responsive communication</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Development Process Section -->
+    <section class="dev-process-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Development Process</h2>
+          <p class="section-subtitle">
+            Agile methodology, 2-week sprints, continuous delivery. Transparent
+            collaboration from discovery to deployment.
+          </p>
+        </div>
+
+        <div class="dev-process-cards">
+          <div class="dev-process-card">
+            <div class="dev-process-card-icon">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <h3 class="dev-process-card-title">Agile Methodology</h3>
+            <p class="dev-process-card-description">
+              2-week sprints, daily standups, sprint planning, retrospectives.
+              Iterative development with continuous feedback.
+            </p>
+            <div class="dev-process-features">
+              <span
+                ><i class="fas fa-check-circle"></i> Scrum/Kanban
+                frameworks</span
+              >
+              <span
+                ><i class="fas fa-check-circle"></i> Jira/Azure DevOps
+                tracking</span
+              >
+              <span
+                ><i class="fas fa-check-circle"></i> Continuous stakeholder
+                engagement</span
+              >
+            </div>
+          </div>
+
+          <div class="dev-process-card">
+            <div class="dev-process-card-icon">
+              <i class="fas fa-vial"></i>
+            </div>
+            <h3 class="dev-process-card-title">Quality Assurance</h3>
+            <p class="dev-process-card-description">
+              Automated testing, code reviews, CI/CD pipelines. Quality built
+              into every phase of development.
+            </p>
+            <div class="dev-process-features">
+              <span
+                ><i class="fas fa-check-circle"></i> Unit & integration
+                tests</span
+              >
+              <span><i class="fas fa-check-circle"></i> Peer code reviews</span>
+              <span
+                ><i class="fas fa-check-circle"></i> Performance
+                monitoring</span
+              >
+            </div>
+          </div>
+
+          <div class="dev-process-card">
+            <div class="dev-process-card-icon">
+              <i class="fas fa-sitemap"></i>
+            </div>
+            <h3 class="dev-process-card-title">Development Phases</h3>
+            <p class="dev-process-card-description">
+              Structured phases from discovery to deployment ensure systematic
+              progress and quality outcomes.
+            </p>
+            <div class="dev-process-phases">
+              <div class="phase">
+                <div class="phase-number">1</div>
+                <div class="phase-content">
+                  <h4>Discovery</h4>
+                  <p>Requirements, research, roadmap planning</p>
+                </div>
+              </div>
+              <div class="phase">
+                <div class="phase-number">2</div>
+                <div class="phase-content">
+                  <h4>Design</h4>
+                  <p>Wireframes, prototypes, UI/UX</p>
+                </div>
+              </div>
+              <div class="phase">
+                <div class="phase-number">3</div>
+                <div class="phase-content">
+                  <h4>Development</h4>
+                  <p>Sprints, code reviews, testing</p>
+                </div>
+              </div>
+              <div class="phase">
+                <div class="phase-number">4</div>
+                <div class="phase-content">
+                  <h4>Deployment</h4>
+                  <p>CI/CD, monitoring, support</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="process-faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Process & Methodology FAQ</h2>
+          <p class="section-subtitle">
+            Common questions about our agile development approach
+          </p>
+        </div>
+
+        <div class="process-faq-container">
+          <div class="process-faq-item">
+            <div class="process-faq-question">
+              <h3>What industries do you specialize in?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="process-faq-answer">
+              <p>
+                We have extensive experience across multiple industries
+                including healthcare and telemedicine, fintech and banking,
+                e-commerce and retail, education and e-learning, logistics and
+                supply chain, real estate and property management, hospitality
+                and travel, manufacturing and IoT, media and entertainment, and
+                enterprise SaaS platforms.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-faq-item">
+            <div class="process-faq-question">
+              <h3>Do you work with startups or only established companies?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="process-faq-answer">
+              <p>
+                We work with businesses of all sizes, from startups looking to
+                build their MVP to established enterprises seeking to modernize
+                legacy systems. Our flexible engagement models allow us to
+                tailor our services to meet the unique needs and budgets of each
+                client.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-faq-item">
+            <div class="process-faq-question">
+              <h3>What is your typical project engagement model?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="process-faq-answer">
+              <p>
+                We offer multiple engagement models including fixed-price
+                projects, time and material contracts, and dedicated development
+                teams. Our preferred approach is agile methodology with 2-week
+                sprints, regular demos, and continuous feedback to ensure
+                alignment and adaptability throughout the project lifecycle.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-faq-item">
+            <div class="process-faq-question">
+              <h3>How do you ensure project success and timely delivery?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="process-faq-answer">
+              <p>
+                We employ proven agile methodologies, regular progress tracking,
+                transparent communication, and risk management practices. Our
+                experienced project managers ensure milestones are met, and our
+                quality assurance processes guarantee deliverables meet the
+                highest standards.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-faq-item">
+            <div class="process-faq-question">
+              <h3>
+                Do you provide consultation services before starting
+                development?
+              </h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="process-faq-answer">
+              <p>
+                Yes, we offer comprehensive discovery and consulting services to
+                help clarify requirements, define project scope, and establish
+                success metrics before any development begins. This ensures
+                we're aligned on objectives and can provide accurate estimates
+                and timelines.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-faq-item">
+            <div class="process-faq-question">
+              <h3>
+                Can you take over a project from another development team?
+              </h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="process-faq-answer">
+              <p>
+                Yes, we have extensive experience in project rescue and codebase
+                migration. We conduct thorough assessments of existing code,
+                documentation, and infrastructure before proposing a transition
+                plan to ensure smooth handover and continuity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">
+            Ready to Experience Our
+            <span class="highlight">Agile Approach</span>
+          </h2>
+          <p class="cta-subtitle">
+            We're quick to adapt based on evolving goals or market conditions.
+            Let's discuss how our proven process can accelerate your project
+            success.
+          </p>
+
+          <div class="cta-buttons">
+            <a href="#contact" class="cta-btn primary-btn"
+              >Start Your Project <i class="fas fa-rocket"></i
+            ></a>
+            <a href="#discovery" class="cta-btn secondary-btn"
+              >Schedule Discovery Call <i class="fas fa-calendar-check"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="footer-container">
+        <!-- Top Section with Logo and Tagline -->
+        <div class="footer-top">
+          <div class="footer-logo-container">
+            <div class="logo-wrapper">
+              <img
+                src="/Intallia24/Images/logo1.png"
+                alt="Intallia Logo"
+                class="footer-logo"
+              />
+              <div class="logo-text">
+                <span class="logo-top">INTALIA</span>
+                <span class="logo-bottom">Building Tomorrow's Workforce</span>
+              </div>
+            </div>
+            <p class="footer-tagline">
+              Technology is at the core of everything we do—but it’s our people
+              who make the real difference. At Intallia, we bring together a
+              curated team of innovators, problem-solvers, and domain experts
+              who blend deep technical skills with a product-first mindset.
+            </p>
+          </div>
+
+          <div class="footer-cta">
+            <button class="btn-primary">Start Your Project →</button>
+            <button class="btn-secondary">Free Consultation</button>
+          </div>
+        </div>
+
+        <!-- Middle Section with Services, Developers, Company Links -->
+        <div class="footer-middle">
+          <div class="footer-column">
+            <h3 class="footer-heading">Services</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html"
+                  >Data Science & Engineering</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/website-development.html"
+                  >Web Application Development</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html"
+                  >Mobile Application Development</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html"
+                  >AI / ML Engineering</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/data-engineering.html"
+                  >Data Engineering Solutions</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/automation-workflows.html"
+                  >Automation & Workflows</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Hire Developers</h3>
+            <ul class="footer-links">
+              <li><a href="#">Hire React Developers</a></li>
+              <li><a href="#">Hire Node.js Developers</a></li>
+              <li><a href="#">Hire Java Developers</a></li>
+              <li><a href="#">Hire Python Developers</a></li>
+              <li><a href="#">Hire Flutter Developers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/Intallia24/index.html">Home</a></li>
+              <li><a href="/Intallia24/Pages/About/about.html">Our Company</a></li>
+              <li><a href="/Intallia24/Pages/About/our-work.html">How We Work</a></li>
+              <li><a href="/Intallia24/Pages/About/our-values.html">Our Values</a></li>
+              <li>
+                <a href="/Intallia24/Pages/About/our-working-culture.html"
+                  >Our Working Culture</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Get In Touch</h3>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> 123 Tech Street,
+                Innovation City
+              </p>
+              <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+              <p><i class="fas fa-envelope"></i> info@intallia.com</p>
+            </div>
+
+            <div class="newsletter">
+              <h4>Subscribe to our newsletter</h4>
+              <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email" />
+                <button class="btn-subscribe">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section with Social Media and Copyright -->
+        <div class="footer-bottom">
+          <div class="social-icons">
+            <a href="#" class="social-icon" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Twitter">
+              <i class="fab fa-twitter"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Instagram">
+              <i class="fab fa-instagram"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="GitHub">
+              <i class="fab fa-github"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="YouTube">
+              <i class="fab fa-youtube"></i>
+              <span class="icon-bg"></span>
+            </a>
+          </div>
+
+          <div class="copyright">
+            <p>
+              &copy; <span id="current-year">2024</span> Intallia. All rights
+              reserved. | <a href="#">Privacy Policy</a> |
+              <a href="#">Terms of Service</a>
+            </p>
+          </div>
+
+          <div class="footer-quote">
+            <button class="btn-quote">Get Quote</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/Intallia24/JS/our-work.js"></script>
+    <script src="/Intallia24/JS/script.js"></script>
+    <script src="/Intallia24/JS/footer.js"></script>
+  </body>
+</html>

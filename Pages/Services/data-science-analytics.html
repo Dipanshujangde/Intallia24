@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Science & Analytics</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Intallia24/CSS/data-science-analytics.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/navbar.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/footer.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header">
+      <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo-container">
+          <div class="logo">
+            <div class="logo-text">
+              <!-- <span class="logo-main">INTALLA 24</span>
+              <span class="logo-sub">Building Tomorrow's Workforce</span> -->
+              <a href="/Intallia24/index.html">
+                <img src="/Intallia24/Images/intallia-logo.png" alt="" />
+              </a>
+            </div>
+            <div class="logo-gradient"></div>
+          </div>
+          <!-- Mobile Menu Toggle -->
+          <button class="menu-toggle" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="/Intallia24/index.html" class="nav-link active">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+
+          <!-- About Us Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">
+              <i class="fas fa-info-circle"></i> About Us
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/about.html">
+                  <i class="fas fa-building"></i>
+                  <span>Our Company</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-work.html">
+                  <i class="fas fa-cogs"></i>
+                  <span>How We Work</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-values.html">
+                  <i class="fas fa-heart"></i>
+                  <span>Our Values</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-working-culture.html">
+                  <i class="fas fa-users"></i>
+                  <span>Our Working Culture</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#services" class="nav-link dropdown-toggle">
+              <i class="fas fa-cogs"></i> Services
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html">
+                  <i class="fas fa-layer-group"></i>
+                  <span>Data Science & Analytics</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html">
+                  <i class="fas fa-chart-bar"></i>
+                  <span>AL / ML Engineering</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/website-development.html">
+                  <i class="fas fa-database"></i>
+                  <span>Website Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html">
+                  <i class="fas fa-mobile-alt"></i>
+                  <span>Mobile Application Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-engineering.html">
+                  <i class="fas fa-globe"></i>
+                  <span>Data Engineering Solutions</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/automation-workflows.html">
+                  <i class="fas fa-robot"></i>
+                  <span>Automation & Workflows</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#" class="view-more" id="viewMoreServices">
+                  <i class="fas fa-eye"></i>
+                  <span>View More Services</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Products -->
+          <li class="nav-item">
+            <a href="#products" class="nav-link">
+              <i class="fas fa-box-open"></i> Products
+            </a>
+          </li>
+        </ul>
+
+        <!-- Get Free Consultation Button -->
+        <div class="cta-container">
+          <button class="cta-button" id="consultationBtn">
+            <i class="fas fa-comment-dots"></i> Get Free Consultation
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <!-- <main class="main-content">
+      <div class="container">
+        <div class="content-section" id="contentDisplay">
+          <h2 id="sectionTitle">Home Content</h2>
+          <p id="sectionDescription">
+            Welcome to our website! Select any menu item to see detailed
+            information about that section.
+          </p>
+        </div>
+      </div>
+    </main> -->
+
+    <!-- Consultation Modal -->
+    <div class="modal" id="consultationModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Get Free Consultation</h3>
+          <button class="close-modal" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Fill out the form below and our experts will contact you within 24
+            hours.
+          </p>
+          <form id="consultationForm">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Phone Number" />
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="" disabled selected>Select Service</option>
+                <option value="fullstack">Full Stack Development</option>
+                <option value="analytics">Data Analytics</option>
+                <option value="datascience">Data Science</option>
+                <option value="mobile">Mobile Application Development</option>
+                <option value="web">Web Application Development</option>
+                <option value="ai">AI Powered Platform</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-btn">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="data-science-container">
+      <!-- Hero Section -->
+      <section class="ds-hero-section">
+        <div class="ds-hero-content">
+          <div class="ds-title-container">
+            <i class="fas fa-chart-line ds-title-icon"></i>
+            <h1 class="ds-main-title">
+              Data Science & <span class="ds-highlight">Analytics</span>
+            </h1>
+          </div>
+          <p class="ds-hero-description">
+            We transform raw data into actionable insights and predictive
+            intelligence. Our data science services help organizations uncover
+            hidden patterns, automate decision-making, and drive growth through
+            data-driven strategies, machine learning models, and comprehensive
+            analytics solutions.
+          </p>
+          <div class="ds-hero-buttons">
+            <a href="#" class="ds-btn-primary"
+              >Start Your Data Project <i class="fas fa-arrow-right"></i
+            ></a>
+            <a href="#" class="ds-btn-secondary"
+              >View Case Studies <i class="fas fa-eye"></i
+            ></a>
+          </div>
+          <div class="ds-stats-container">
+            <div class="ds-stat-item">
+              <div class="ds-counter" data-target="50">0</div>
+              <p>Data Projects</p>
+            </div>
+            <div class="ds-stat-item">
+              <div class="ds-counter" data-target="95">0</div>
+              <p>Model Accuracy</p>
+            </div>
+            <div class="ds-stat-item">
+              <div class="ds-counter" data-target="12">0</div>
+              <p>TB Processed</p>
+            </div>
+            <div class="ds-stat-item">
+              <div class="ds-counter" data-target="40">0</div>
+              <p>% Cost Reduction</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Science Services Section -->
+      <section class="ds-services-section">
+        <h2 class="ds-section-title">Data Science Services</h2>
+        <p class="ds-section-description">
+          From predictive analytics to AI-powered insights, we deliver
+          comprehensive data solutions that transform information into
+          competitive advantage.
+        </p>
+        <div class="ds-services-cards">
+          <div class="ds-service-card">
+            <i class="fas fa-brain ds-service-icon"></i>
+            <h3>Predictive Analytics & ML</h3>
+            <p>
+              Advanced machine learning models for forecasting, pattern
+              recognition, and predictive insights that drive smarter business
+              decisions.
+            </p>
+          </div>
+          <div class="ds-service-card">
+            <i class="fas fa-database ds-service-icon"></i>
+            <h3>Data Engineering & Warehousing</h3>
+            <p>
+              Scalable data pipelines, ETL processes, and data warehouse
+              solutions that ensure clean, accessible, and reliable data
+              infrastructure.
+            </p>
+          </div>
+          <div class="ds-service-card">
+            <i class="fas fa-chart-bar ds-service-icon"></i>
+            <h3>Business Intelligence & Dashboards</h3>
+            <p>
+              Interactive dashboards and reporting tools that provide real-time
+              insights and KPIs for informed decision-making at all levels.
+            </p>
+          </div>
+          <div class="ds-service-card">
+            <i class="fas fa-robot ds-service-icon"></i>
+            <h3>AI & Deep Learning Solutions</h3>
+            <p>
+              Neural networks and deep learning applications for complex pattern
+              recognition, natural language processing, and computer vision.
+            </p>
+          </div>
+          <div class="ds-service-card">
+            <i class="fas fa-search ds-service-icon"></i>
+            <h3>Data Mining & Exploration</h3>
+            <p>
+              Comprehensive data discovery and mining services to uncover hidden
+              patterns, correlations, and business opportunities in your data.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technologies & Tools Section -->
+      <section class="ds-tech-section">
+        <div class="ds-tech-header">
+          <i class="fas fa-tools ds-tech-icon"></i>
+          <h2 class="ds-section-title">Technologies & Tools</h2>
+        </div>
+        <p class="ds-section-description">
+          We leverage cutting-edge data science technologies, programming
+          languages, and analytical tools to deliver scalable, accurate, and
+          actionable insights that drive business transformation and competitive
+          advantage.
+        </p>
+        <div class="ds-tech-cards">
+          <div class="ds-tech-card">
+            <i class="fas fa-code ds-card-icon"></i>
+            <h3>Programming & Libraries</h3>
+            <p>
+              Python, R, SQL, TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy
+              for robust data manipulation and model development.
+            </p>
+          </div>
+          <div class="ds-tech-card">
+            <i class="fas fa-cloud ds-card-icon"></i>
+            <h3>Cloud Platforms</h3>
+            <p>
+              AWS SageMaker, Google Cloud AI, Azure Machine Learning, Databricks
+              for scalable cloud-based data solutions and ML ops.
+            </p>
+          </div>
+          <div class="ds-tech-card">
+            <i class="fas fa-chart-pie ds-card-icon"></i>
+            <h3>Visualization Tools</h3>
+            <p>
+              Tableau, Power BI, D3.js, Plotly for creating compelling data
+              visualizations and interactive dashboards.
+            </p>
+          </div>
+          <div class="ds-tech-card">
+            <i class="fas fa-server ds-card-icon"></i>
+            <h3>Big Data Technologies</h3>
+            <p>
+              Hadoop, Spark, Kafka, Airflow for processing large-scale data
+              streams and building robust data pipelines.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Our Data Science Section -->
+      <section class="ds-why-choose-section">
+        <h2 class="ds-section-title">Why Choose Our Data Science Solutions</h2>
+        <p class="ds-section-description">
+          We deliver data science solutions that don't just generate
+          reports—they provide actionable intelligence with 95%+ model accuracy,
+          real-time processing capabilities, scalable architectures, and
+          measurable business impact that drives revenue growth and operational
+          efficiency.
+        </p>
+        <div class="ds-why-choose-content">
+          <div class="ds-excellence-list">
+            <h3>Built for Data Excellence</h3>
+            <div class="ds-excellence-item">
+              <i class="fas fa-cogs"></i>
+              <div>
+                <h4>End-to-End Data Solutions</h4>
+                <p>
+                  Complete data lifecycle management from collection and
+                  processing to analysis and actionable insights.
+                </p>
+              </div>
+            </div>
+            <div class="ds-excellence-item">
+              <i class="fas fa-shield-alt"></i>
+              <div>
+                <h4>Data Security & Compliance</h4>
+                <p>
+                  Enterprise-grade security with encryption, access controls,
+                  and compliance with GDPR, HIPAA, and industry standards.
+                </p>
+              </div>
+            </div>
+            <div class="ds-excellence-item">
+              <i class="fas fa-sync-alt"></i>
+              <div>
+                <h4>Real-Time Analytics</h4>
+                <p>
+                  Streaming analytics and real-time dashboards for immediate
+                  insights and timely decision-making.
+                </p>
+              </div>
+            </div>
+            <div class="ds-excellence-item">
+              <i class="fas fa-expand-alt"></i>
+              <div>
+                <h4>Scalable Architecture</h4>
+                <p>
+                  Cloud-native solutions that scale seamlessly with your data
+                  volume and analytical complexity.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ds-feature-cards">
+            <div class="ds-feature-card">
+              <i class="fas fa-bolt"></i>
+              <h4>Predictive Power</h4>
+              <p>
+                Advanced algorithms that forecast trends and behaviors with high
+                accuracy.
+              </p>
+            </div>
+            <div class="ds-feature-card">
+              <i class="fas fa-search"></i>
+              <h4>Pattern Recognition</h4>
+              <p>
+                Uncover hidden insights and correlations in complex datasets.
+              </p>
+            </div>
+            <div class="ds-feature-card">
+              <i class="fas fa-robot"></i>
+              <h4>AI Automation</h4>
+              <p>
+                Intelligent automation of data processing and decision
+                workflows.
+              </p>
+            </div>
+            <div class="ds-feature-card">
+              <i class="fas fa-chart-line"></i>
+              <h4>Performance Tracking</h4>
+              <p>
+                Comprehensive metrics and KPI tracking for continuous
+                improvement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Analytics Process Section -->
+      <section class="ds-process-section">
+        <h2 class="ds-section-title">Our Analytics Process</h2>
+        <p class="ds-section-description">
+          From data discovery to insight delivery, our proven methodology
+          ensures your data initiatives deliver maximum business value and
+          actionable intelligence.
+        </p>
+        <div class="ds-process-cards">
+          <div class="ds-process-card">
+            <div class="ds-process-number">1</div>
+            <h3>Discovery & Assessment</h3>
+            <p>
+              Understanding business objectives, data landscape, and defining
+              success metrics for your analytics initiative.
+            </p>
+          </div>
+          <div class="ds-process-card">
+            <div class="ds-process-number">2</div>
+            <h3>Data Preparation</h3>
+            <p>
+              Data cleaning, transformation, and feature engineering to create
+              analysis-ready datasets.
+            </p>
+          </div>
+          <div class="ds-process-card">
+            <div class="ds-process-number">3</div>
+            <h3>Model Development</h3>
+            <p>
+              Building, training, and validating machine learning models with
+              iterative refinement cycles.
+            </p>
+          </div>
+          <div class="ds-process-card">
+            <div class="ds-process-number">4</div>
+            <h3>Insight Delivery</h3>
+            <p>
+              Deploying models, creating dashboards, and delivering actionable
+              insights to stakeholders.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Business Impact Section -->
+      <section class="ds-impact-section">
+        <h2 class="ds-section-title">Business Impact & ROI</h2>
+        <p class="ds-section-description">
+          We focus on delivering measurable business outcomes and tangible ROI
+          through data-driven insights and predictive analytics.
+        </p>
+        <div class="ds-impact-cards">
+          <div class="ds-impact-card">
+            <i class="fas fa-money-bill-wave ds-impact-icon"></i>
+            <h3>Revenue Optimization</h3>
+            <p>
+              Predictive models that identify growth opportunities, optimize
+              pricing, and increase customer lifetime value.
+            </p>
+          </div>
+          <div class="ds-impact-card">
+            <i class="fas fa-cogs ds-impact-icon"></i>
+            <h3>Operational Efficiency</h3>
+            <p>
+              Process optimization and automation that reduce costs, improve
+              productivity, and eliminate waste.
+            </p>
+          </div>
+          <div class="ds-impact-card">
+            <i class="fas fa-user-friends ds-impact-icon"></i>
+            <h3>Customer Intelligence</h3>
+            <p>
+              Advanced segmentation, churn prediction, and personalization
+              strategies that enhance customer experiences.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- What Our Clients Say Section -->
+      <section class="ds-testimonials-section">
+        <h2 class="ds-section-title">What Our Clients Say</h2>
+        <p class="ds-section-description">
+          Don't just take our word for it - hear from organizations that have
+          transformed their business with our data solutions
+        </p>
+        <div class="ds-testimonial-cards">
+          <div class="ds-testimonial-card">
+            <div class="ds-testimonial-content">
+              <p>
+                "Their predictive models reduced our inventory costs by 35%
+                while improving stock availability. The ROI was achieved within
+                the first quarter."
+              </p>
+            </div>
+            <div class="ds-testimonial-author">
+              <h4>Michael Chen</h4>
+              <p>COO, RetailChain Corp</p>
+            </div>
+          </div>
+          <div class="ds-testimonial-card">
+            <div class="ds-testimonial-content">
+              <p>
+                "The customer segmentation and recommendation engine increased
+                our cross-sell revenue by 42%. The insights were both deep and
+                actionable."
+              </p>
+            </div>
+            <div class="ds-testimonial-author">
+              <h4>Sarah Johnson</h4>
+              <p>VP Marketing, FinTech Solutions</p>
+            </div>
+          </div>
+          <div class="ds-testimonial-card">
+            <div class="ds-testimonial-content">
+              <p>
+                "Their fraud detection system reduced false positives by 60%
+                while catching 98% of fraudulent transactions. Exceptional
+                accuracy and performance."
+              </p>
+            </div>
+            <div class="ds-testimonial-author">
+              <h4>Robert Williams</h4>
+              <p>Head of Security, Global Bank</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Strategy & Implementation Section -->
+      <section class="ds-strategy-section">
+        <div class="ds-strategy-header">
+          <i class="fas fa-chess-king ds-strategy-icon"></i>
+          <h2 class="ds-section-title">Data Strategy & Implementation</h2>
+        </div>
+        <p class="ds-section-description">
+          From data architecture design through model deployment to ongoing
+          optimization achieving 95%+ accuracy rates. Our comprehensive data
+          strategy encompasses data governance, quality assurance, and
+          continuous improvement for sustainable data-driven transformation.
+        </p>
+        <div class="ds-strategy-cards">
+          <div class="ds-strategy-card">
+            <h3>Data Architecture & Governance</h3>
+            <p>
+              Designing scalable data architectures with proper governance, data
+              quality frameworks, and compliance controls ensuring reliability
+              and trust in data assets.
+            </p>
+          </div>
+          <div class="ds-strategy-card">
+            <h3>Model Development & Validation</h3>
+            <p>
+              95%+ model accuracy with rigorous testing, cross-validation, and
+              A/B testing frameworks. Real-time model performance monitoring and
+              drift detection.
+            </p>
+          </div>
+          <div class="ds-strategy-card">
+            <h3>Production & Maintenance</h3>
+            <p>
+              Seamless model deployment with MLOps practices, automated
+              retraining pipelines, and ongoing performance optimization as data
+              patterns evolve.
+            </p>
+          </div>
+        </div>
+        <div class="ds-solution-cards">
+          <div class="ds-solution-card ds-ml-card">
+            <i class="fas fa-brain ds-solution-icon"></i>
+            <h3>Machine Learning Solutions</h3>
+            <ul>
+              <li>Predictive Analytics & Forecasting</li>
+              <li>Natural Language Processing</li>
+              <li>Computer Vision & Image Recognition</li>
+            </ul>
+          </div>
+          <div class="ds-solution-card ds-bi-card">
+            <i class="fas fa-chart-bar ds-solution-icon"></i>
+            <h3>Business Intelligence</h3>
+            <ul>
+              <li>Interactive Dashboards & Reports</li>
+              <li>Real-time KPI Monitoring</li>
+              <li>Self-Service Analytics</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Science & Analytics FAQ Section -->
+      <section class="ds-faq-section">
+        <h2 class="ds-section-title">Data Science & Analytics FAQ</h2>
+        <div class="ds-faq-container">
+          <div class="ds-faq-item">
+            <div class="ds-faq-question">
+              <h3>What types of data science projects do you handle?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="ds-faq-answer">
+              <p>
+                We handle a wide range of data science projects including
+                predictive analytics, machine learning model development,
+                natural language processing, computer vision, recommendation
+                systems, fraud detection, customer segmentation, time series
+                forecasting, and business intelligence solutions. Our expertise
+                spans across industries including finance, healthcare, retail,
+                manufacturing, and technology.
+              </p>
+            </div>
+          </div>
+          <div class="ds-faq-item">
+            <div class="ds-faq-question">
+              <h3>How do you ensure data quality and accuracy?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="ds-faq-answer">
+              <p>
+                We implement rigorous data quality frameworks including data
+                profiling, validation rules, anomaly detection, and automated
+                cleaning pipelines. Our processes include cross-validation, A/B
+                testing, and continuous monitoring to ensure model accuracy and
+                reliability. We maintain data lineage tracking and implement
+                governance practices throughout the data lifecycle.
+              </p>
+            </div>
+          </div>
+          <div class="ds-faq-item">
+            <div class="ds-faq-question">
+              <h3>What is your typical project timeline?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="ds-faq-answer">
+              <p>
+                Project timelines vary based on complexity. A basic analytics
+                dashboard can be delivered in 4-6 weeks, while comprehensive
+                machine learning solutions typically take 2-4 months. We follow
+                agile methodologies with regular deliverables and stakeholder
+                reviews to ensure alignment and timely delivery.
+              </p>
+            </div>
+          </div>
+          <div class="ds-faq-item">
+            <div class="ds-faq-question">
+              <h3>Do you provide ongoing support and maintenance?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="ds-faq-answer">
+              <p>
+                Yes, we offer comprehensive support packages including model
+                monitoring, performance optimization, regular updates, and
+                retraining as data patterns evolve. We provide SLAs for response
+                times and have dedicated teams for ongoing maintenance and
+                enhancement of data solutions.
+              </p>
+            </div>
+          </div>
+          <div class="ds-faq-item">
+            <div class="ds-faq-question">
+              <h3>How do you handle data security and privacy?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="ds-faq-answer">
+              <p>
+                We implement enterprise-grade security measures including data
+                encryption (at rest and in transit), access controls, audit
+                logging, and anonymization techniques. We comply with
+                regulations like GDPR, HIPAA, CCPA, and implement industry best
+                practices for data protection and privacy.
+              </p>
+            </div>
+          </div>
+          <div class="ds-faq-item">
+            <div class="ds-faq-question">
+              <h3>Can you work with our existing data infrastructure?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="ds-faq-answer">
+              <p>
+                Yes, we have extensive experience integrating with various data
+                platforms including cloud services (AWS, Azure, GCP), on-premise
+                systems, data warehouses, and business applications. We can work
+                with your existing infrastructure or recommend improvements
+                based on your needs.
+              </p>
+            </div>
+          </div>
+          <div class="ds-faq-item">
+            <div class="ds-faq-question">
+              <h3>How do you measure the success of data projects?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="ds-faq-answer">
+              <p>
+                We establish clear KPIs and success metrics aligned with
+                business objectives before project initiation. Success is
+                measured through model accuracy, business impact metrics
+                (revenue increase, cost reduction), user adoption rates, and ROI
+                calculations. We provide regular reporting on these metrics
+                throughout the project lifecycle.
+              </p>
+            </div>
+          </div>
+          <div class="ds-faq-item">
+            <div class="ds-faq-question">
+              <h3>Do you provide training and knowledge transfer?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="ds-faq-answer">
+              <p>
+                Yes, we offer comprehensive training programs, documentation,
+                and knowledge transfer sessions to ensure your team can
+                effectively use and maintain the data solutions we deliver. We
+                believe in empowering your organization with the skills needed
+                for ongoing data-driven decision making.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ready to Transform Section -->
+      <section class="ds-transform-section">
+        <h2 class="ds-section-title">
+          Ready to Transform Your Data into Intelligence?
+        </h2>
+        <p class="ds-section-description">
+          Unlock the full potential of your data with our expert data science
+          and analytics solutions. Transform information into actionable
+          insights that drive smarter decisions, optimize operations, and create
+          sustainable competitive advantages for your business.
+        </p>
+        <div class="ds-transform-buttons">
+          <a href="#" class="ds-btn-transform-primary"
+            >Get Free Data Assessment <i class="fas fa-chart-line"></i
+          ></a>
+          <a href="#" class="ds-btn-transform-secondary"
+            >View Success Metrics <i class="fas fa-chart-bar"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section-->
+    <footer class="footer-section">
+      <div class="footer-container">
+        <!-- Top Section with Logo and Tagline -->
+        <div class="footer-top">
+          <div class="footer-logo-container">
+            <div class="logo-wrapper">
+              <img
+                src="/Intallia24/Images/logo1.png"
+                alt="Intallia Logo"
+                class="footer-logo"
+              />
+              <div class="logo-text">
+                <span class="logo-top">INTALIA</span>
+                <span class="logo-bottom">Building Tomorrow's Workforce</span>
+              </div>
+            </div>
+            <p class="footer-tagline">
+              Technology is at the core of everything we do—but it’s our people
+              who make the real difference. At Intallia, we bring together a
+              curated team of innovators, problem-solvers, and domain experts
+              who blend deep technical skills with a product-first mindset.
+            </p>
+          </div>
+
+          <div class="footer-cta">
+            <button class="btn-primary">Start Your Project →</button>
+            <button class="btn-secondary">Free Consultation</button>
+          </div>
+        </div>
+
+        <!-- Middle Section with Services, Developers, Company Links -->
+        <div class="footer-middle">
+          <div class="footer-column">
+            <h3 class="footer-heading">Services</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html"
+                  >Data Science & Engineering</a
+                >
+              </li>
+              <li><a href="#">Web Application Development</a></li>
+              <li>
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html"
+                  >Mobile Application Development</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html"
+                  >AI / ML Engineering</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/data-engineering.html"
+                  >Data Engineering Solutions</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/automation-workflows.html"
+                  >Automation & Workflows</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Hire Developers</h3>
+            <ul class="footer-links">
+              <li><a href="#">Hire React Developers</a></li>
+              <li><a href="#">Hire Node.js Developers</a></li>
+              <li><a href="#">Hire Java Developers</a></li>
+              <li><a href="#">Hire Python Developers</a></li>
+              <li><a href="#">Hire Flutter Developers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/Intallia24/index.html">Home</a></li>
+              <li><a href="/Intallia24/Pages/About/about.html">Our Company</a></li>
+              <li><a href="/Intallia24/Pages/About/our-work.html">How We Work</a></li>
+              <li><a href="/Intallia24/Pages/About/our-values.html">Our Values</a></li>
+              <li>
+                <a href="/Intallia24/Pages/About/our-working-culture.html"
+                  >Our Working Culture</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Get In Touch</h3>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> 123 Tech Street,
+                Innovation City
+              </p>
+              <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+              <p><i class="fas fa-envelope"></i> info@intallia.com</p>
+            </div>
+
+            <div class="newsletter">
+              <h4>Subscribe to our newsletter</h4>
+              <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email" />
+                <button class="btn-subscribe">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section with Social Media and Copyright -->
+        <div class="footer-bottom">
+          <div class="social-icons">
+            <a href="#" class="social-icon" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Twitter">
+              <i class="fab fa-twitter"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Instagram">
+              <i class="fab fa-instagram"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="GitHub">
+              <i class="fab fa-github"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="YouTube">
+              <i class="fab fa-youtube"></i>
+              <span class="icon-bg"></span>
+            </a>
+          </div>
+
+          <div class="copyright">
+            <p>
+              &copy; <span id="current-year">2024</span> Intallia. All rights
+              reserved. | <a href="#">Privacy Policy</a> |
+              <a href="#">Terms of Service</a>
+            </p>
+          </div>
+
+          <div class="footer-quote">
+            <button class="btn-quote">Get Quote</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/Intallia24/JS/data-science-analytics.js"></script>
+    <script src="/Intallia24/JS/script.js"></script>
+    <script src="/Intallia24/JS/footer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1403 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #333;
+  line-height: 1.6;
+}
+
+.automation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Theme Colors for Automation */
+:root {
+  --automation-primary-green: #10b981;
+  --automation-primary-aqua: #06b6d4;
+  --automation-dark-green: #059669;
+  --automation-dark-aqua: #0891b2;
+  --automation-light-green: #d1fae5;
+  --automation-light-aqua: #cffafe;
+  --automation-text-dark: #1f2937;
+  --automation-text-light: #6b7280;
+  --automation-card-bg: #ffffff;
+  --automation-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --automation-transition: all 0.3s ease;
+}
+
+/* Common Section Styles */
+section {
+  margin-bottom: 80px;
+  padding: 30px 0;
+}
+
+.automation-section-title {
+  font-size: 2.5rem;
+  color: var(--automation-text-dark);
+  margin-bottom: 15px;
+  position: relative;
+  text-align: center;
+}
+
+.automation-section-description {
+  font-size: 1.1rem;
+  color: var(--automation-text-light);
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Hero Section */
+.automation-hero-section {
+  text-align: center;
+  padding: 50px 0;
+  background: linear-gradient(135deg, #f0fdf4 0%, #f0f9ff 100%);
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: var(--automation-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.automation-hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(16, 185, 129, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(6, 182, 212, 0.1) 0%,
+      transparent 50%
+    );
+}
+
+.automation-hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.automation-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.automation-title-icon {
+  font-size: 3rem;
+  color: var(--automation-primary-green);
+  margin-right: 20px;
+  background: var(--automation-light-green);
+  padding: 15px;
+  border-radius: 50%;
+  transition: var(--automation-transition);
+  animation: automation-icon-float 3s ease-in-out infinite;
+}
+
+@keyframes automation-icon-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.automation-title-icon:hover {
+  transform: rotate(15deg) scale(1.1);
+  background: linear-gradient(
+    135deg,
+    var(--automation-primary-green),
+    var(--automation-primary-aqua)
+  );
+  color: white;
+  animation: none;
+}
+
+.automation-main-title {
+  font-size: 3rem;
+  color: var(--automation-text-dark);
+  text-align: left;
+}
+
+.automation-highlight {
+  color: var(--automation-primary-aqua);
+  position: relative;
+}
+
+.automation-highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(6, 182, 212, 0.2);
+  z-index: -1;
+}
+
+.automation-hero-description {
+  font-size: 1.2rem;
+  color: var(--automation-text-light);
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+}
+
+.automation-hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.automation-btn-primary1,
+.automation-btn-secondary1 {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--automation-transition);
+  cursor: pointer;
+  box-shadow: var(--automation-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.automation-btn-primary1::before,
+.automation-btn-secondary1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: var(--automation-transition);
+}
+
+.automation-btn-primary1:hover::before,
+.automation-btn-secondary1:hover::before {
+  left: 100%;
+}
+
+.automation-btn-primary1 {
+  background: linear-gradient(
+    90deg,
+    var(--automation-primary-green),
+    var(--automation-primary-aqua)
+  );
+  color: white;
+  border: none;
+}
+
+.automation-btn-primary1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+  background: linear-gradient(
+    90deg,
+    var(--automation-dark-green),
+    var(--automation-dark-aqua)
+  );
+}
+
+.automation-btn-secondary1 {
+  background-color: white;
+  color: var(--automation-primary-green);
+  border: 2px solid var(--automation-primary-green);
+}
+
+.automation-btn-secondary1:hover {
+  background-color: var(--automation-light-green);
+  transform: translateY(-5px);
+  border-color: var(--automation-dark-green);
+  color: var(--automation-dark-green);
+}
+
+.automation-btn-primary1 i,
+.automation-btn-secondary1 i {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.automation-stats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.automation-stat-item {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: var(--automation-shadow);
+  min-width: 180px;
+  transition: var(--automation-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.automation-stat-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.1),
+    rgba(6, 182, 212, 0.1)
+  );
+  z-index: 0;
+  opacity: 0;
+  transition: var(--automation-transition);
+}
+
+.automation-stat-item:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.2);
+}
+
+.automation-stat-item:hover::before {
+  opacity: 1;
+}
+
+.automation-counter {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--automation-primary-green);
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.automation-stat-item p {
+  color: var(--automation-text-light);
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+/* Automation Services Section */
+.automation-services-section {
+  padding: 60px 0;
+}
+
+.automation-services-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.automation-service-card {
+  background-color: var(--automation-card-bg);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: var(--automation-shadow);
+  transition: var(--automation-transition);
+  text-align: center;
+  border-top: 5px solid var(--automation-primary-green);
+  position: relative;
+  overflow: hidden;
+}
+
+.automation-service-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(
+    135deg,
+    var(--automation-primary-green),
+    var(--automation-primary-aqua)
+  );
+  transition: var(--automation-transition);
+  z-index: 0;
+}
+
+.automation-service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  border-top-color: var(--automation-primary-aqua);
+}
+
+.automation-service-card:hover::after {
+  height: 5px;
+}
+
+.automation-service-icon {
+  font-size: 2.5rem;
+  color: var(--automation-primary-green);
+  margin-bottom: 20px;
+  background-color: var(--automation-light-green);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+  transition: var(--automation-transition);
+}
+
+.automation-service-card:hover .automation-service-icon {
+  color: white;
+  background: linear-gradient(
+    135deg,
+    var(--automation-primary-green),
+    var(--automation-primary-aqua)
+  );
+  transform: rotateY(180deg);
+}
+
+.automation-service-card h3 {
+  font-size: 1.5rem;
+  color: var(--automation-text-dark);
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.automation-service-card p {
+  color: var(--automation-text-light);
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+/* Technologies & Platforms Section */
+.automation-tech-section {
+  background: linear-gradient(135deg, #f0f9ff 0%, #f0fdf4 100%);
+  padding: 50px 40px;
+  border-radius: 20px;
+}
+
+.automation-section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.automation-tech-icon {
+  font-size: 2.5rem;
+  color: var(--automation-primary-aqua);
+  margin-right: 20px;
+  background-color: var(--automation-light-aqua);
+  padding: 15px;
+  border-radius: 50%;
+  transition: var(--automation-transition);
+}
+
+.automation-tech-icon:hover {
+  transform: rotate(-15deg) scale(1.1);
+  background: linear-gradient(
+    135deg,
+    var(--automation-primary-aqua),
+    var(--automation-primary-green)
+  );
+  color: white;
+}
+
+.automation-tech-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.automation-tech-card {
+  background-color: var(--automation-card-bg);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: var(--automation-shadow);
+  transition: var(--automation-transition);
+  text-align: center;
+  border-left: 5px solid var(--automation-primary-aqua);
+  position: relative;
+  overflow: hidden;
+}
+
+.automation-tech-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(6, 182, 212, 0.1),
+    transparent
+  );
+  transition: var(--automation-transition);
+}
+
+.automation-tech-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(6, 182, 212, 0.2);
+  border-left-color: var(--automation-primary-green);
+}
+
+.automation-tech-card:hover::before {
+  left: 100%;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  color: var(--automation-primary-aqua);
+  margin-bottom: 20px;
+  transition: var(--automation-transition);
+}
+
+.automation-tech-card:hover .card-icon {
+  color: var(--automation-primary-green);
+  transform: scale(1.2);
+}
+
+.automation-tech-card h3 {
+  font-size: 1.5rem;
+  color: var(--automation-text-dark);
+  margin-bottom: 15px;
+}
+
+.automation-tech-card p {
+  color: var(--automation-text-light);
+  line-height: 1.7;
+}
+
+/* Why Choose Our Automation Section */
+.automation-choose-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.automation-excellence-list h3 {
+  font-size: 1.8rem;
+  color: var(--automation-text-dark);
+  margin-bottom: 25px;
+  padding-left: 10px;
+  border-left: 4px solid var(--automation-primary-green);
+}
+
+.automation-excellence-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: var(--automation-shadow);
+  transition: var(--automation-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.automation-excellence-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--automation-primary-green),
+    var(--automation-primary-aqua)
+  );
+  transition: var(--automation-transition);
+}
+
+.automation-excellence-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.automation-excellence-item:hover::before {
+  height: 100%;
+}
+
+.automation-excellence-item i {
+  font-size: 1.8rem;
+  color: var(--automation-primary-green);
+  margin-right: 20px;
+  background-color: var(--automation-light-green);
+  padding: 15px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: var(--automation-transition);
+}
+
+.automation-excellence-item:hover i {
+  color: white;
+  background: linear-gradient(
+    135deg,
+    var(--automation-primary-green),
+    var(--automation-primary-aqua)
+  );
+  transform: rotate(15deg);
+}
+
+.automation-excellence-item h4 {
+  font-size: 1.3rem;
+  color: var(--automation-text-dark);
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.automation-excellence-item p {
+  color: var(--automation-text-light);
+  position: relative;
+  z-index: 1;
+}
+
+.automation-feature-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.automation-feature-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: var(--automation-shadow);
+  text-align: center;
+  transition: var(--automation-transition);
+  border-bottom: 4px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.automation-feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(
+    135deg,
+    var(--automation-primary-green),
+    var(--automation-primary-aqua)
+  );
+  transition: var(--automation-transition);
+  z-index: 0;
+}
+
+.automation-feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-bottom-color: var(--automation-primary-aqua);
+}
+
+.automation-feature-card:hover::before {
+  height: 100%;
+}
+
+.automation-feature-card:hover i,
+.automation-feature-card:hover h4,
+.automation-feature-card:hover p {
+  color: white;
+}
+
+.automation-feature-card i {
+  font-size: 2rem;
+  color: var(--automation-primary-aqua);
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+  transition: var(--automation-transition);
+}
+
+.automation-feature-card:hover i {
+  transform: scale(1.2);
+}
+
+.automation-feature-card h4 {
+  font-size: 1.3rem;
+  color: var(--automation-text-dark);
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+  transition: var(--automation-transition);
+}
+
+.automation-feature-card p {
+  color: var(--automation-text-light);
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 1;
+  transition: var(--automation-transition);
+}
+
+/* Our Automation Process Section */
+.automation-process-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.automation-process-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--automation-shadow);
+  text-align: center;
+  transition: var(--automation-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.automation-process-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(
+    135deg,
+    var(--automation-primary-green),
+    var(--automation-primary-aqua)
+  );
+  transition: var(--automation-transition);
+  z-index: 0;
+}
+
+.automation-process-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.automation-process-card:hover::before {
+  height: 100%;
+}
+
+.automation-process-card:hover .automation-process-number,
+.automation-process-card:hover h3,
+.automation-process-card:hover p {
+  color: white;
+}
+
+.automation-process-number {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(
+    90deg,
+    var(--automation-primary-green),
+    var(--automation-primary-aqua)
+  );
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  z-index: 1;
+  transition: var(--automation-transition);
+}
+
+.automation-process-card:hover .automation-process-number {
+  transform: translateX(-50%) scale(1.2);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.automation-process-card h3 {
+  font-size: 1.5rem;
+  color: var(--automation-text-dark);
+  margin: 20px 0 15px;
+  position: relative;
+  z-index: 1;
+  transition: var(--automation-transition);
+}
+
+.automation-process-card p {
+  color: var(--automation-text-light);
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+  transition: var(--automation-transition);
+}
+
+/* Automation Success Stories Section */
+.automation-success-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.automation-success-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--automation-shadow);
+  text-align: center;
+  transition: var(--automation-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.automation-success-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--automation-primary-green),
+    var(--automation-primary-aqua)
+  );
+  transition: var(--automation-transition);
+}
+
+.automation-success-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  animation: automation-pulse 1.5s infinite;
+}
+
+.automation-success-card:hover::before {
+  height: 100%;
+}
+
+@keyframes automation-pulse {
+  0% {
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+  }
+  50% {
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+  }
+  100% {
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+  }
+}
+
+.automation-success-icon {
+  font-size: 2.5rem;
+  color: var(--automation-primary-green);
+  margin-bottom: 20px;
+  transition: var(--automation-transition);
+}
+
+.automation-success-card:hover .automation-success-icon {
+  color: var(--automation-primary-aqua);
+  transform: rotate(15deg) scale(1.2);
+}
+
+.automation-success-card h3 {
+  font-size: 1.5rem;
+  color: var(--automation-text-dark);
+  margin-bottom: 15px;
+  transition: var(--automation-transition);
+}
+
+.automation-success-card:hover h3 {
+  color: var(--automation-primary-green);
+}
+
+.automation-success-card p {
+  color: var(--automation-text-light);
+  line-height: 1.7;
+}
+
+/* Testimonials Section */
+.automation-testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.automation-testimonial-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--automation-shadow);
+  transition: var(--automation-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.automation-testimonial-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    var(--automation-primary-green),
+    var(--automation-primary-aqua)
+  );
+}
+
+.automation-testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.automation-testimonial-content {
+  padding: 20px;
+  background-color: #f8fafc;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.automation-testimonial-content::before {
+  content: '"';
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  font-size: 4rem;
+  color: var(--automation-light-green);
+  font-family: Georgia, serif;
+}
+
+.automation-testimonial-content p {
+  color: var(--automation-text-dark);
+  font-style: italic;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+.automation-testimonial-author h4 {
+  font-size: 1.3rem;
+  color: var(--automation-text-dark);
+  margin-bottom: 5px;
+}
+
+.automation-testimonial-author p {
+  color: var(--automation-primary-aqua);
+  font-weight: 600;
+}
+
+/* Automation Strategy Section */
+.automation-strategy-section {
+  background: linear-gradient(135deg, #f0fdf4 0%, #f0f9ff 100%);
+  padding: 50px 40px;
+  border-radius: 20px;
+}
+
+.automation-strategy-icon {
+  font-size: 2.5rem;
+  color: var(--automation-primary-green);
+  margin-right: 20px;
+  background-color: var(--automation-light-green);
+  padding: 15px;
+  border-radius: 50%;
+  transition: var(--automation-transition);
+}
+
+.automation-strategy-icon:hover {
+  transform: rotate(15deg) scale(1.1);
+  background: linear-gradient(
+    135deg,
+    var(--automation-primary-green),
+    var(--automation-primary-aqua)
+  );
+  color: white;
+}
+
+.automation-strategy-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.automation-strategy-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--automation-shadow);
+  transition: var(--automation-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.automation-strategy-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(16, 185, 129, 0.1),
+    rgba(6, 182, 212, 0.1)
+  );
+  transition: var(--automation-transition);
+}
+
+.automation-strategy-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.automation-strategy-card:hover::before {
+  width: 100%;
+}
+
+.automation-strategy-card h3 {
+  font-size: 1.5rem;
+  color: var(--automation-text-dark);
+  margin-bottom: 15px;
+  color: var(--automation-primary-green);
+  position: relative;
+  z-index: 1;
+}
+
+.automation-strategy-card p {
+  color: var(--automation-text-light);
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+.automation-platform-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.automation-platform-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--automation-shadow);
+  transition: var(--automation-transition);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.automation-platform-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.rpa-card {
+  border-top: 5px solid #ff6b6b;
+}
+
+.workflow-card {
+  border-top: 5px solid #4ecdc4;
+}
+
+.automation-platform-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  transition: var(--automation-transition);
+}
+
+.rpa-card .automation-platform-icon {
+  color: #ff6b6b;
+}
+
+.workflow-card .automation-platform-icon {
+  color: #4ecdc4;
+}
+
+.automation-platform-card:hover .automation-platform-icon {
+  transform: scale(1.2);
+}
+
+.automation-platform-card h3 {
+  font-size: 1.8rem;
+  color: var(--automation-text-dark);
+  margin-bottom: 20px;
+}
+
+.automation-platform-card ul {
+  list-style: none;
+  text-align: left;
+}
+
+.automation-platform-card li {
+  padding: 10px 0;
+  color: var(--automation-text-light);
+  border-bottom: 1px solid #f1f5f9;
+  transition: var(--automation-transition);
+}
+
+.automation-platform-card li:last-child {
+  border-bottom: none;
+}
+
+.automation-platform-card li::before {
+  content: "▸";
+  color: var(--automation-primary-green);
+  font-weight: bold;
+  margin-right: 10px;
+  transition: var(--automation-transition);
+}
+
+.automation-platform-card:hover li::before {
+  color: var(--automation-primary-aqua);
+}
+
+.automation-platform-card:hover li {
+  color: var(--automation-text-dark);
+  transform: translateX(5px);
+}
+
+/* FAQ Section */
+.automation-faq-container {
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+.automation-faq-item {
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: var(--automation-shadow);
+  overflow: hidden;
+  transition: var(--automation-transition);
+}
+
+.automation-faq-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.automation-faq-question {
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: #f8fafc;
+  transition: var(--automation-transition);
+}
+
+.automation-faq-question:hover {
+  background-color: #f1f5f9;
+}
+
+.automation-faq-question h3 {
+  font-size: 1.2rem;
+  color: var(--automation-text-dark);
+  margin: 0;
+}
+
+.automation-faq-question i {
+  color: var(--automation-primary-green);
+  transition: var(--automation-transition);
+}
+
+.automation-faq-answer {
+  padding: 0 30px;
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease,
+    padding 0.3s ease;
+}
+
+.automation-faq-answer.active {
+  padding: 25px 30px;
+  max-height: 500px;
+}
+
+.automation-faq-answer p {
+  color: var(--automation-text-light);
+  line-height: 1.7;
+}
+
+.automation-faq-item.active .automation-faq-question i {
+  transform: rotate(180deg);
+}
+
+.automation-faq-item.active .automation-faq-question {
+  background-color: var(--automation-light-green);
+}
+
+/* Ready to Automate Section */
+.automation-launch-section {
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(
+    135deg,
+    var(--automation-primary-green),
+    var(--automation-primary-aqua)
+  );
+  border-radius: 20px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.automation-launch-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size:
+    30px 30px,
+    50px 50px;
+  animation: automation-float 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes automation-float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(30px, 30px) rotate(360deg);
+  }
+}
+
+.automation-launch-section .automation-section-title {
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.automation-launch-section .automation-section-description {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.automation-launch-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.automation-btn-launch-primary,
+.automation-btn-launch-secondary {
+  padding: 18px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--automation-transition);
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.automation-btn-launch-primary {
+  background-color: white;
+  color: var(--automation-primary-green);
+}
+
+.automation-btn-launch-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  background-color: #f1f5f9;
+}
+
+.automation-btn-launch-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.automation-btn-launch-secondary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.automation-btn-launch-primary i,
+.automation-btn-launch-secondary i {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .automation-choose-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .automation-platform-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .automation-hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .automation-btn-primary1,
+  .automation-btn-secondary1 {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .automation-main-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .automation-section-title {
+    font-size: 2rem;
+  }
+
+  .automation-title-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .automation-title-icon {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .automation-stats-container {
+    gap: 20px;
+  }
+
+  .automation-stat-item {
+    min-width: 140px;
+    padding: 15px;
+  }
+
+  .automation-counter {
+    font-size: 2.2rem;
+  }
+
+  .automation-feature-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .automation-process-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .automation-launch-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .automation-btn-launch-primary,
+  .automation-btn-launch-secondary {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .automation-tech-section,
+  .automation-strategy-section {
+    padding: 40px 20px;
+  }
+
+  .automation-section-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .automation-tech-icon,
+  .automation-strategy-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .automation-services-cards,
+  .automation-tech-cards,
+  .automation-testimonial-cards,
+  .automation-success-cards,
+  .automation-strategy-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .automation-section-title {
+    font-size: 1.8rem;
+  }
+
+  .automation-hero-description,
+  .automation-section-description {
+    font-size: 1rem;
+  }
+
+  .automation-faq-question h3 {
+    font-size: 1.1rem;
+  }
+}

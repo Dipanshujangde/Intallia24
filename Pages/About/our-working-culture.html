@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Working Culture - Intallia24</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Intallia24/CSS/our-working-culture.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/navbar.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/footer.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header">
+      <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo-container">
+          <div class="logo">
+            <div class="logo-text">
+              <!-- <span class="logo-main">INTALLA 24</span>
+              <span class="logo-sub">Building Tomorrow's Workforce</span> -->
+              <a href="/Intallia24/index.html">
+                <img src="/Intallia24/Images/intallia-logo.png" alt="" />
+              </a>
+            </div>
+            <div class="logo-gradient"></div>
+          </div>
+          <!-- Mobile Menu Toggle -->
+          <button class="menu-toggle" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="/Intallia24/index.html" class="nav-link active">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+
+          <!-- About Us Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">
+              <i class="fas fa-info-circle"></i> About Us
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/about.html">
+                  <i class="fas fa-building"></i>
+                  <span>Our Company</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-work.html">
+                  <i class="fas fa-cogs"></i>
+                  <span>How We Work</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-values.html">
+                  <i class="fas fa-heart"></i>
+                  <span>Our Values</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-working-culture.html">
+                  <i class="fas fa-users"></i>
+                  <span>Our Working Culture</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#services" class="nav-link dropdown-toggle">
+              <i class="fas fa-cogs"></i> Services
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html">
+                  <i class="fas fa-layer-group"></i>
+                  <span>Data Science & Analytics</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html">
+                  <i class="fas fa-chart-bar"></i>
+                  <span>AL / ML Engineering</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Pages/Services/website-development.html">
+                  <i class="fas fa-database"></i>
+                  <span>Website Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html">
+                  <i class="fas fa-mobile-alt"></i>
+                  <span>Mobile Application Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-engineering.html">
+                  <i class="fas fa-globe"></i>
+                  <span>Data Engineering Solutions</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/automation-workflows.html">
+                  <i class="fas fa-robot"></i>
+                  <span>Automation & Workflows</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#" class="view-more" id="viewMoreServices">
+                  <i class="fas fa-eye"></i>
+                  <span>View More Services</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Products -->
+          <li class="nav-item">
+            <a href="#products" class="nav-link">
+              <i class="fas fa-box-open"></i> Products
+            </a>
+          </li>
+        </ul>
+
+        <!-- Get Free Consultation Button -->
+        <div class="cta-container">
+          <button class="cta-button" id="consultationBtn">
+            <i class="fas fa-comment-dots"></i> Get Free Consultation
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <!-- <main class="main-content">
+      <div class="container">
+        <div class="content-section" id="contentDisplay">
+          <h2 id="sectionTitle">Home Content</h2>
+          <p id="sectionDescription">
+            Welcome to our website! Select any menu item to see detailed
+            information about that section.
+          </p>
+        </div>
+      </div>
+    </main> -->
+
+    <!-- Consultation Modal -->
+    <div class="modal" id="consultationModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Get Free Consultation</h3>
+          <button class="close-modal" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Fill out the form below and our experts will contact you within 24
+            hours.
+          </p>
+          <form id="consultationForm">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Phone Number" />
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="" disabled selected>Select Service</option>
+                <option value="fullstack">Full Stack Development</option>
+                <option value="analytics">Data Analytics</option>
+                <option value="datascience">Data Science</option>
+                <option value="mobile">Mobile Application Development</option>
+                <option value="web">Web Application Development</option>
+                <option value="ai">AI Powered Platform</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-btn">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="culture-hero-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="title-with-icon">
+            <i class="fas fa-users culture-hero-icon"></i>
+            <h1 class="main-heading">Our Working Culture</h1>
+          </div>
+          <p class="section-subtitle">
+            At Intallia24, we believe that brilliant products come from
+            brilliant people working in the right environment. We're not just a
+            workplace—we're a launchpad for innovation, creativity, and personal
+            growth.
+          </p>
+
+          <div class="culture-intro">
+            <p>
+              Inspiring freedom. Fueling creativity. Building brilliance.
+              Together. Our culture is built on principles that create an
+              environment where exceptional talent thrives and innovation
+              becomes inevitable.
+            </p>
+          </div>
+
+          <a href="#join" class="join-culture-btn"
+            >Join Our Culture <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Makes Us Different Section -->
+    <section class="different-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">What Makes Us Different</h2>
+          <p class="section-subtitle">
+            Our culture is built on six fundamental principles that create an
+            environment where exceptional talent thrives and innovation becomes
+            inevitable.
+          </p>
+        </div>
+
+        <div class="different-cards">
+          <div class="different-card">
+            <div class="different-icon">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <h3 class="different-title">Celebrate Individuality</h3>
+            <p class="different-description">
+              We embrace the unique perspectives, talents, and personalities
+              that each team member brings. Your authentic self is your greatest
+              asset.
+            </p>
+            <div class="different-features">
+              <span
+                ><i class="fas fa-check-circle"></i> Diverse perspectives
+                valued</span
+              >
+              <span
+                ><i class="fas fa-check-circle"></i> Personal strengths
+                recognized</span
+              >
+              <span
+                ><i class="fas fa-check-circle"></i> Authentic expression
+                encouraged</span
+              >
+              <span
+                ><i class="fas fa-check-circle"></i> Inclusive environment
+                fostered</span
+              >
+            </div>
+          </div>
+
+          <div class="different-card">
+            <div class="different-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h3 class="different-title">Open Communication</h3>
+            <p class="different-description">
+              Transparency and honest dialogue form the foundation of our
+              relationships. Every voice matters, and every idea has potential.
+            </p>
+            <div class="different-features">
+              <span
+                ><i class="fas fa-check-circle"></i> Transparent
+                leadership</span
+              >
+              <span
+                ><i class="fas fa-check-circle"></i> Regular feedback
+                sessions</span
+              >
+              <span><i class="fas fa-check-circle"></i> Open-door policy</span>
+              <span
+                ><i class="fas fa-check-circle"></i> Cross-team
+                collaboration</span
+              >
+            </div>
+          </div>
+
+          <div class="different-card">
+            <div class="different-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3 class="different-title">Creative Freedom</h3>
+            <p class="different-description">
+              Innovation flourishes when creativity is unleashed. We provide
+              space, resources, and trust to explore, experiment, and create.
+            </p>
+            <div class="different-features">
+              <span
+                ><i class="fas fa-check-circle"></i> Flexible work
+                approaches</span
+              >
+              <span
+                ><i class="fas fa-check-circle"></i> Innovation time
+                allocated</span
+              >
+              <span
+                ><i class="fas fa-check-circle"></i> Creative project
+                support</span
+              >
+              <span
+                ><i class="fas fa-check-circle"></i> Experimentation
+                encouraged</span
+              >
+            </div>
+          </div>
+
+          <div class="different-card">
+            <div class="different-icon">
+              <i class="fas fa-flag"></i>
+            </div>
+            <h3 class="different-title">Strong Ownership</h3>
+            <p class="different-description">
+              We empower team members to take ownership of their work, make
+              meaningful decisions, and drive projects from start to finish.
+            </p>
+            <div class="different-features">
+              <span
+                ><i class="fas fa-check-circle"></i> Decision-making
+                authority</span
+              >
+              <span
+                ><i class="fas fa-check-circle"></i> Project leadership
+                opportunities</span
+              >
+              <span
+                ><i class="fas fa-check-circle"></i> Accountability
+                culture</span
+              >
+              <span
+                ><i class="fas fa-check-circle"></i> Result-oriented
+                mindset</span
+              >
+            </div>
+          </div>
+
+          <div class="different-card">
+            <div class="different-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="different-title">Continuous Learning</h3>
+            <p class="different-description">
+              Growth never stops here. We invest in learning opportunities and
+              skill development to keep our team at the forefront of technology.
+            </p>
+            <div class="different-features">
+              <span
+                ><i class="fas fa-check-circle"></i> Learning budget
+                provided</span
+              >
+              <span
+                ><i class="fas fa-check-circle"></i> Conference attendance</span
+              >
+              <span
+                ><i class="fas fa-check-circle"></i> Internal knowledge
+                sharing</span
+              >
+              <span
+                ><i class="fas fa-check-circle"></i> Skill development
+                programs</span
+              >
+            </div>
+          </div>
+
+          <div class="different-card">
+            <div class="different-icon">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <h3 class="different-title">Work-Life Harmony</h3>
+            <p class="different-description">
+              We believe sustainable productivity comes from balanced lives,
+              supporting both professional success and personal well-being.
+            </p>
+            <div class="different-features">
+              <span
+                ><i class="fas fa-check-circle"></i> Flexible work hours</span
+              >
+              <span
+                ><i class="fas fa-check-circle"></i> Remote work options</span
+              >
+              <span><i class="fas fa-check-circle"></i> Wellness programs</span>
+              <span
+                ><i class="fas fa-check-circle"></i> Mental health support</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Culture by Numbers Section -->
+    <section class="culture-numbers-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="title-with-icon">
+            <i class="fas fa-chart-bar numbers-icon"></i>
+            <h2 class="section-title">Culture by the Numbers</h2>
+          </div>
+          <p class="section-subtitle">
+            Our employee-first approach creates measurable results in
+            satisfaction, growth, and overall workplace excellence.
+          </p>
+        </div>
+
+        <div class="culture-numbers-intro">
+          <p>
+            These metrics reflect our commitment to creating an exceptional
+            workplace where team members can thrive, grow, and do their best
+            work.
+          </p>
+        </div>
+
+        <div class="culture-stats-cards">
+          <div class="culture-stat-card">
+            <div class="culture-stat-icon">
+              <i class="fas fa-smile"></i>
+            </div>
+            <h3 class="culture-stat-count" data-target="96">0</h3>
+            <p class="culture-stat-label">Employee Satisfaction</p>
+            <p class="culture-stat-description">
+              Our team loves what they do and where they work
+            </p>
+          </div>
+
+          <div class="culture-stat-card">
+            <div class="culture-stat-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="culture-stat-count" data-target="2.5">0</h3>
+            <p class="culture-stat-label">Career Growth Rate</p>
+            <p class="culture-stat-description">
+              Faster professional development than industry average
+            </p>
+          </div>
+
+          <div class="culture-stat-card">
+            <div class="culture-stat-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3 class="culture-stat-count" data-target="4.8">0</h3>
+            <p class="culture-stat-label">Culture Rating</p>
+            <p class="culture-stat-description">
+              Outstanding workplace culture rating from our team
+            </p>
+          </div>
+
+          <div class="culture-stat-card">
+            <div class="culture-stat-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3 class="culture-stat-count" data-target="32">0</h3>
+            <p class="culture-stat-label">Average Work Week</p>
+            <p class="culture-stat-description">
+              Productive hours focused on meaningful work
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Your Work Environment Section -->
+    <section class="work-environment-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Your Work Environment</h2>
+          <p class="section-subtitle">
+            We've designed spaces and experiences that amplify creativity,
+            foster collaboration, and support your professional journey.
+          </p>
+        </div>
+
+        <div class="work-environment-intro">
+          <p>
+            Our work environment adapts to your needs, providing flexibility,
+            support, and the right tools to help you do your best work.
+          </p>
+        </div>
+
+        <div class="work-environment-cards">
+          <div class="work-environment-card">
+            <div class="work-environment-card-header">
+              <div class="work-environment-card-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <h3 class="work-environment-card-title">Flexible Workspace</h3>
+              <p class="work-environment-card-subtitle">
+                Choose where and how you work best—office, remote, or hybrid.
+              </p>
+            </div>
+            <div class="work-environment-card-features">
+              <span><i class="fas fa-check"></i> Modern office spaces</span>
+              <span><i class="fas fa-check"></i> Flexible seating</span>
+              <span><i class="fas fa-check"></i> Remote work support</span>
+              <span><i class="fas fa-check"></i> Collaboration zones</span>
+            </div>
+          </div>
+
+          <div class="work-environment-card">
+            <div class="work-environment-card-header">
+              <div class="work-environment-card-icon">
+                <i class="fas fa-users-cog"></i>
+              </div>
+              <h3 class="work-environment-card-title">Team Collaboration</h3>
+              <p class="work-environment-card-subtitle">
+                Cross-functional teams working together on exciting challenges.
+              </p>
+            </div>
+            <div class="work-environment-card-features">
+              <span><i class="fas fa-check"></i> Agile methodologies</span>
+              <span><i class="fas fa-check"></i> Pair programming</span>
+              <span><i class="fas fa-check"></i> Cross-team projects</span>
+              <span><i class="fas fa-check"></i> Knowledge sharing</span>
+            </div>
+          </div>
+
+          <div class="work-environment-card">
+            <div class="work-environment-card-header">
+              <div class="work-environment-card-icon">
+                <i class="fas fa-flask"></i>
+              </div>
+              <h3 class="work-environment-card-title">Innovation Labs</h3>
+              <p class="work-environment-card-subtitle">
+                Dedicated time and space for exploring new technologies and
+                ideas.
+              </p>
+            </div>
+            <div class="work-environment-card-features">
+              <span><i class="fas fa-check"></i> Hackathons & sprints</span>
+              <span
+                ><i class="fas fa-check"></i> Research & development time</span
+              >
+              <span><i class="fas fa-check"></i> Prototyping resources</span>
+              <span
+                ><i class="fas fa-check"></i> Tech exploration sessions</span
+              >
+            </div>
+          </div>
+
+          <div class="work-environment-card">
+            <div class="work-environment-card-header">
+              <div class="work-environment-card-icon">
+                <i class="fas fa-calendar-day"></i>
+              </div>
+              <h3 class="work-environment-card-title">
+                Structured Flexibility
+              </h3>
+              <p class="work-environment-card-subtitle">
+                Flexible schedules with structured collaboration and innovation
+                time.
+              </p>
+            </div>
+            <div class="work-environment-card-features">
+              <span><i class="fas fa-check"></i> Flexible start times</span>
+              <span><i class="fas fa-check"></i> Team sync-ups</span>
+              <span><i class="fas fa-check"></i> Focused deep work</span>
+              <span><i class="fas fa-check"></i> Innovation time blocks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Perks That Matter Section -->
+    <section class="perks-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Perks That Matter</h2>
+          <p class="section-subtitle">
+            We go beyond standard benefits to provide meaningful perks that
+            support your growth, health, and happiness.
+          </p>
+        </div>
+
+        <div class="perks-intro">
+          <p>
+            Our comprehensive perks package is designed to support you both
+            professionally and personally, creating an environment where you can
+            thrive.
+          </p>
+        </div>
+
+        <div class="perks-cards">
+          <div class="perk-card">
+            <div class="perk-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="perk-title">Learning & Development</h3>
+            <p class="perk-description">
+              Continuous investment in your professional growth and skill
+              development.
+            </p>
+            <div class="perk-features">
+              <span><i class="fas fa-award"></i> Annual learning budget</span>
+              <span><i class="fas fa-ticket-alt"></i> Conference tickets</span>
+              <span
+                ><i class="fas fa-laptop-code"></i> Online course
+                subscriptions</span
+              >
+              <span
+                ><i class="fas fa-certificate"></i> Certification support</span
+              >
+              <span><i class="fas fa-comments"></i> Internal tech talks</span>
+            </div>
+          </div>
+
+          <div class="perk-card">
+            <div class="perk-icon">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <h3 class="perk-title">Health & Wellness</h3>
+            <p class="perk-description">
+              Comprehensive support for your physical and mental wellbeing.
+            </p>
+            <div class="perk-features">
+              <span
+                ><i class="fas fa-shield-alt"></i> Comprehensive health
+                insurance</span
+              >
+              <span><i class="fas fa-brain"></i> Mental health support</span>
+              <span><i class="fas fa-dumbbell"></i> Gym memberships</span>
+              <span><i class="fas fa-apple-alt"></i> Wellness programs</span>
+              <span
+                ><i class="fas fa-stethoscope"></i> Regular health
+                checkups</span
+              >
+            </div>
+          </div>
+
+          <div class="perk-card">
+            <div class="perk-icon">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <h3 class="perk-title">Work-Life Balance</h3>
+            <p class="perk-description">
+              Flexibility and support to maintain a healthy balance between work
+              and life.
+            </p>
+            <div class="perk-features">
+              <span><i class="fas fa-clock"></i> Flexible work hours</span>
+              <span><i class="fas fa-home"></i> Remote work options</span>
+              <span
+                ><i class="fas fa-umbrella-beach"></i> Extra vacation days</span
+              >
+              <span
+                ><i class="fas fa-calendar-alt"></i> Sabbatical programs</span
+              >
+              <span><i class="fas fa-hands-helping"></i> Family support</span>
+            </div>
+          </div>
+
+          <div class="perk-card">
+            <div class="perk-icon">
+              <i class="fas fa-glass-cheers"></i>
+            </div>
+            <h3 class="perk-title">Fun & Recognition</h3>
+            <p class="perk-description">
+              Celebrating achievements and fostering a fun, engaging workplace.
+            </p>
+            <div class="perk-features">
+              <span><i class="fas fa-trophy"></i> Achievement awards</span>
+              <span><i class="fas fa-gamepad"></i> Game tournaments</span>
+              <span
+                ><i class="fas fa-calendar-check"></i> Monthly team
+                outings</span
+              >
+              <span><i class="fas fa-lightbulb"></i> Innovation rewards</span>
+              <span
+                ><i class="fas fa-birthday-cake"></i> Team celebrations</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="culture-cta-section">
+      <div class="container">
+        <div class="culture-cta-content">
+          <h2 class="culture-cta-title">
+            Ready to Be Part of Something
+            <span class="highlight">Brilliant</span>?
+          </h2>
+          <p class="culture-cta-subtitle">
+            Join a culture where your growth matters, your voice is heard, and
+            your work makes a meaningful impact. Let's build the future
+            together.
+          </p>
+
+          <div class="culture-cta-buttons">
+            <a href="#careers" class="culture-cta-btn primary-btn"
+              >Explore Open Roles <i class="fas fa-briefcase"></i
+            ></a>
+            <a href="#services" class="culture-cta-btn secondary-btn"
+              >Discover Our Services <i class="fas fa-rocket"></i
+            ></a>
+            <a href="#culture-chat" class="culture-cta-btn accent-btn"
+              >Schedule a Culture Chat <i class="fas fa-calendar-check"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="footer-container">
+        <!-- Top Section with Logo and Tagline -->
+        <div class="footer-top">
+          <div class="footer-logo-container">
+            <div class="logo-wrapper">
+              <img
+                src="/Intallia24/Images/logo1.png"
+                alt="Intallia Logo"
+                class="footer-logo"
+              />
+              <div class="logo-text">
+                <span class="logo-top">INTALIA</span>
+                <span class="logo-bottom">Building Tomorrow's Workforce</span>
+              </div>
+            </div>
+            <p class="footer-tagline">
+              Technology is at the core of everything we do—but it’s our people
+              who make the real difference. At Intallia, we bring together a
+              curated team of innovators, problem-solvers, and domain experts
+              who blend deep technical skills with a product-first mindset.
+            </p>
+          </div>
+
+          <div class="footer-cta">
+            <button class="btn-primary">Start Your Project →</button>
+            <button class="btn-secondary">Free Consultation</button>
+          </div>
+        </div>
+
+        <!-- Middle Section with Services, Developers, Company Links -->
+        <div class="footer-middle">
+          <div class="footer-column">
+            <h3 class="footer-heading">Services</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html"
+                  >Data Science & Engineering</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/website-development.html"
+                  >Web Application Development</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html"
+                  >Mobile Application Development</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html"
+                  >AI / ML Engineering</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/data-engineering.html"
+                  >Data Engineering Solutions</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/automation-workflows.html"
+                  >Automation & Workflows</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Hire Developers</h3>
+            <ul class="footer-links">
+              <li><a href="#">Hire React Developers</a></li>
+              <li><a href="#">Hire Node.js Developers</a></li>
+              <li><a href="#">Hire Java Developers</a></li>
+              <li><a href="#">Hire Python Developers</a></li>
+              <li><a href="#">Hire Flutter Developers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/Intallia24/index.html">Home</a></li>
+              <li><a href="/Intallia24/Pages/About/about.html">Our Company</a></li>
+              <li><a href="/Intallia24/Pages/About/our-work.html">How We Work</a></li>
+              <li><a href="/Intallia24/Pages/About/our-values.html">Our Values</a></li>
+              <li>
+                <a href="/Intallia24/Pages/About/our-working-culture.html"
+                  >Our Working Culture</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Get In Touch</h3>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> 123 Tech Street,
+                Innovation City
+              </p>
+              <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+              <p><i class="fas fa-envelope"></i> info@intallia.com</p>
+            </div>
+
+            <div class="newsletter">
+              <h4>Subscribe to our newsletter</h4>
+              <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email" />
+                <button class="btn-subscribe">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section with Social Media and Copyright -->
+        <div class="footer-bottom">
+          <div class="social-icons">
+            <a href="#" class="social-icon" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Twitter">
+              <i class="fab fa-twitter"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Instagram">
+              <i class="fab fa-instagram"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="GitHub">
+              <i class="fab fa-github"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="YouTube">
+              <i class="fab fa-youtube"></i>
+              <span class="icon-bg"></span>
+            </a>
+          </div>
+
+          <div class="copyright">
+            <p>
+              &copy; <span id="current-year">2024</span> Intallia. All rights
+              reserved. | <a href="#">Privacy Policy</a> |
+              <a href="#">Terms of Service</a>
+            </p>
+          </div>
+
+          <div class="footer-quote">
+            <button class="btn-quote">Get Quote</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/Intallia24/JS/our-working-culture.js"></script>
+    <script src="/Intallia24/JS/script.js"></script>
+    <script src="/Intallia24/JS/footer.js"></script>
+  </body>
+</html>

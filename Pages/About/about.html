@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Intallia24</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Intallia24/CSS/about.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/navbar.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/footer.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header">
+      <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo-container">
+          <div class="logo">
+            <div class="logo-text">
+              <!-- <span class="logo-main">INTALLA 24</span>
+              <span class="logo-sub">Building Tomorrow's Workforce</span> -->
+              <a href="/Intallia24/index.html">
+                <img src="/Intallia24/Images/intallia-logo.png" alt="" />
+              </a>
+            </div>
+            <div class="logo-gradient"></div>
+          </div>
+          <!-- Mobile Menu Toggle -->
+          <button class="menu-toggle" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="/Intallia24/index.html" class="nav-link active">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+
+          <!-- About Us Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">
+              <i class="fas fa-info-circle"></i> About Us
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/about.html">
+                  <i class="fas fa-building"></i>
+                  <span>Our Company</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-work.html">
+                  <i class="fas fa-cogs"></i>
+                  <span>How We Work</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-values.html">
+                  <i class="fas fa-heart"></i>
+                  <span>Our Values</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-working-culture.html">
+                  <i class="fas fa-users"></i>
+                  <span>Our Working Culture</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#services" class="nav-link dropdown-toggle">
+              <i class="fas fa-cogs"></i> Services
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html">
+                  <i class="fas fa-layer-group"></i>
+                  <span>Data Science & Analytics</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html">
+                  <i class="fas fa-chart-bar"></i>
+                  <span>AL / ML Engineering</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/website-development.html">
+                  <i class="fas fa-database"></i>
+                  <span>Website Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html">
+                  <i class="fas fa-mobile-alt"></i>
+                  <span>Mobile Application Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-engineering.html">
+                  <i class="fas fa-globe"></i>
+                  <span>Data Engineering Solutions</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/automation-workflows.html">
+                  <i class="fas fa-robot"></i>
+                  <span>Automation & Workflows</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#" class="view-more" id="viewMoreServices">
+                  <i class="fas fa-eye"></i>
+                  <span>View More Services</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Products -->
+          <li class="nav-item">
+            <a href="#products" class="nav-link">
+              <i class="fas fa-box-open"></i> Products
+            </a>
+          </li>
+        </ul>
+
+        <!-- Get Free Consultation Button -->
+        <div class="cta-container">
+          <button class="cta-button" id="consultationBtn">
+            <i class="fas fa-comment-dots"></i> Get Free Consultation
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <!-- <main class="main-content">
+      <div class="container">
+        <div class="content-section" id="contentDisplay">
+          <h2 id="sectionTitle">Home Content</h2>
+          <p id="sectionDescription">
+            Welcome to our website! Select any menu item to see detailed
+            information about that section.
+          </p>
+        </div>
+      </div>
+    </main> -->
+
+    <!-- Consultation Modal -->
+    <div class="modal" id="consultationModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Get Free Consultation</h3>
+          <button class="close-modal" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Fill out the form below and our experts will contact you within 24
+            hours.
+          </p>
+          <form id="consultationForm">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Phone Number" />
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="" disabled selected>Select Service</option>
+                <option value="fullstack">Full Stack Development</option>
+                <option value="analytics">Data Analytics</option>
+                <option value="datascience">Data Science</option>
+                <option value="mobile">Mobile Application Development</option>
+                <option value="web">Web Application Development</option>
+                <option value="ai">AI Powered Platform</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-btn">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <h1 class="main-heading">
+            About <span class="typewriter-text">Intallia24</span>
+          </h1>
+          <p class="section-subtitle">
+            Your trusted technology partner for innovative digital solutions
+          </p>
+        </div>
+
+        <div class="about-content">
+          <p>
+            Intallia24 is a future-forward technology company simplifying
+            digital transformation with intelligent software solutions,
+            AI-powered platforms, and trusted long-term partnerships. We serve
+            startups, mid-market companies, and enterprise organizations
+            worldwide.
+          </p>
+          <p>
+            We specialize in custom software development, web and mobile
+            applications, cloud-native architectures, and product engineering.
+            Our expertise spans across healthcare, fintech, e-commerce,
+            education, logistics, and SaaS sectors, delivering measurable
+            business outcomes through technical excellence.
+          </p>
+          <p>
+            With a focus on agile methodologies and deep industry expertise, we
+            build scalable solutions that drive real impact. Our team combines
+            innovation with practical implementation to transform business
+            challenges into opportunities for growth.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision & Mission Cards -->
+    <section class="vision-mission-section">
+      <div class="container">
+        <div class="cards-row">
+          <!-- Vision Card -->
+          <div class="vision-card card">
+            <div class="card-header">
+              <div class="icon-container">
+                <i class="fas fa-eye icon-large"></i>
+              </div>
+              <h2 class="card-title">Our Vision</h2>
+            </div>
+            <div class="card-content">
+              <p>
+                To be the world's most trusted technology partner, transforming
+                businesses through innovative digital solutions that create
+                lasting value and drive sustainable growth.
+              </p>
+              <p>
+                We envision a future where technology seamlessly integrates with
+                business strategy, empowering organizations to reach their full
+                potential in an increasingly digital world.
+              </p>
+              <p>
+                Our vision extends beyond delivering projects—we aim to build
+                ecosystems where innovation thrives, partnerships flourish, and
+                technology becomes a true enabler of progress.
+              </p>
+              <p>
+                We strive to create a world where every business, regardless of
+                size or industry, can leverage cutting-edge technology to solve
+                complex challenges and achieve remarkable outcomes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Mission Card -->
+          <div class="mission-card card">
+            <div class="card-header">
+              <div class="icon-container">
+                <i class="fas fa-bullseye icon-large"></i>
+              </div>
+              <h2 class="card-title">Our Mission</h2>
+            </div>
+            <div class="card-content">
+              <p>
+                To empower businesses by simplifying digital transformation
+                through intelligent, innovative technology solutions that solve
+                real business problems and drive measurable results.
+              </p>
+              <p>
+                We build scalable software products, modernize legacy systems,
+                automate complex workflows, enhance customer experiences, and
+                enable data-driven decision making.
+              </p>
+              <p>
+                Our mission encompasses fostering long-term strategic
+                partnerships built on trust, transparency, integrity, and mutual
+                success where we become an extension of your team.
+              </p>
+              <p>
+                We deliver impactful solutions combining technical excellence
+                with business acumen, ensuring every project achieves its
+                intended outcomes and creates lasting value for our clients.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="core-values-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="title-with-icon">
+            <i class="fas fa-gem section-icon"></i>
+            <h2 class="section-title">Our Core Values</h2>
+          </div>
+          <p class="section-subtitle">
+            The fundamental beliefs that guide everything we do at Intallia24
+          </p>
+        </div>
+
+        <div class="core-values-intro">
+          <p>
+            Our core values reflect our commitment to excellence, innovation,
+            collaboration, and delivering sustainable business value through
+            software solutions that stand the test of time. These principles
+            shape our company culture, influence our hiring practices, guide our
+            client engagements, and define what it means to be part of the
+            Intallia24 team.
+          </p>
+        </div>
+
+        <div class="values-cards">
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3 class="value-title">Partnership-Driven</h3>
+            <p class="value-description">
+              We build more than products; we build lasting partnerships by
+              deeply understanding your challenges and business goals.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3 class="value-title">Intelligent Solutions</h3>
+            <p class="value-description">
+              We leverage cutting-edge technology, including AI, to craft
+              intelligent solutions that deliver measurable, real-world impact.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3 class="value-title">Passion & Integrity</h3>
+            <p class="value-description">
+              Our team works with passion and integrity, bringing bold ideas to
+              life with dedication, transparency, and purpose.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-crosshairs"></i>
+            </div>
+            <h3 class="value-title">Precision & Purpose</h3>
+            <p class="value-description">
+              Every line of code is written with precision, and every project is
+              guided by a clear purpose to drive your success.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet Our Developers -->
+    <section class="developers-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Meet Our Team</h2>
+          <p class="section-subtitle">
+            Experienced technology professionals, software architects, and
+            engineering leaders with 8-15+ years of hands-on experience
+            delivering successful software projects across diverse industries
+            and technical challenges.
+          </p>
+        </div>
+
+        <div class="developers-intro">
+          <p>
+            Our leadership team brings deep expertise in software architecture,
+            agile methodologies, DevOps practices, cloud computing, AI/ML
+            technologies, enterprise system integration, team building, and
+            strategic technology planning. They guide our engineering teams,
+            mentor junior developers, establish best practices, drive innovation
+            initiatives, and ensure quality standards.
+          </p>
+        </div>
+
+        <div class="developers-grid" id="developersContainer">
+          <!-- Developer cards will be generated by JavaScript -->
+        </div>
+
+        <div class="view-more-container">
+          <button id="viewMoreBtn" class="view-more-btn">
+            View More Developers <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- By the Numbers -->
+    <section class="numbers-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">By the Numbers</h2>
+          <p class="section-subtitle">Our track record speaks for itself</p>
+        </div>
+
+        <div class="numbers-grid">
+          <div class="number-card">
+            <div class="number-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="number-count" data-target="15">0</h3>
+            <p class="number-label">Engineers & Architects</p>
+            <p class="number-description">
+              Senior professionals with proven expertise
+            </p>
+          </div>
+
+          <div class="number-card">
+            <div class="number-icon">
+              <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h3 class="number-count" data-target="8">0</h3>
+            <p class="number-label">Years Average Experience</p>
+            <p class="number-description">
+              Deep technical knowledge and best practices
+            </p>
+          </div>
+
+          <div class="number-card">
+            <div class="number-icon">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <h3 class="number-count" data-target="20">0</h3>
+            <p class="number-label">Projects Completed</p>
+            <p class="number-description">
+              Successful deliveries across various industries
+            </p>
+          </div>
+
+          <div class="number-card">
+            <div class="number-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3 class="number-count" data-target="100">0</h3>
+            <p class="number-label">Certified Professionals</p>
+            <p class="number-description">
+              Industry-recognized certifications and training
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Expertise -->
+    <section class="expertise-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Expertise</h2>
+          <p class="section-subtitle">
+            Industry-recognized certifications that validate our capabilities
+          </p>
+        </div>
+
+        <div class="expertise-grid">
+          <div class="expertise-card">
+            <div class="expertise-icon">
+              <i class="fab fa-aws"></i>
+            </div>
+            <h3 class="expertise-title">AWS Certified Solutions Architect</h3>
+          </div>
+
+          <div class="expertise-card">
+            <div class="expertise-icon">
+              <i class="fab fa-google"></i>
+            </div>
+            <h3 class="expertise-title">Google Cloud Professional</h3>
+          </div>
+
+          <div class="expertise-card">
+            <div class="expertise-icon">
+              <i class="fab fa-microsoft"></i>
+            </div>
+            <h3 class="expertise-title">Microsoft Azure Solutions Architect</h3>
+          </div>
+
+          <div class="expertise-card">
+            <div class="expertise-icon">
+              <i class="fab fa-docker"></i>
+            </div>
+            <h3 class="expertise-title">Docker Certified Associate</h3>
+          </div>
+
+          <div class="expertise-card">
+            <div class="expertise-icon">
+              <i class="fab fa-java"></i>
+            </div>
+            <h3 class="expertise-title">Oracle Certified Professional Java</h3>
+          </div>
+
+          <div class="expertise-card">
+            <div class="expertise-icon">
+              <i class="fas fa-scroll"></i>
+            </div>
+            <h3 class="expertise-title">Certified Scrum Master</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Common questions about Intallia24</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What industries do you specialize in?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We have extensive experience across multiple industries
+                including healthcare and telemedicine, fintech and banking,
+                e-commerce and retail, education and e-learning, logistics and
+                supply chain, real estate and property management, hospitality
+                and travel, manufacturing and IoT, media and entertainment, and
+                enterprise SaaS platforms.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Do you work with startups or only established companies?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We work with businesses of all sizes, from startups looking to
+                build their MVP to established enterprises seeking to modernize
+                legacy systems. Our flexible engagement models allow us to
+                tailor our services to meet the unique needs and budgets of each
+                client.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What is your typical project engagement model?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We offer multiple engagement models including fixed-price
+                projects, time and material contracts, and dedicated development
+                teams. Our preferred approach is agile methodology with 2-week
+                sprints, regular demos, and continuous feedback to ensure
+                alignment and adaptability throughout the project lifecycle.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How do you ensure project success and timely delivery?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We employ proven agile methodologies, regular progress tracking,
+                transparent communication, and risk management practices. Our
+                experienced project managers ensure milestones are met, and our
+                quality assurance processes guarantee deliverables meet the
+                highest standards.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>
+                Do you provide consultation services before starting
+                development?
+              </h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, we offer comprehensive discovery and consulting services to
+                help clarify requirements, define project scope, and establish
+                success metrics before any development begins. This ensures
+                we're aligned on objectives and can provide accurate estimates
+                and timelines.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>
+                What communication channels and project management tools do you
+                use?
+              </h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We use a variety of communication tools including Slack,
+                Microsoft Teams, and Zoom for daily communication. For project
+                management, we typically use Jira, Trello, or Asana depending on
+                client preference. We're flexible and can adapt to your existing
+                tools and workflows.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="footer-container">
+        <!-- Top Section with Logo and Tagline -->
+        <div class="footer-top">
+          <div class="footer-logo-container">
+            <div class="logo-wrapper">
+              <img
+                src="/Intallia24/Images/logo1.png"
+                alt="Intallia Logo"
+                class="footer-logo"
+              />
+              <div class="logo-text">
+                <span class="logo-top">INTALIA</span>
+                <span class="logo-bottom">Building Tomorrow's Workforce</span>
+              </div>
+            </div>
+            <p class="footer-tagline">
+              Technology is at the core of everything we do—but it’s our people
+              who make the real difference. At Intallia, we bring together a
+              curated team of innovators, problem-solvers, and domain experts
+              who blend deep technical skills with a product-first mindset.
+            </p>
+          </div>
+
+          <div class="footer-cta">
+            <button class="btn-primary">Start Your Project →</button>
+            <button class="btn-secondary">Free Consultation</button>
+          </div>
+        </div>
+
+        <!-- Middle Section with Services, Developers, Company Links -->
+        <div class="footer-middle">
+          <div class="footer-column">
+            <h3 class="footer-heading">Services</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html"
+                  >Data Science & Engineering</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/website-development.html"
+                  >Web Application Development</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html"
+                  >Mobile Application Development</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html"
+                  >AI / ML Engineering</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/data-engineering.html"
+                  >Data Engineering Solutions</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/automation-workflows.html"
+                  >Automation & Workflows</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Hire Developers</h3>
+            <ul class="footer-links">
+              <li><a href="#">Hire React Developers</a></li>
+              <li><a href="#">Hire Node.js Developers</a></li>
+              <li><a href="#">Hire Java Developers</a></li>
+              <li><a href="#">Hire Python Developers</a></li>
+              <li><a href="#">Hire Flutter Developers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/Intallia24/index.html">Home</a></li>
+              <li><a href="/Intallia24/Pages/About/about.html">Our Company</a></li>
+              <li><a href="/Intallia24/Pages/About/our-work.html">How We Work</a></li>
+              <li><a href="/Intallia24/Pages/About/our-values.html">Our Values</a></li>
+              <li>
+                <a href="/Intallia24/Pages/About/our-working-culture.html"
+                  >Our Working Culture</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Get In Touch</h3>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> 123 Tech Street,
+                Innovation City
+              </p>
+              <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+              <p><i class="fas fa-envelope"></i> info@intallia.com</p>
+            </div>
+
+            <div class="newsletter">
+              <h4>Subscribe to our newsletter</h4>
+              <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email" />
+                <button class="btn-subscribe">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section with Social Media and Copyright -->
+        <div class="footer-bottom">
+          <div class="social-icons">
+            <a href="#" class="social-icon" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Twitter">
+              <i class="fab fa-twitter"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Instagram">
+              <i class="fab fa-instagram"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="GitHub">
+              <i class="fab fa-github"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="YouTube">
+              <i class="fab fa-youtube"></i>
+              <span class="icon-bg"></span>
+            </a>
+          </div>
+
+          <div class="copyright">
+            <p>
+              &copy; <span id="current-year">2024</span> Intallia. All rights
+              reserved. | <a href="#">Privacy Policy</a> |
+              <a href="#">Terms of Service</a>
+            </p>
+          </div>
+
+          <div class="footer-quote">
+            <button class="btn-quote">Get Quote</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/Intallia24/JS/about.js"></script>
+    <script src="/Intallia24/JS/footer.js"></script>
+    <script src="/Intallia24/JS/script.js"></script>
+  </body>
+</html>

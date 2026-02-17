@@ -1,0 +1,939 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Application Development</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Intallia24/CSS/mobile-application-development.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/navbar.css" />
+    <link rel="stylesheet" href="/Intallia24/CSS/footer.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header">
+      <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo-container">
+          <div class="logo">
+            <div class="logo-text">
+              <!-- <span class="logo-main">INTALLA 24</span>
+              <span class="logo-sub">Building Tomorrow's Workforce</span> -->
+              <a href="/Intallia24/index.html">
+                <img src="/Intallia24/Images/intallia-logo.png" alt="" />
+              </a>
+            </div>
+            <div class="logo-gradient"></div>
+          </div>
+          <!-- Mobile Menu Toggle -->
+          <button class="menu-toggle" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="/Intallia24/index.html" class="nav-link active">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+
+          <!-- About Us Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">
+              <i class="fas fa-info-circle"></i> About Us
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/about.html">
+                  <i class="fas fa-building"></i>
+                  <span>Our Company</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-work.html">
+                  <i class="fas fa-cogs"></i>
+                  <span>How We Work</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-values.html">
+                  <i class="fas fa-heart"></i>
+                  <span>Our Values</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/About/our-working-culture.html">
+                  <i class="fas fa-users"></i>
+                  <span>Our Working Culture</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a href="#services" class="nav-link dropdown-toggle">
+              <i class="fas fa-cogs"></i> Services
+              <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html">
+                  <i class="fas fa-layer-group"></i>
+                  <span>Data Science & Analytics</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html">
+                  <i class="fas fa-chart-bar"></i>
+                  <span>AL / ML Engineering</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/website-development.html">
+                  <i class="fas fa-database"></i>
+                  <span>Website Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html">
+                  <i class="fas fa-mobile-alt"></i>
+                  <span>Mobile Application Development</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/data-engineering.html">
+                  <i class="fas fa-globe"></i>
+                  <span>Data Engineering Solutions</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="/Intallia24/Pages/Services/automation-workflows.html">
+                  <i class="fas fa-robot"></i>
+                  <span>Automation & Workflows</span>
+                </a>
+              </li>
+              <li class="dropdown-item">
+                <a href="#" class="view-more" id="viewMoreServices">
+                  <i class="fas fa-eye"></i>
+                  <span>View More Services</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Products -->
+          <li class="nav-item">
+            <a href="#products" class="nav-link">
+              <i class="fas fa-box-open"></i> Products
+            </a>
+          </li>
+        </ul>
+
+        <!-- Get Free Consultation Button -->
+        <div class="cta-container">
+          <button class="cta-button" id="consultationBtn">
+            <i class="fas fa-comment-dots"></i> Get Free Consultation
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <!-- <main class="main-content">
+      <div class="container">
+        <div class="content-section" id="contentDisplay">
+          <h2 id="sectionTitle">Home Content</h2>
+          <p id="sectionDescription">
+            Welcome to our website! Select any menu item to see detailed
+            information about that section.
+          </p>
+        </div>
+      </div>
+    </main> -->
+
+    <!-- Consultation Modal -->
+    <div class="modal" id="consultationModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Get Free Consultation</h3>
+          <button class="close-modal" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Fill out the form below and our experts will contact you within 24
+            hours.
+          </p>
+          <form id="consultationForm">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Phone Number" />
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="" disabled selected>Select Service</option>
+                <option value="fullstack">Full Stack Development</option>
+                <option value="analytics">Data Analytics</option>
+                <option value="datascience">Data Science</option>
+                <option value="mobile">Mobile Application Development</option>
+                <option value="web">Web Application Development</option>
+                <option value="ai">AI Powered Platform</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-btn">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="mobile-dev-container">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <div class="title-container">
+            <i class="fas fa-mobile-alt title-icon"></i>
+            <h1 class="main-title">
+              Mobile Application <span class="highlight">Development</span>
+            </h1>
+          </div>
+          <p class="hero-description">
+            We create beautiful, fast, and scalable mobile apps for iOS &
+            Android. Our development services help startups, mid-market
+            companies, and enterprises stay connected with customers through
+            engaging mobile experiences, automate internal workflows, and launch
+            innovative digital-first products.
+          </p>
+          <div class="hero-buttons">
+            <a href="#" class="btn-primary1"
+              >Start Your App Project <i class="fas fa-arrow-right"></i
+            ></a>
+            <a href="#" class="btn-secondary1"
+              >View App Portfolio <i class="fas fa-eye"></i
+            ></a>
+          </div>
+          <div class="stats-container">
+            <div class="stat-item">
+              <div class="counter" data-target="20">0</div>
+              <p>Apps Launched</p>
+            </div>
+            <div class="stat-item">
+              <div class="counter" data-target="4.8">0</div>
+              <p>Average Rating</p>
+            </div>
+            <div class="stat-item">
+              <div class="counter" data-target="10">0</div>
+              <p>M+ Downloads</p>
+            </div>
+            <div class="stat-item">
+              <div class="counter" data-target="99.9">0</div>
+              <p>% Uptime</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mobile App Services Section -->
+      <section class="services-section">
+        <h2 class="section-title">Mobile App Services</h2>
+        <p class="section-description">
+          From enterprise mobility solutions to consumer-facing applications, we
+          create intuitive, performant mobile experiences that drive measurable
+          business results.
+        </p>
+        <div class="services-cards">
+          <div class="service-card">
+            <i class="fas fa-briefcase service-icon"></i>
+            <h3>Business & Enterprise Apps</h3>
+            <p>
+              Custom mobile solutions that streamline operations and enhance
+              team productivity across your organization with enterprise-grade
+              features.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-users service-icon"></i>
+            <h3>Customer-Facing Mobile Solutions</h3>
+            <p>
+              Engaging consumer apps that strengthen customer relationships,
+              drive brand loyalty, and deliver exceptional user experiences.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-map-marker-alt service-icon"></i>
+            <h3>Location-Based Services</h3>
+            <p>
+              GPS-enabled apps with mapping integration for location-aware
+              features, real-time tracking, and geofencing capabilities.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-shopping-cart service-icon"></i>
+            <h3>E-commerce & Payment Apps</h3>
+            <p>
+              Secure mobile commerce platforms with integrated payment gateways,
+              shopping carts, and seamless checkout experiences.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-share-alt service-icon"></i>
+            <h3>Social & Content-Based Apps</h3>
+            <p>
+              Dynamic social platforms and media-rich applications for content
+              sharing, community building, and user engagement.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Frameworks & Tools Section -->
+      <section class="frameworks-section">
+        <div class="section-header">
+          <i class="fas fa-tools framework-icon"></i>
+          <h2 class="section-title">Frameworks & Tools</h2>
+        </div>
+        <p class="section-description">
+          We leverage industry-leading mobile development technologies,
+          frameworks, and platform SDKs to deliver exceptional app performance,
+          smooth 60fps animations, responsive user interfaces, and delightful
+          user experiences meeting platform-specific design standards.
+        </p>
+        <div class="framework-cards">
+          <div class="framework-card">
+            <i class="fab fa-android card-icon"></i>
+            <h3>Native Development</h3>
+            <p>
+              Kotlin (Android), Swift (iOS), Java, Objective-C for maximum
+              performance and platform-specific features.
+            </p>
+          </div>
+          <div class="framework-card">
+            <i class="fas fa-layer-group card-icon"></i>
+            <h3>Cross-Platform</h3>
+            <p>
+              Flutter, React Native, Xamarin, Ionic enabling faster development
+              and simultaneous deployment to multiple platforms.
+            </p>
+          </div>
+          <div class="framework-card">
+            <i class="fas fa-server card-icon"></i>
+            <h3>Backend & APIs</h3>
+            <p>
+              Node.js, Firebase, GraphQL, REST APIs for robust backend services
+              and seamless data integration.
+            </p>
+          </div>
+          <div class="framework-card">
+            <i class="fas fa-rocket card-icon"></i>
+            <h3>Deployment</h3>
+            <p>
+              App Store, Google Play, TestFlight, CI/CD pipelines ensuring
+              smooth releases and updates.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Our Mobile Development Section -->
+      <section class="why-choose-section">
+        <h2 class="section-title">Why Choose Our Mobile Development</h2>
+        <p class="section-description">
+          We create mobile applications that don't just look aesthetically
+          pleasing with pixel-perfect designs—they perform flawlessly with
+          sub-100ms response times, efficient memory management, and optimized
+          battery consumption, scale effortlessly from hundreds to millions of
+          users, and deliver measurable business value.
+        </p>
+        <div class="why-choose-content">
+          <div class="excellence-list">
+            <h3>Built for Mobile Excellence</h3>
+            <div class="excellence-item">
+              <i class="fas fa-mobile-alt"></i>
+              <div>
+                <h4>Native & Cross-Platform Development</h4>
+                <p>
+                  Optimized for each platform with smooth animations, fast
+                  loading, and seamless user experience.
+                </p>
+              </div>
+            </div>
+            <div class="excellence-item">
+              <i class="fas fa-shield-alt"></i>
+              <div>
+                <h4>Security First</h4>
+                <p>
+                  Built-in security features including encryption, secure
+                  authentication, and compliance standards.
+                </p>
+              </div>
+            </div>
+            <div class="excellence-item">
+              <i class="fas fa-sync-alt"></i>
+              <div>
+                <h4>Easy Updates</h4>
+                <p>
+                  Streamlined deployment process with automated testing and
+                  seamless app store submissions.
+                </p>
+              </div>
+            </div>
+            <div class="excellence-item">
+              <i class="fas fa-expand-alt"></i>
+              <div>
+                <h4>Scalable Architecture</h4>
+                <p>
+                  Modular design that grows with your user base and adapts to
+                  changing business requirements.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="feature-cards">
+            <div class="feature-card">
+              <i class="fas fa-bolt"></i>
+              <h4>Native Performance</h4>
+              <p>
+                Optimized for maximum speed and responsiveness on each platform.
+              </p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-wifi"></i>
+              <h4>Offline Functionality</h4>
+              <p>Apps work seamlessly even without internet connectivity.</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-cloud"></i>
+              <h4>Cloud Synchronization</h4>
+              <p>Real-time data sync across devices and platforms.</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-chart-line"></i>
+              <h4>Analytics & Insights</h4>
+              <p>
+                Comprehensive tracking and reporting for data-driven decisions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Development Process Section -->
+      <section class="process-section">
+        <h2 class="section-title">Our Development Process</h2>
+        <p class="section-description">
+          From concept to App Store launch, our proven process ensures your
+          mobile app delivers exceptional results and user satisfaction.
+        </p>
+        <div class="process-cards">
+          <div class="process-card">
+            <div class="process-number">1</div>
+            <h3>Strategy</h3>
+            <p>
+              Market research and app strategy planning to define goals, target
+              audience, and success metrics.
+            </p>
+          </div>
+          <div class="process-card">
+            <div class="process-number">2</div>
+            <h3>Design</h3>
+            <p>
+              UI/UX design and prototype development focusing on user experience
+              and visual appeal.
+            </p>
+          </div>
+          <div class="process-card">
+            <div class="process-number">3</div>
+            <h3>Development</h3>
+            <p>
+              Native or cross-platform development with agile methodology and
+              regular updates.
+            </p>
+          </div>
+          <div class="process-card">
+            <div class="process-number">4</div>
+            <h3>Launch</h3>
+            <p>
+              App store submission, marketing, and launch strategy for maximum
+              impact.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- App Store Success Section -->
+      <section class="appstore-section">
+        <h2 class="section-title">App Store Success</h2>
+        <p class="section-description">
+          We handle the complete app store submission process and optimization
+          to ensure your app gets discovered and downloaded.
+        </p>
+        <div class="appstore-cards">
+          <div class="appstore-card">
+            <i class="fas fa-search appstore-icon"></i>
+            <h3>App Store Optimization</h3>
+            <p>
+              Optimized app listings with compelling descriptions, keywords, and
+              screenshots that drive downloads.
+            </p>
+          </div>
+          <div class="appstore-card">
+            <i class="fas fa-star appstore-icon"></i>
+            <h3>Review Management</h3>
+            <p>
+              Strategies to encourage positive reviews and respond
+              professionally to user feedback.
+            </p>
+          </div>
+          <div class="appstore-card">
+            <i class="fas fa-chart-pie appstore-icon"></i>
+            <h3>Analytics & Insights</h3>
+            <p>
+              Comprehensive tracking and reporting to measure app performance
+              and user engagement.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- What Our Clients Say Section -->
+      <section class="testimonials-section">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-description">
+          Don't just take our word for it - hear from our satisfied clients
+        </p>
+        <div class="testimonial-cards">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "BrillianTech developed our fitness app for both iOS and Android
+                with seamless performance. Downloaded over 100,000 times with a
+                4.8-star rating."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <h4>David Park</h4>
+              <p>CEO, FitLife App</p>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "They transformed our outdated mobile app into a modern
+                experience. Customer engagement increased by 250% within the
+                first month."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <h4>Lisa Thompson</h4>
+              <p>Director, RetailPro</p>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "The real-time tracking and push notification features work
+                perfectly. Professional team that delivers on promises."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <h4>James Wilson</h4>
+              <p>Co-Founder, DeliveryNow</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- App Store Success Strategy Section -->
+      <section class="strategy-section">
+        <div class="section-header">
+          <i class="fas fa-chess-knight strategy-icon"></i>
+          <h2 class="section-title">App Store Success Strategy</h2>
+        </div>
+        <p class="section-description">
+          From initial development through beta testing to App Store and Google
+          Play launch achieving 4.5+ star average ratings. Our proven mobile app
+          launch strategy encompasses comprehensive App Store Optimization (ASO)
+          with keyword research, compelling app descriptions, and continuous
+          iteration for sustainable app growth.
+        </p>
+        <div class="strategy-cards">
+          <div class="strategy-card">
+            <h3>Platform Strategy & ASO</h3>
+            <p>
+              Strategic platform choice based on audience, budget, timeline. App
+              Store Optimization increases discoverability 3-5x with keyword
+              research, A/B tested screenshots.
+            </p>
+          </div>
+          <div class="strategy-card">
+            <h3>Performance & Analytics</h3>
+            <p>
+              60fps animations, sub-100ms response times, under 2% crash rate.
+              Battery optimization keeping drain under 5%. Mixpanel/Firebase
+              analytics tracking.
+            </p>
+          </div>
+          <div class="strategy-card">
+            <h3>Post-Launch Support</h3>
+            <p>
+              Monthly updates with bug fixes, OS compatibility, feature
+              releases. Review monitoring, feature prioritization based on
+              analytics. Backend optimization as user base grows.
+            </p>
+          </div>
+        </div>
+        <div class="platform-cards">
+          <div class="platform-card ios-card">
+            <i class="fab fa-apple platform-icon"></i>
+            <h3>iOS Development</h3>
+            <ul>
+              <li>Swift, UIKit, SwiftUI</li>
+              <li>Apple Pay, HealthKit, ARKit</li>
+              <li>Core Data, URLSession</li>
+            </ul>
+          </div>
+          <div class="platform-card android-card">
+            <i class="fab fa-android platform-icon"></i>
+            <h3>Android Development</h3>
+            <ul>
+              <li>Kotlin, Jetpack Compose</li>
+              <li>Firebase, Google Maps, ML Kit</li>
+              <li>Room, Retrofit, Gradle</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mobile App Development FAQ Section -->
+      <section class="faq-section">
+        <h2 class="section-title">Mobile App Development FAQ</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What mobile platforms do you develop for?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We develop native and cross-platform mobile applications for iOS
+                (iPhone, iPad) and Android devices. We offer native development
+                using Swift/Kotlin, cross-platform development using React
+                Native and Flutter, Progressive Web Apps (PWAs), and hybrid apps
+                using modern frameworks. Our team has expertise in all major
+                platforms and can recommend the best approach based on your
+                requirements, budget, and timeline.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How much does it cost to develop a mobile app?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                The cost of mobile app development varies depending on
+                complexity, features, platforms, and design requirements. Simple
+                apps can start from $10,000, while more complex enterprise
+                solutions can range from $50,000 to $200,000+. We provide
+                detailed project estimates after understanding your specific
+                requirements.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How long does it take to build a mobile app?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Development timelines depend on app complexity. A basic MVP can
+                be delivered in 2-3 months, while more sophisticated
+                applications typically take 4-6 months. Our agile development
+                process ensures regular deliverables and flexibility to adjust
+                scope as needed.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Do you provide UI/UX design for mobile apps?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, we have a dedicated team of UI/UX designers who create
+                intuitive, user-friendly designs following platform-specific
+                guidelines (Material Design for Android, Human Interface
+                Guidelines for iOS). Our design process includes user research,
+                wireframing, prototyping, and usability testing.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How do you ensure mobile app security?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We implement multiple security layers including data encryption,
+                secure authentication (OAuth, biometrics), secure API
+                communication (HTTPS, SSL pinning), code obfuscation, and
+                regular security testing. We follow OWASP Mobile Security
+                guidelines and conduct penetration testing before launch.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Do you handle App Store and Google Play submissions?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, we manage the complete app submission process including
+                preparing store assets (screenshots, descriptions), configuring
+                store listings, handling developer accounts, and navigating
+                review processes. We have a 95%+ first-time approval rate due to
+                our expertise with platform guidelines.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What happens after the app is launched?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We provide post-launch support including monitoring, bug fixes,
+                performance optimization, and updates for new OS versions. We
+                also offer maintenance packages for ongoing improvements,
+                feature additions, and analytics review to ensure your app
+                continues to meet business goals.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Can you maintain or update an existing mobile app?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, we offer app maintenance and update services. We can
+                analyze your existing codebase, suggest improvements, fix bugs,
+                add new features, and ensure compatibility with the latest OS
+                versions. Our team works with both native and cross-platform
+                codebases.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ready to Launch Section -->
+      <section class="launch-section">
+        <h2 class="section-title">Ready to Launch Your Mobile App?</h2>
+        <p class="section-description">
+          Transform your business with a professionally designed, expertly
+          developed mobile application that meaningfully engages users through
+          intuitive interfaces and valuable features, drives sustainable
+          business growth through increased mobile revenue, expanded market
+          reach, and improved customer loyalty.
+        </p>
+        <div class="launch-buttons">
+          <a href="#" class="btn-launch-primary"
+            >Get Free App Consultation <i class="fas fa-comments"></i
+          ></a>
+          <a href="#" class="btn-launch-secondary"
+            >View Success Stories <i class="fas fa-book-open"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+      <div class="footer-container">
+        <!-- Top Section with Logo and Tagline -->
+        <div class="footer-top">
+          <div class="footer-logo-container">
+            <div class="logo-wrapper">
+              <img
+                src="/Intallia24/Images/logo1.png"
+                alt="Intallia Logo"
+                class="footer-logo"
+              />
+              <div class="logo-text">
+                <span class="logo-top">INTALIA</span>
+                <span class="logo-bottom">Building Tomorrow's Workforce</span>
+              </div>
+            </div>
+            <p class="footer-tagline">
+              Technology is at the core of everything we do—but it’s our people
+              who make the real difference. At Intallia, we bring together a
+              curated team of innovators, problem-solvers, and domain experts
+              who blend deep technical skills with a product-first mindset.
+            </p>
+          </div>
+
+          <div class="footer-cta">
+            <button class="btn-primary">Start Your Project →</button>
+            <button class="btn-secondary">Free Consultation</button>
+          </div>
+        </div>
+
+        <!-- Middle Section with Services, Developers, Company Links -->
+        <div class="footer-middle">
+          <div class="footer-column">
+            <h3 class="footer-heading">Services</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="/Intallia24/Pages/Services/data-science-analytics.html"
+                  >Data Science & Engineering</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/website-development.html"
+                  >Web Application Development</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/mobile-application-development.html"
+                  >Mobile Application Development</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/ai-ml-engineering.html"
+                  >AI / ML Engineering</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/data-engineering.html"
+                  >Data Engineering Solutions</a
+                >
+              </li>
+              <li>
+                <a href="/Intallia24/Pages/Services/automation-workflows.html"
+                  >Automation & Workflows</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Hire Developers</h3>
+            <ul class="footer-links">
+              <li><a href="#">Hire React Developers</a></li>
+              <li><a href="#">Hire Node.js Developers</a></li>
+              <li><a href="#">Hire Java Developers</a></li>
+              <li><a href="#">Hire Python Developers</a></li>
+              <li><a href="#">Hire Flutter Developers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/Intallia24/index.html">Home</a></li>
+              <li><a href="/Intallia24/Pages/About/about.html">Our Company</a></li>
+              <li><a href="/Intallia24/Pages/About/our-work.html">How We Work</a></li>
+              <li><a href="/Intallia24/Pages/About/our-values.html">Our Values</a></li>
+              <li>
+                <a href="/Intallia24/Pages/About/our-working-culture.html"
+                  >Our Working Culture</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-heading">Get In Touch</h3>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> 123 Tech Street,
+                Innovation City
+              </p>
+              <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+              <p><i class="fas fa-envelope"></i> info@intallia.com</p>
+            </div>
+
+            <div class="newsletter">
+              <h4>Subscribe to our newsletter</h4>
+              <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email" />
+                <button class="btn-subscribe">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section with Social Media and Copyright -->
+        <div class="footer-bottom">
+          <div class="social-icons">
+            <a href="#" class="social-icon" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Twitter">
+              <i class="fab fa-twitter"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="Instagram">
+              <i class="fab fa-instagram"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="GitHub">
+              <i class="fab fa-github"></i>
+              <span class="icon-bg"></span>
+            </a>
+            <a href="#" class="social-icon" title="YouTube">
+              <i class="fab fa-youtube"></i>
+              <span class="icon-bg"></span>
+            </a>
+          </div>
+
+          <div class="copyright">
+            <p>
+              &copy; <span id="current-year">2024</span> Intallia. All rights
+              reserved. | <a href="#">Privacy Policy</a> |
+              <a href="#">Terms of Service</a>
+            </p>
+          </div>
+
+          <div class="footer-quote">
+            <button class="btn-quote">Get Quote</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/Intallia24/JS/mobile-application-development.js"></script>
+    <script src="/Intallia24/JS/script.js"></script>
+    <script src="/Intallia24/JS/footer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,887 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-green: #10b981;
+  --primary-aqua: #06b6d4;
+  --dark-green: #059669;
+  --dark-aqua: #0891b2;
+  --light-green: #d1fae5;
+  --light-aqua: #cffafe;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --background-light: #f9fafb;
+  --card-bg: #ffffff;
+  --border-color: #e5e7eb;
+  --shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-hover:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--background-light);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  /* margin-bottom: 15px; */
+  background: linear-gradient(90deg, var(--primary-green), var(--primary-aqua));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto 25px;
+  line-height: 1.7;
+}
+
+/* Hero Section */
+.values-hero-section {
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.08) 0%,
+    rgba(6, 182, 212, 0.08) 100%
+  );
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.title-with-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.values-hero-icon {
+  font-size: 2.8rem;
+  margin-right: 15px;
+  color: var(--primary-green);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.main-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.values-intro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+}
+
+.values-intro p {
+  margin-bottom: 15px;
+}
+
+.join-team-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, var(--primary-green), var(--primary-aqua));
+  color: white;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.join-team-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--dark-green), var(--dark-aqua));
+  transition: width 0.5s ease;
+  z-index: -1;
+}
+
+.join-team-btn:hover::before {
+  width: 100%;
+}
+
+.join-team-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+.join-team-btn i {
+  margin-left: 10px;
+  transition: var(--transition);
+}
+
+.join-team-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Pillars Section */
+.pillars-section {
+  background-color: var(--card-bg);
+}
+
+.pillars-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .pillars-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pillar-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 35px 30px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border-top: 5px solid transparent;
+}
+
+.pillar-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.pillar-card:nth-child(1):hover {
+  border-top-color: var(--primary-green);
+}
+
+.pillar-card:nth-child(2):hover {
+  border-top-color: var(--primary-aqua);
+}
+
+.pillar-card:nth-child(3):hover {
+  border-top-color: #10b981;
+}
+
+.pillar-card:nth-child(4):hover {
+  border-top-color: #06b6d4;
+}
+
+.pillar-card:nth-child(5):hover {
+  border-top-color: #059669;
+}
+
+.pillar-card:nth-child(6):hover {
+  border-top-color: #0891b2;
+}
+
+.pillar-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  background: linear-gradient(135deg, var(--light-green), var(--light-aqua));
+  color: var(--primary-green);
+  font-size: 1.8rem;
+  transition: var(--transition);
+}
+
+.pillar-card:hover .pillar-icon {
+  transform: scale(1.1) rotate(10deg);
+  background: linear-gradient(
+    135deg,
+    var(--primary-green),
+    var(--primary-aqua)
+  );
+  color: white;
+}
+
+.pillar-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+}
+
+.pillar-description {
+  color: var(--text-light);
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+.pillar-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pillar-features span {
+  display: flex;
+  align-items: center;
+  color: var(--dark-green);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.pillar-features span i {
+  margin-right: 8px;
+  color: var(--primary-green);
+  font-size: 0.9rem;
+}
+
+/* Values in Action Section */
+.values-action-section {
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.05) 0%,
+    rgba(6, 182, 212, 0.05) 100%
+  );
+}
+
+.action-icon {
+  font-size: 2.5rem;
+  margin-right: 15px;
+  color: var(--primary-aqua);
+}
+
+.values-action-intro {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+.values-stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.values-stat-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 40px 25px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.values-stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.values-stat-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  background: linear-gradient(135deg, var(--light-green), var(--light-aqua));
+  color: var(--primary-green);
+  font-size: 2rem;
+  transition: var(--transition);
+}
+
+.values-stat-card:hover .values-stat-icon {
+  transform: scale(1.1);
+  background: linear-gradient(
+    135deg,
+    var(--primary-green),
+    var(--primary-aqua)
+  );
+  color: white;
+}
+
+.values-stat-count {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, var(--primary-green), var(--primary-aqua));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.values-stat-count::after {
+  content: "%";
+  font-size: 2rem;
+}
+
+.values-stat-card:nth-child(2) .values-stat-count::after,
+.values-stat-card:nth-child(3) .values-stat-count::after {
+  content: "";
+}
+
+.values-stat-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.values-stat-description {
+  color: var(--text-light);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Culture Section */
+.culture-section {
+  background-color: var(--card-bg);
+}
+
+.culture-intro {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+.culture-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.culture-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.culture-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-green);
+}
+
+.culture-card-header {
+  margin-bottom: 25px;
+}
+
+.culture-card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, var(--light-green), var(--light-aqua));
+  color: var(--primary-green);
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.culture-card:hover .culture-card-icon {
+  transform: scale(1.1);
+  background: linear-gradient(
+    135deg,
+    var(--primary-green),
+    var(--primary-aqua)
+  );
+  color: white;
+}
+
+.culture-card-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.culture-card-subtitle {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.culture-card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.culture-card-features span {
+  display: flex;
+  align-items: center;
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.culture-card-features span i {
+  margin-right: 10px;
+  color: var(--primary-aqua);
+  font-size: 1rem;
+  width: 20px;
+}
+
+/* Beliefs Section */
+.beliefs-section {
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.05) 0%,
+    rgba(6, 182, 212, 0.05) 100%
+  );
+}
+
+.beliefs-intro {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+.beliefs-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.belief-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.belief-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.belief-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, var(--light-green), var(--light-aqua));
+  color: var(--primary-green);
+  font-size: 1.8rem;
+  transition: var(--transition);
+}
+
+.belief-card:hover .belief-icon {
+  transform: rotate(15deg);
+  background: linear-gradient(
+    135deg,
+    var(--primary-green),
+    var(--primary-aqua)
+  );
+  color: white;
+}
+
+.belief-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+}
+
+.belief-description {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Values FAQ Section */
+.values-faq-section {
+  background-color: var(--card-bg);
+}
+
+.values-faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.values-faq-item {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border-left: 4px solid transparent;
+  transition: var(--transition);
+}
+
+.values-faq-item:hover {
+  border-left-color: var(--primary-aqua);
+}
+
+.values-faq-question {
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.values-faq-question:hover {
+  background-color: rgba(6, 182, 212, 0.05);
+}
+
+.values-faq-question h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-right: 20px;
+}
+
+.values-faq-question i {
+  color: var(--primary-aqua);
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.values-faq-item.active .values-faq-question i {
+  transform: rotate(180deg);
+}
+
+.values-faq-answer {
+  padding: 0 25px;
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.5s ease,
+    padding 0.5s ease;
+}
+
+.values-faq-item.active .values-faq-answer {
+  padding: 0 25px 25px;
+  max-height: 500px;
+}
+
+.values-faq-answer p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* CTA Section */
+.values-cta-section {
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.08) 0%,
+    rgba(6, 182, 212, 0.08) 100%
+  );
+  text-align: center;
+}
+
+.values-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.values-cta-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+}
+
+.highlight {
+  background: linear-gradient(90deg, var(--primary-green), var(--primary-aqua));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-green), var(--primary-aqua));
+  border-radius: 2px;
+}
+
+.values-cta-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.values-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.values-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 40px;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  min-width: 220px;
+}
+
+.primary-btn {
+  background: linear-gradient(90deg, var(--primary-green), var(--primary-aqua));
+  color: white;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.primary-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--dark-green), var(--dark-aqua));
+  transition: width 0.5s ease;
+  z-index: -1;
+}
+
+.primary-btn:hover::before {
+  width: 100%;
+}
+
+.secondary-btn {
+  background-color: white;
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.1);
+}
+
+.secondary-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-green), var(--primary-aqua));
+  transition: width 0.5s ease;
+  z-index: -1;
+}
+
+.secondary-btn:hover {
+  color: white;
+  border-color: transparent;
+}
+
+.secondary-btn:hover::before {
+  width: 100%;
+}
+
+.values-cta-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+.values-cta-btn i {
+  margin-left: 10px;
+  transition: var(--transition);
+}
+
+.values-cta-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .main-heading {
+    font-size: 2.8rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .values-cta-title {
+    font-size: 2.3rem;
+  }
+
+  .pillars-cards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+
+  .values-hero-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .main-heading {
+    font-size: 2.3rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .values-cta-title {
+    font-size: 2rem;
+  }
+
+  .title-with-icon {
+    flex-direction: column;
+  }
+
+  .values-hero-icon,
+  .action-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .pillars-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .values-stats-cards,
+  .culture-cards,
+  .beliefs-cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .values-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .values-cta-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .values-cta-title {
+    font-size: 1.8rem;
+  }
+
+  .values-stats-cards,
+  .culture-cards,
+  .beliefs-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar-card,
+  .values-stat-card,
+  .culture-card,
+  .belief-card {
+    padding: 25px;
+  }
+
+  .values-faq-question {
+    padding: 20px;
+  }
+
+  .values-faq-question h3 {
+    font-size: 1.1rem;
+  }
+
+  .values-stat-count {
+    font-size: 2.8rem;
+  }
+}
